@@ -1,0 +1,103 @@
+package es.ugr.ri;
+
+import java.io.PrintWriter;
+import java.nio.charset.StandardCharsets;
+
+import java.nio.file.Files;
+import java.nio.file.Path;
+
+import java.util.ArrayList;
+
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+import org.apache.tika.Tika;
+import org.apache.tika.io.TikaInputStream;
+
+import org.apache.tika.langdetect.optimaize.OptimaizeLangDetector;
+import org.apache.tika.language.detect.LanguageDetector;
+import org.apache.tika.language.detect.LanguageResult;
+import org.apache.tika.metadata.Metadata;
+import org.apache.tika.parser.AutoDetectParser;
+import org.apache.tika.parser.ParseContext;
+import org.apache.tika.sax.BodyContentHandler;
+
+public class Main {
+    public static void main(String[] args) throws Exception {
+        if (args.length != 1) {
+            System.err.println("Uso: mvn exec:java -Dexec.args=\"documentos\"");
+            return;
+        }
+
+        Path dir = Path.of(args[0]);
+        if (!Files.isDirectory(dir)) {
+            System.err.println("No es un directorio " + dir);
+            return;
+        }
+
+        Tika tika = new Tika();
+        AutoDetectParser parser = new AutoDetectParser(); //Lee el contenido del documento con el parser adecuado
+        LanguageDetector langDetector = new OptimaizeLangDetector().loadModels();//Detecta idiomas
+
+        List<Path> ficheros;
+        try(Stream<Path> s = Files.walk(dir)){
+            ficheros = s.filter(Files::isRegularFile).sorted().collect(Collectors.toList()); //Lo ultimo basicamente recolecta todos los elementos y lo pone en un sitio y con el toList lo metemos en lista
+        } //dicho bloque recorre la carpeta de forma recursiva para sacar todos los documentos que archivos regulares.
+
+        System.out.println("Ficheros encontrados: " + ficheros.size());
+        for(Path p : ficheros){
+            System.out.println(" " + dir.relativize(p)); //relativize quita el prefijo de la carpeta
+        }
+        
+        List<String> filas = new ArrayList<>();
+        filas.add("Fichero;MIME (contenido);MIME (solo extension);Codificacion;Idioma;Caracteres;Estado");
+        System.out.println(filas.get(0));
+
+        for (Path p : ficheros) {
+            String nombre = dir.relativize(p).toString();
+            String mimeContenido = "-";
+            String mimeNombre = tika.detect(p.getFileName().toString());
+            String codificacion = "-";
+            String idioma = "-";
+            int caracteres = 0;
+            String estado = "OK";
+            //Preparamos el estado inicial de cada fichero 
+            try{
+                try(TikaInputStream tis = TikaInputStream.get(p)){
+                    mimeContenido = tika.detect(tis);
+                }//Usamos tika para el tipo por contenido que tiene
+
+                Metadata md = new Metadata();
+                BodyContentHandler handler = new BodyContentHandler(-1);
+                try(TikaInputStream tis = TikaInputStream.get(p)){
+                    parser.parse(tis,handler,md,new ParseContext());
+                }
+                String texto = handler.toString();
+                caracteres = texto.length(); //abrimos un flujo y vamos leyendo poco a poco e introduciendo los metadatos y el contenido en el sitio correspondiente
+
+                String enc = md.get("Content-Encoding");
+                if (enc == null) enc = md.get("X-TIKA:detectedEncoding");//tika a lo mejor lo deja aqui si no lo encuentra arriba
+                if (enc != null) codificacion = enc;//pillamos el codificado que dejo en md en el bloque de arriba
+
+                if (!texto.isBlank()) {
+                    String muestra = texto.substring(0, Math.min(texto.length(), 100_000));
+                    LanguageResult r = langDetector.detect(muestra);
+                    idioma = r.isUnknown() ? "?" : r.getLanguage();
+                }
+            }catch (Exception e) {
+                estado = "Error: " + e.getClass().getSimpleName();
+            } // try catch para cada archivo para que si un archivo falla no reviente el programa directamente
+
+
+           filas.add(String.join(";", nombre, mimeContenido, mimeNombre,codificacion, idioma, String.valueOf(caracteres), estado));//Ponemos cada uno de estos como una fila de datos
+        }
+        for (String f : filas) {
+            System.out.println(f);
+        }
+        try (PrintWriter pw = new PrintWriter("inventario.csv", StandardCharsets.UTF_8)) {
+            filas.forEach(pw::println);
+        }//Utilizando la biblioteca printwriter fija UTF-8 y para cada linea de la lista filas lo mete en el csv
+        System.out.println("\nGuardado correctamente en inventario.csv");
+    }
+}

@@ -1,0 +1,17 @@
+Fichero;MIME (contenido);MIME (solo extension);Codificacion;Idioma;Caracteres;Estado
+Doc1.docx;application/vnd.openxmlformats-officedocument.wordprocessingml.document;application/vnd.openxmlformats-officedocument.wordprocessingml.document;-;es;119;OK
+P.xlsx;application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;-;es;507032;OK
+Práctica 1.docx;application/vnd.openxmlformats-officedocument.wordprocessingml.document;application/vnd.openxmlformats-officedocument.wordprocessingml.document;-;es;20977;OK
+XML yJSON.pptx;application/vnd.openxmlformats-officedocument.presentationml.presentation;application/vnd.openxmlformats-officedocument.presentationml.presentation;-;es;5750;OK
+arxiv.pdf;application/pdf;application/pdf;-;en;87518;OK
+capturaDePantalla.png;image/png;image/png;-;-;0;OK
+comprimido.zip;application/zip;application/zip;ISO-8859-1;es;482257;OK
+escaneado.pdf;application/pdf;application/pdf;-;-;9;OK
+espanol1.txt;text/plain;text/plain;UTF-8;es;1090849;OK
+espanol2.txt;text/plain;text/plain;UTF-8;es;217300;OK
+extensionFalse.pdf;text/html;application/pdf;UTF-8;es;141888;OK
+frances.txt;text/plain;text/plain;UTF-8;fr;317817;OK
+ingles.txt;text/plain;text/plain;UTF-8;en;339290;OK
+libro.html;text/html;text/html;UTF-8;en;175015;OK
+prueba.txt;text/plain;text/plain;UTF-8;es;171;OK
+wiki.html;text/html;text/html;UTF-8;es;141888;OK
