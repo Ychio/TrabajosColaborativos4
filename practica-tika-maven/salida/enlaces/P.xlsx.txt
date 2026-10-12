@@ -1,0 +1,12 @@
+a	https://forms.gle/epV5dbEw1QGwFAvHA	https://forms.gle/epV5dbEw1QGwFAvHA
+a	https://web.telegram.org/k/	https://web.telegram.org/k/
+a	http://abierta.ugr.es/	http://abierta.ugr.es/
+a	https://sede.ugr.es/procs/Gestion-Academica-Solicitud-de-convocatoria-de-gracia/	https://sede.ugr.es/procs/Gestion-Academica-Solicitud-de-convocatoria-de-gracia/
+a	https://icaro.ual.es/	https://icaro.ual.es/
+a	https://etsiit.ugr.es/pages/trabajos_fin_grado	https://etsiit.ugr.es/pages/trabajos_fin_grado
+a	https://forms.gle/epV5dbEw1QGwFAvHA	
+a	https://web.telegram.org/k/	
+a	http://abierta.ugr.es/	
+a	https://sede.ugr.es/procs/Gestion-Academica-Solicitud-de-convocatoria-de-gracia/	
+a	https://icaro.ual.es/	
+a	https://etsiit.ugr.es/pages/trabajos_fin_grado	

@@ -1,0 +1,3 @@
+Documento de prueba para la práctica de Recuperación de Información.
+Apache Tika permite detectar el tipo de un documento y extraer su contenido textual y sus metadatos.
+

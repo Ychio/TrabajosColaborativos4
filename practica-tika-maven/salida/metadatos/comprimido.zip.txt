@@ -1,0 +1,5 @@
+X-TIKA:Parsed-By = org.apache.tika.parser.DefaultParser | org.apache.tika.parser.pkg.PackageParser
+X-TIKA:Parsed-By-Full-Set = org.apache.tika.parser.DefaultParser | org.apache.tika.parser.pkg.PackageParser | org.apache.tika.parser.csv.TextAndCSVParser | org.apache.tika.parser.html.JSoupParser | org.apache.tika.parser.pdf.PDFParser
+X-TIKA:detectedEncoding = ISO-8859-1
+X-TIKA:encodingDetector = UniversalEncodingDetector
+Content-Type = application/zip

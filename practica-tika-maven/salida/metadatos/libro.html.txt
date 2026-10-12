@@ -1,0 +1,22 @@
+og:image = https://www.gutenberg.org/cache/epub/1513/pg1513.cover.medium.jpg
+og:type = Text
+og:title = Romeo and Juliet
+X-TIKA:Parsed-By-Full-Set = org.apache.tika.parser.DefaultParser | org.apache.tika.parser.html.JSoupParser
+dc.rights = Public domain in the USA.
+generator = Ebookmaker 0.14.6 by Project Gutenberg
+dcterms.created = 1998-11-01
+X-TIKA:encodingDetector = HtmlEncodingDetector
+dcterms.source = https://www.gutenberg.org/files/1513/1513-h/1513-h.htm
+dcterms.modified = 2026-10-01T13:56:08.756947+00:00
+X-TIKA:Parsed-By = org.apache.tika.parser.DefaultParser | org.apache.tika.parser.html.JSoupParser
+dc:title = Romeo and Juliet | Project Gutenberg
+dc.creator = Shakespeare, William, 1564-1616
+Content-Encoding = UTF-8
+dc.title = Romeo and Juliet
+X-TIKA:detectedEncoding = UTF-8
+dc.subject = Vendetta -- Drama | Youth -- Drama | Verona (Italy) -- Drama | Juliet (Fictitious character) -- Drama | Romeo (Fictitious character) -- Drama | Conflict of generations -- Drama | Tragedies (Drama)
+dc.language = en
+og:url = https://www.gutenberg.org/cache/epub/1513/pg1513-images.html
+Content-Language = en
+Content-Type = text/html; charset=UTF-8
+format-detection = telephone=no,date=no,address=no,email=no,url=no

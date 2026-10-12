@@ -1,0 +1,9 @@
+Este es el encabezado
+Este es el título
+
+	tabla	con	contenido
+	en 	la	cual
+	no se	que	poner
+
+
+Este es el pie de pagina

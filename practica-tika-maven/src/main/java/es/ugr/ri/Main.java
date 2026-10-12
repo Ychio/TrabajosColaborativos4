@@ -23,6 +23,10 @@ import org.apache.tika.parser.AutoDetectParser;
 import org.apache.tika.parser.ParseContext;
 import org.apache.tika.sax.BodyContentHandler;
 
+import org.apache.tika.sax.Link;
+import org.apache.tika.sax.LinkContentHandler;
+import org.apache.tika.sax.TeeContentHandler;
+
 public class Main {
     public static void main(String[] args) throws Exception {
         if (args.length != 1) {
@@ -46,13 +50,16 @@ public class Main {
         } //dicho bloque recorre la carpeta de forma recursiva para sacar todos los documentos que archivos regulares.
 
         System.out.println("Ficheros encontrados: " + ficheros.size());
-        for(Path p : ficheros){
-            System.out.println(" " + dir.relativize(p)); //relativize quita el prefijo de la carpeta
-        }
         
+        Path dirTexto = Path.of("salida","texto");
+        Path dirMeta = Path.of("salida","metadatos");
+        Path dirEnlaces = Path.of("salida","enlaces");
+        Files.createDirectories(dirTexto);
+        Files.createDirectories(dirMeta);
+        Files.createDirectories(dirEnlaces); //creamos los directorios para guardar los contenidos de texto, metadatos y enlaces
+
         List<String> filas = new ArrayList<>();
         filas.add("Fichero;MIME (contenido);MIME (solo extension);Codificacion;Idioma;Caracteres;Estado");
-        System.out.println(filas.get(0));
 
         for (Path p : ficheros) {
             String nombre = dir.relativize(p).toString();
@@ -70,11 +77,14 @@ public class Main {
 
                 Metadata md = new Metadata();
                 BodyContentHandler handler = new BodyContentHandler(-1);
-                try(TikaInputStream tis = TikaInputStream.get(p)){
-                    parser.parse(tis,handler,md,new ParseContext());
+                LinkContentHandler linkHandler = new LinkContentHandler();
+                TeeContentHandler tee = new TeeContentHandler(handler, linkHandler);
+                try (TikaInputStream tis = TikaInputStream.get(p)) {
+                    parser.parse(tis, tee, md, new ParseContext()); //el parser actua de locutor y va soltando contenido, mientras el tee unifica los dos habndler y cada handler pilla lo que necesite
                 }
                 String texto = handler.toString();
                 caracteres = texto.length(); //abrimos un flujo y vamos leyendo poco a poco e introduciendo los metadatos y el contenido en el sitio correspondiente
+                Files.writeString(dirTexto.resolve(nombre + ".txt"), texto,StandardCharsets.UTF_8);
 
                 String enc = md.get("Content-Encoding");
                 if (enc == null) enc = md.get("X-TIKA:detectedEncoding");//tika a lo mejor lo deja aqui si no lo encuentra arriba
@@ -83,8 +93,22 @@ public class Main {
                 if (!texto.isBlank()) {
                     String muestra = texto.substring(0, Math.min(texto.length(), 100_000));
                     LanguageResult r = langDetector.detect(muestra);
-                    idioma = r.isUnknown() ? "?" : r.getLanguage();
+                    idioma = r.isUnknown() ? "?" : r.getLanguage(); //Identifica el lenguaje mediante como maximo los primeros 100000 palabras
                 }
+                
+                List<String> lineasMd = new ArrayList<>();
+                for (String n : md.names()) {
+                    lineasMd.add(n + " = " + String.join(" | ", md.getValues(n)));
+                }
+                Files.write(dirMeta.resolve(nombre + ".txt"), lineasMd, StandardCharsets.UTF_8);
+
+                // Enlaces -> salida/enlaces/<fichero>.txt
+                List<Link> enlaces = linkHandler.getLinks();
+                List<String> lineasEnl = new ArrayList<>();
+                for (Link l : enlaces) {
+                    lineasEnl.add(l.getType() + "\t" + l.getUri() + "\t" + l.getText().trim());
+                }
+                Files.write(dirEnlaces.resolve(nombre + ".txt"), lineasEnl, StandardCharsets.UTF_8);
             }catch (Exception e) {
                 estado = "Error: " + e.getClass().getSimpleName();
             } // try catch para cada archivo para que si un archivo falla no reviente el programa directamente

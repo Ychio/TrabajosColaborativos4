@@ -1,0 +1,2983 @@
+
+CETUP2026-014
+
+Prepared for submission to JCAP
+
+Interpretation of Nanohertz
+Gravitational Waves via Cosmic
+Strings in Post-BBN Matter and
+Kination Domination
+
+Raymond T. Co, Siu Cheung Lam, Taegyu Lee
+
+Physics Department, Indiana University, Bloomington, IN 47405, USA
+
+E-mail: rco@iu.edu, siuclam@iu.edu, taeglee@iu.edu
+
+Abstract. Recent pulsar timing array (PTA) observations have reported evidence for a com-
+mon low frequency signal consistent with a stochastic gravitational wave background. In
+this work, we investigate the cosmic string interpretation of this signal in a non-standard
+cosmological history between big bang nucleosynthesis and recombination, featuring an early
+matter-dominated era followed by a kination phase. Previous studies have shown that kination
+can significantly modify the cosmic-string-induced gravitational wave spectrum, generating
+characteristic features in the nanohertz range and producing a shape consistent with current
+PTA data. Building on this, we perform separate Bayesian analyses of the NANOGrav 15-year
+and EPTA DR2 New+ datasets to quantify the extent to which such a cosmological history is
+favored by the data. We find substantial evidence for a transient period of matter and kina-
+tion domination over the standard cosmological history within a cosmic-string interpretation
+of the gravitational-wave signal, with a Bayes factor 3.63+0.22
+
+−0.21 from the NANOGrav 15-year
+dataset, while leaving the inferred cosmic-string tension nearly unchanged. This cosmic-
+string-dominated scenario is particularly relevant if the contribution from supermassive black
+hole binaries (SMBHBs) is small, as hinted at by astrophysical population simulations. Com-
+pared with a scenario where gravitational waves are produced purely by SMBHBs, cosmic-
+string interpretations with and without an additional contribution from SMBHBs, across both
+expansion histories and datasets, reveal no significant preference.
+
+ar
+X
+
+iv
+:2
+
+61
+0.
+
+10
+67
+
+4v
+1 
+
+ [
+as
+
+tr
+o-
+
+ph
+.C
+
+O
+] 
+
+ 7
+ O
+
+ct
+ 2
+
+02
+6
+
+mailto:rco@iu.edu
+mailto:siuclam@iu.edu
+mailto:taeglee@iu.edu
+https://arxiv.org/abs/2610.10674v1
+
+
+Contents
+
+1 Introduction 1
+
+2 Axion rotation and kination 3
+2.1 Matter-like evolution 4
+2.2 Kination-like evolution 4
+2.3 Characteristic temperatures 5
+
+3 Cosmic string gravitational waves 7
+3.1 Local cosmic strings and their gravitational wave background 7
+3.2 GW spectrum in standard cosmology 8
+3.3 GW spectrum modified by matter and kination eras 9
+
+4 Bayesian analysis framework 11
+
+5 Analyses 12
+5.1 Constraints 13
+
+5.1.1 BBN 14
+5.1.2 CMB 15
+
+5.2 PTAs and analyses setup 16
+
+6 Results 19
+6.1 Bayesian inference and model comparison 19
+
+6.1.1 Results for NG15 dataset 19
+6.1.2 Results for EPTA DR2 New+ dataset 21
+6.1.3 Model comparison 24
+
+6.2 Gravitational-wave spectra 25
+
+7 Conclusion and outlook 27
+
+1 Introduction
+
+The growing sensitivity of pulsar timing arrays (PTAs) has opened a new observational win-
+dow onto the nanohertz gravitational wave (GW) regime. Recent results by the NANOGrav
+15-year collaboration [1], the European Pulsar Timing Array (EPTA) [2], the Parkes Pulsar
+Timing Array (PPTA) [3] and the Chinese Pulsar Timing Array (CPTA) [4] have reported
+evidence for a stochastic GW background (SGWB) in the nanohertz regime. These develop-
+ments have generated considerable interest since the PTA signal may provide a direct probe
+not only of astrophysical sources such as supermassive black hole binaries (SMBHBs), but
+also of relic processes that may have occurred in the early Universe. Possible early-Universe
+cosmological sources relevant to the PTA band include cosmic strings (CS) [5, 6], first-order
+phase transitions [7, 8], scalar-induced gravitational waves [9, 10], and gravitational waves
+associated with non-standard cosmological histories such as kination [11, 12].
+
+In the early Universe, cosmic strings can form during the symmetry breaking phase
+transition via the Kibble mechanism [13, 14]. Depending on whether the underlying sponta-
+neously broken symmetry is global or gauged, cosmic strings are broadly classified into global
+
+– 1 –
+
+
+
+and local strings. In this work, we focus on local cosmic strings. Such symmetry-breaking
+patterns arise in a variety of particle physics models. A common example is the breaking
+of an extra Abelian gauge symmetry such as U(1)B−L, which frequently appears in models
+for neutrino mass generation based on the seesaw mechanism [15, 16]. Local strings may
+also emerge in grand unified theories whose symmetry-breaking pattern contains an inter-
+mediate U(1) symmetry, as in various SO(10) constructions [17, 18]. These scenarios make
+local cosmic strings theoretically and phenomenologically well motivated. Once formed, they
+follow a scaling law where the fraction of energy density in the network compared to the
+background is fixed. Moreover, on scales much larger than their core width, local strings
+are often well approximated by Nambu–Goto strings, so their network evolution leads to
+predictive cosmological signatures, most notably an SGWB produced by oscillating cosmic
+string loops [5, 19–21]. The resulting SGWB depends not only on string parameters such as
+the tension, emission spectrum, and intercommutation probability, but also heavily on the
+background expansion history of the Universe [11]. Therefore, the GW spectrum generated
+by cosmic strings can reveal information not only about string microphysics but also about
+the history of the cosmological evolution.
+
+Among the simplest and well-motivated departures from the standard thermal history
+is a kination-dominated (KD) era, during which the energy density of the Universe is domi-
+nated by the kinetic energy of a scalar field [22, 23]. A particularly natural realization arises
+in theories containing a complex scalar field with a global U(1) symmetry and a scalar poten-
+tial whose non-zero vacuum expectation value spontaneously breaks the U(1) symmetry. In
+addition, higher-dimensional operators explicitly break the symmetry and, for a large initial
+radial field value, provide a kick in the angular direction that initiates field rotation in the
+early Universe. While the radial mode is still displaced from its vacuum value, the scalar-field
+energy can drive an early matter-dominated (MD) phase. As the radial mode thermalizes,
+part of the energy stored in the complex scalar field is dissipated, while the approximately
+conserved charge prevents the energy from being completely depleted. The motion then ap-
+proaches circular rotation in field space. Once the radial mode settles to the vacuum, the
+potential energy becomes negligible. In this regime, the energy density is dominated by rota-
+tional kinetic energy, giving rise to a kination era. This kination era corresponds to a phase
+with an equation of state parameter w ≃ 1, where the energy density redshifts as a−6 with a
+the scale factor. Since this component redshifts faster than radiation, the kination phase is
+temporary and the Universe eventually returns to the radiation-dominated (RD) epoch.
+
+The PTA signal is also interesting from the viewpoint of non-standard expansion histo-
+ries. Previous work has shown that if an early matter-dominated era is followed by kination,
+with both transitions occurring between big bang nucleosynthesis (BBN) and recombina-
+tion, the SGWB from cosmic strings can deviate substantially from the nearly flat spectrum
+expected in the standard radiation-dominated cosmology [11]. In particular, this late matter–
+kination sequence can modify the resulting spectral structure in the nanohertz range. Mo-
+tivated by this possibility, in this work we perform a Bayesian analysis of the cosmic string
+interpretation in the presence of such a late matter-to-kination domination history, and assess
+whether it provides a better description of current PTA data than the standard cosmology.
+
+The remainder of this paper is organized as follows. In Sec. 2, we review axion rotation
+that can give rise to the kination cosmology considered in this work, characterized by an
+early matter-dominated era followed by a kination-dominated era. In Sec. 3, we describe
+GW production from local cosmic strings and detail the resulting spectrum in the presence
+of the modified expansion history. In Sec. 4, we outline the Bayesian analysis framework and
+
+– 2 –
+
+
+
+describe the use of Bayes factors for model comparison. In Sec. 5, we present the constraints
+imposed by BBN and cosmic microwave background (CMB) observations. The results of the
+PTA analyses are presented and discussed in Sec. 6, followed by our conclusions in Sec. 7.
+
+2 Axion rotation and kination
+
+A simple and well-motivated origin of a KD era is provided by the rotation of a complex
+scalar field that spontaneously breaks an approximate global U(1) symmetry [24]. We write
+the complex scalar field as
+
+P (x) =
+1√
+2
+S(x)eiθ(x), (2.1)
+
+where S denotes the radial mode and θ the angular mode. In the vacuum, the radial field
+settles to its vacuum expectation value, fa, so that the canonically normalized axion field is
+
+ϕ(x) = fa θ(x). (2.2)
+
+The dynamics are described by
+
+L = |∂P |2 − V (P ) =
+1
+
+2
+(∂S)2 +
+
+1
+
+2
+S2(∂θ)2 − V0(S)− V
+
+��U(1)(P ), (2.3)
+
+where V0(S) is the U(1)-symmetric part of the potential, while V
+��U(1)(P ) denotes terms that
+
+explicitly break the U(1) symmetry. An example is a higher-dimensional operator of the form
+
+V
+��U(1)(P ) =
+
+(
+Pn
+
+Mn−4
++ h.c.
+
+)
+, n > 4, (2.4)
+
+with M the cutoff scale of the theory. These terms are expected to exist when the U(1)
+symmetry is an accidental symmetry [25–28] and is broken by quantum gravity [29–33]. In
+the early Universe, the scalar field can acquire a large field value by a negative Hubble-induced
+mass term during inflation. When the radial field value is large, this operator exerts a torque
+in the angular direction and sets the field into rotational motion in field space, in close analogy
+with Affleck–Dine dynamics [34].
+
+Once the explicit breaking term becomes negligible due to the redshift of the radial field
+amplitude, the angular motion is associated with a conserved U(1) charge. For a homogeneous
+condensate, the corresponding charge density is
+
+nθ ≡ iṖ ∗P − iṖP ∗ = S2θ̇, (2.5)
+
+and it redshifts simply as 1/a3. Equivalently, in the absence of significant entropy production,
+the yield
+
+Yθ ≡
+nθ
+
+s
+(2.6)
+
+remains approximately constant, where s is the entropy density of the Universe. This con-
+served charge is the key quantity that controls subsequent cosmological evolution. The im-
+portant point is that the same rotating condensate can behave first as matter and later as
+kination, depending on whether the rotation occurs at large radius or close to the vacuum
+expectation value.
+
+– 3 –
+
+
+
+2.1 Matter-like evolution
+
+The first stage arises while the radial field is still far from its vacuum value. In well-motivated
+scenarios such as supersymmetric theories [35, 36], the radial potential can remain nearly
+quadratic over a wide range of large field values despite the presence of a nonzero vacuum
+expectation value. At this stage, we therefore approximate
+
+V0(S) ≃
+1
+
+2
+m2
+
+SS
+2, S ≫ fa. (2.7)
+
+During this stage, the orbit is well described by rotational motion with a redshifting amplitude.
+The angular velocity is determined by the radial equation of motion, which gives
+
+θ̇2 ≃ V ′
+0(S)
+
+S
+. (2.8)
+
+For a quadratic potential, V ′
+0(S) = m2
+
+SS, and therefore
+
+θ̇ ≃ mS . (2.9)
+
+Since the conserved charge is nθ = S2θ̇ and nθ ∝ a−3, the orbit radius decreases as
+
+S2 ∝ a−3. (2.10)
+
+The energy stored in the rotating condensate is then dominated by the rotational and quadratic-
+potential pieces, both of which scale in the same way. As a result, the energy density of the
+rotation follows
+
+ρrot ∝ a−3. (2.11)
+
+Thus, while the field is rotating at large radius, the condensate behaves effectively as matter.
+Importantly, this matter scaling is not caused by oscillations around the minimum in the
+usual case, but by coherent rotation at the large field radius.
+
+Although radial oscillations are inevitably triggered together with the initial kick, the
+radial motion can later be depleted during the evolution. If the radial mode interacts with
+the thermal bath, it can dissipate the energy density stored in the radial mode. This can
+be done by perturbative decays of the radial mode or by scattering of the radial mode with
+gauge bosons or with fermions in the thermal bath [24]. Thermalization becomes efficient
+when Γth > H. However, if the interaction responsible for this dissipation does not break
+the U(1) symmetry, it dissipates energy without affecting the associated charge, i.e., rotation
+in the angular direction. Thermalization therefore does not remove the entire energy stored
+in the complex scalar field. Rather, it removes the energy associated with radial motion,
+rendering the rotational motion circular.
+
+2.2 Kination-like evolution
+
+As the Universe expands further, the charge density continues to dilute and the radius of the
+orbit shrinks. Eventually the radial field approaches its vacuum value. At that point the
+motion is no longer a rotation at a large radius, but rather a motion along the bottom of the
+wine-bottle potential with nearly fixed radius. The conserved charge then implies
+
+nθ = f2
+a θ̇, (2.12)
+
+– 4 –
+
+
+
+so that the angular velocity decreases as θ̇ ∝ a−3. The complex field energy density is now
+dominated by the angular kinetic term,
+
+ρrot ≃
+1
+
+2
+f2
+a θ̇
+
+2 =
+n2
+θ
+
+2f2
+a
+
+∝ a−6, (2.13)
+
+which is the scaling of kination and corresponds to an equation of state w = 1. We assume
+that the axion is sufficiently light that axion rotation continues past TKR.
+
+The essential picture is therefore very simple. At large radius, the energy per unit charge
+is set by the radial mass scale, and the condensate behaves like matter. Once the radius reaches
+fa, the same conserved charge is stored in pure angular motion, and the energy density begins
+to redshift much faster, scaling as a−6.
+
+2.3 Characteristic temperatures
+
+In this work, both MD and KD are essential in producing the characteristic cosmic string
+GW spectrum that is relevant for PTA observations. For this cosmological sequence to occur
+between BBN and recombination, the radial mode should thermalize before the energy density
+stored in the rotating condensate dominates over the radiation energy density. If this criterion
+is satisfied, the Universe enters an early MD era and transitions to a KD era. As a result,
+the cosmological history naturally proceeds from being RD to MD, to KD, and subsequently
+to RD. This cosmology is illustrated schematically in Fig. 1. Importantly, neither transition
+requires the dominant component to decay into radiation. In particular, unlike the usual early
+matter domination that ends by reheating, the onset of kination need not be accompanied
+by entropy production. The eventual transition from MD to KD and then to RD occurs
+automatically through cosmic redshift.
+
+It is useful to describe this history in terms of the approximately conserved yield Yθ =
+nθ/s. Below, we denote by TRM, TMK, and TKR the temperatures at the time of the radiation-
+to-matter, matter-to-kination, and kination-to-radiation transitions, respectively. During the
+matter-dominated stage, the rotational energy density is of order
+
+ρ
+(MD)
+rot ≃ mSnθ = mSYθs, (2.14)
+
+where s = 2π2g∗sT
+3/45 is the entropy density. Equating the condensate energy density with
+
+the radiation energy density, ρR = π2g∗T
+4/30, gives the temperature at which the rotating
+
+condensate begins to dominate,
+
+TRM ≃ 4
+
+3
+mSYθ, (2.15)
+
+where we have taken g∗s ≃ g∗.
+The transition from matter domination to kination domination occurs when the orbit
+
+radius shrinks to the vacuum value. Using the matter scaling relation between charge and
+radius one finds
+
+TMK ≃
+(
+
+45
+
+2π2g∗(TMK)
+
+mSf
+2
+a
+
+Yθ
+
+)1/3
+
+. (2.16)
+
+Finally, kination ends when the a−6 component falls below radiation, namely when
+
+1
+
+2
+f2
+a θ̇
+
+2 = ρR. (2.17)
+
+– 5 –
+
+
+
+Scale factor a
+
+En
+er
+
+gy
+ d
+
+en
+si
+
+ty
+ 
+
+(a
+)
+
+BBN Recombination
+
+a R
+M
+
+a M
+K
+
+a K
+R
+
+a e
+q
+
+a 4
+
+a 3
+
+a
+6
+
+a 4
+
+a 3
+
+R
+
+rot
+
+M
+
+Figure 1. Schematic representation of the cosmological evolution of the different energy components
+with scale factor a in the presence of a rotating field: RD → MD → KD → RD → MD. Radiation,
+matter and scalar field energy densities are denoted by ρR, ρM and ρrot and are represented by orange,
+green and blue solid lines, respectively. The vertical light blue dashed lines indicate, from left to right,
+the RM, MK, and KR transitions, occurring at aRM, aMK and aKR, followed by standard matter-
+radiation equality at aeq, respectively. In the scenario considered here, the intermediate matter-
+dominated era arises from scalar field rotation at large radius. As the radial field settles toward its
+vacuum value, the angular kinetic energy dominates, driving a period of kination phase, after which the
+radiation component eventually overtakes the rapidly redshifting scalar field energy density, bringing
+the Universe back to radiation domination. Finally, after matter-radiation equality, standard matter
+domination ensues until late-time dark energy domination (not shown).
+
+This gives
+
+TKR ≃ 3
+√
+15
+
+2π
+√
+
+g∗(TKR)
+
+fa
+Yθ
+
+. (2.18)
+
+It is worth noting that these transition temperatures are not independent. Up to the effective
+relativistic degrees of freedom for energy and entropy, g∗ and g∗s, they satisfy
+
+T 3
+MK ≃ TRMT 2
+
+KR. (2.19)
+
+A genuine KD era requires the matter-to-kination transition to occur before radiation takes
+over, which can be expressed as
+
+TMK ≳ TKR. (2.20)
+
+– 6 –
+
+
+
+The scenario described above is especially relevant for the cosmic string interpretation
+studied in this work. The stochastic gravitational wave background emitted by a cosmic
+string network is sensitive not only to the microscopic string parameters, but also to the
+expansion history of the Universe. Consequently, a sequence such as RD → MD → KD → RD
+can imprint characteristic breaks and changes of slope in the gravitational wave spectrum,
+potentially shifting the relevant spectral features into the PTA band.
+
+3 Cosmic string gravitational waves
+
+3.1 Local cosmic strings and their gravitational wave background
+
+Local cosmic strings can form when a U(1) gauge symmetry is spontaneously broken [13]. In
+local strings, unlike global strings, the would-be Goldstone mode is eaten by the gauge field,
+and the resulting defect is therefore a local string. Once they are formed, they quickly reach a
+scaling regime consisting of two components: O(1) infinite (long) strings per Hubble volume,
+whose radius of curvature is of order the Hubble length, H−1, together with a population of
+sub-horizon-sized cosmic-string loops [37, 38]. Infinite strings intercommute with each other
+and their energy density is continuously transferred to loops. These loops subsequently shrink
+by emitting gravitational waves, and the present-day stochastic background is obtained by
+summing the loop emission over the entire cosmic history. The gravitational wave spectrum
+is calculated as
+
+ΩGW(f) ≡ 1
+
+ρc
+
+dρGW
+
+d ln f
+=
+
+8πf
+
+3H2
+0
+
+∞∑
+m=1
+
+Gµ2PmCm(f), (3.1)
+
+where ρGW and f are the GW energy density and frequency, µ is the string tension, H0 is
+the Hubble constant today, and Pm denotes the fraction of the total loop power emitted into
+the m-th harmonic,
+
+Pm =
+Γ
+
+ζ(q)
+m−q,
+
+∞∑
+m=1
+
+Pm = Γ. (3.2)
+
+Here Γ ≃ 50 is the total gravitational wave emission efficiency [39], while q = 4/3, 5/3, or 2
+for cusps, kinks, or kink-kink collision dominated emission, respectively. The factor Cm(f)
+encodes the loop number density and the cosmological redshift,
+
+Cm(f) =
+
+∫ t0
+
+tscl
+
+dt′
+(
+a(t′)
+
+a0
+
+)3 dn
+
+df ′ (t
+′, f ′), (3.3)
+
+where tscl is the time at which the long string network enters the scaling regime, a0 ≡ a(t0)
+is the present day scale factor, and t′ is the emission time. The loop number density per unit
+emitted frequency is
+
+dn
+
+df ′ (t
+′, f ′) =
+
+(
+F Ceff(tk)
+
+α t4k
+
+)(
+a(tk)
+
+a(t′)
+
+)3( 1
+
+α+ ΓGµ
+
+)(
+2m
+
+f ′2
+
+)
+, (3.4)
+
+with F ≃ 0.1, which characterizes the fraction of the long string energy transferred into loops
+of initial length lk = αtk. For a loop formed at time tk, the length at emission time t′ is
+
+l(t′, tk) = αtk − ΓGµ (t′ − tk), (3.5)
+
+– 7 –
+
+
+
+so that the emitted frequency in the m-th harmonic is
+
+f ′ =
+2m
+
+l(t′, tk)
+, f =
+
+a(t′)
+
+a0
+f ′. (3.6)
+
+Combining these relations gives the loop formation time relevant for a present day observed
+frequency f ,
+
+tk(t
+′, f) =
+
+2m
+
+f
+
+a(t′)
+
+a0
++ ΓGµ t′
+
+α+ ΓGµ
+. (3.7)
+
+The loop formation efficiency depends on the background equation of state at tk, and is
+commonly approximated by [40, 41]
+
+Ceff(tk) ≃
+
+
+5.4, RD,
+
+0.39, MD,
+
+30, KD.
+
+(3.8)
+
+This makes explicit that ΩGW(f) is determined jointly by the loop formation history, the loop
+decay law, and the background expansion history.
+
+3.2 GW spectrum in standard cosmology
+
+Before turning to non-standard expansion histories, it is useful to recall the benchmark spec-
+tral behavior expected in the standard cosmological background. In this case, the observed
+spectrum can be understood analytically by tracking the epoch in which loops are formed
+and the epoch in which they predominantly emit GW.
+
+An analytic estimate of the spectral shape is obtained by considering loops formed in
+an era with an equation of state parameter w1 and emitting GW in an era with w2. For the
+fundamental mode with m = 1, one finds [42]
+
+Ω
+(1)
+GW(f) ∝ fλ, (3.9)
+
+with
+
+λ =
+
+
+w1(6w2 + 4)− 2
+
+(w1 + 1)(3w2 + 1)
+, tΓ < t0, p < 0,
+
+−1, tΓ < t0, p ≥ 0,
+
+3− 2
+
+w1 + 1
+, tΓ > t0,
+
+(3.10)
+
+where tΓ denotes the characteristic time at which GW emission becomes important for the
+loop evolution and p = −3+2/(1+w1)+4/(3(1+w2)). The parameter p characterizes which
+emission times dominate the integral for Cm. For p < 0, the dominant contribution comes
+from loops emitting near tΓ, whereas for p ≥ 0 it comes from the latest possible emission time
+in the corresponding cosmological era. In the standard cosmological history, this reproduces
+a distinct power law spectrum
+
+Ω
+(1)
+GW(f) ∝
+
+
+f0, formed: RD, emitted: RD,
+
+f−1/2, formed: RD, emitted: MD,
+
+f−1, formed: MD, emitted: MD.
+
+(3.11)
+
+– 8 –
+
+
+
+Moreover, the higher harmonics obey
+
+Ω
+(m)
+GW(f) = m−q Ω
+
+(1)
+GW(f/m), (3.12)
+
+so the total spectrum after summing over all m can be modified relative to the m = 1 estimate,
+especially around spectral breaks. These standard-cosmology results serve as the reference
+spectrum against which non-standard expansion histories can be compared.
+
+3.3 GW spectrum modified by matter and kination eras
+
+The important point for the present work is that cosmic strings are long lasting sources of
+GW. Because of this, the observed frequency today carries information about both the epoch
+when the relevant loops were formed and the epoch when they emit GW. Any non-standard
+expansion can leave an imprint on the string induced SGWB, e.g., Refs. [43–46].
+
+For sufficiently long MD and KD eras, the string spectrum is modified into a triangular
+shape. If we neglect the sum over higher harmonics, one finds the following asymptotic
+behavior
+
+ΩGW(f) ∝
+
+
+f0, f ≲ fKR,
+
+f+1, fKR ≲ f ≲ fMK,
+
+f−1, fMK ≲ f ≲ fRM,
+
+f0, f ≳ fRM,
+
+(3.13)
+
+where fKR, fMK, and fRM denote the characteristic frequencies associated with the transitions
+at TKR, TMK, and TRM, respectively. The origin of these slopes follows directly from Eq. (3.10).
+The segment fKR ≲ f ≲ fMK probes loops associated with the kination era. Since kination
+is a stiff phase (w = 1), the background energy density redshifts faster than radiation, so
+the GW contribution from earlier times is weighted more strongly toward higher observed
+frequencies, which leads to ΩGW ∝ f+1. The segment fMK ≲ f ≲ fRM instead probes loops
+associated with the preceding MD. In that epoch, the expansion history shifts the emission
+frequency relation in the opposite direction, leading to a negative spectral tilt towards higher
+frequencies, which leads to ΩGW ∝ f−1. As a result, the standard broad plateau is converted
+into a peaked structure around the matter-to-kination transition.
+
+For realistic local strings, however, the observed spectrum is the sum over all harmonics.
+For cusp-dominated loops, this leaves the kination slope essentially unchanged, while the high
+frequency tail associated with the preceding matter era is substantially flattened. In that case,
+Eq. (3.13) is replaced more accurately by
+
+ΩGW(f) ∝
+
+
+f0, f ≲ fKR,
+
+f+1, fKR ≲ f ≲ fMK,
+
+f−1/3, fMK ≲ f ≲ fRM,
+
+f0, f ≳ fRM,
+
+(3.14)
+
+where the f−1/3 is due to cusp-dominated emission after summing over higher modes [41].
+Hence, in the axion rotation cosmology discussed in Sec. 2, the local string SGWB
+
+acquires a characteristic triangular bump or peaked broken power law. Its location is deter-
+mined primarily by TMK through fMK, while its width is controlled by the duration of the
+non-standard era, namely by the hierarchy between TRM and TKR. This feature is especially
+important for the present work. Because the cosmic string signal is intrinsically broad, a
+
+– 9 –
+
+
+
+10 9 10 8 10 7 10 6 10 5
+
+f [Hz]
+10 12
+
+10 11
+
+10 10
+
+10 9
+
+10 8
+
+10 7
+G
+
+W
+h2 log10 G = 10.1
+
+TKR = 200 eV
+TRM = 1keV
+
+log10 G = 10.1
+TRM = 5keV
+
+log10 G = 10.2
+
+NANOGrav
+
+EPT
+A
+
+Figure 2. Illustrative SGWB spectra generated from cosmic strings in the kination cosmology com-
+pared to the counterpart in ΛCDM. The black dashed line denotes the spectrum in ΛCDM with
+the string tension fixed at log10 Gµ = −10.1. The red and blue solid lines show the spectra in the
+presence of a matter-kination epoch for log10 Gµ = −10.1 with TRM = 1 keV and log10 Gµ = −10.2
+with TRM = 5 keV. We fix TKR = 200 eV, α = 0.1, F = 0.1, Γ = 50, and q = 4/3, and sum over 104
+
+modes. The violins represent the HD free-spectrum result from NANOGrav 15-year and EPTA DR2
+New+ datasets.
+
+non-standard era does not create an isolated narrow peak from scratch, but rather reshapes
+the broad radiation-era plateau into a triangular spectrum. Consequently, a measurement of
+the break frequencies and slopes can in principle probe not only the microscopic string pa-
+rameters (Gµ,α,Γ) but also the axion rotation parameters encoded in TRM, TMK, and TKR.
+The effect of kination cosmology on the cosmic-string-induced SGWB is illustrated in Fig. 2.
+The solid contour lines show ΩGWh2 in the kination cosmology for different combinations of
+{log10Gµ, TRM}. We fix TKR = 200 eV, α = 0.1, F = 0.1, Γ = 50, and q = 4/3, and sum
+over 104 modes. In contrast, the dashed black line represents a typical SGWB from cosmic
+strings in ΛCDM with log10Gµ fixed at −10.1. The comparison demonstrates that an epoch
+of kination can significantly enhance the spectral peak of the cosmic-string-induced SGWB.
+
+– 10 –
+
+
+
+4 Bayesian analysis framework
+
+In this section, we discuss the main components of statistical analysis within the Bayesian
+framework, establishing a systematic approach for evaluating model evidence and, conse-
+quently, the Bayes factor for model selection. For a more comprehensive review of Bayesian
+analysis and model selection, we refer the reader to the literature, e.g., Refs. [47, 48].
+
+For a model M and data D, the posterior is obtained from the Bayes’ theorem:
+
+P(θ|D,M) =
+π(θ|M)L(D|θ,M)
+
+Z(D|M)
+, (4.1)
+
+where
+
+• π(θ|M) is the prior of the parameter θ assuming model M , encoding all prior informa-
+tion before observing the data D.
+
+• L(D|θ,M) denotes the likelihood of data D given M and θ.
+
+• Z(D|M) is the Bayesian evidence, which constitutes a crucial quantity for model com-
+parisons. This can be obtained by integrating the likelihood over the parameter space
+weighted by the prior
+
+Z(D|M) =
+
+∫
+L(D|θ,M)π(θ|M)dθ. (4.2)
+
+The Bayes factor Bij is used to compare two competing models, Mi, Mj with the dataset
+D, within the Bayesian framework and is defined as the ratio of the respective Bayesian
+evidence calculated from Eq. (4.2),
+
+BD
+ij =
+
+Z(D|Mi)
+
+Z(D|Mj)
+. (4.3)
+
+If BD
+ij > 1, there is evidence in favor of model Mi over model Mj ; if BD
+
+ij < 1, then Mj is
+preferred over Mi. In this work, we quote the log Bayes factor, lnBD
+
+ij = lnZD
+i − lnZD
+
+j ,
+and use Jeffreys’ scale [49, 50] to interpret the relative performance of any two competing
+models Mi and Mj . The linear and log Jeffreys’ scales are summarized in Table 1. We explore
+the parameter space for each model and the Bayesian evidence using UltraNest [51]. The
+marginalized posteriors presented in this work are derived from the nested samples using
+kernel density estimations implemented in the GetDist package [52].
+
+Bayesian evidence naturally incorporates the principle of Occam’s razor, penalizing mod-
+els with unnecessary complexity. Consequently, one can extract information about "goodness-
+of-fit" and the model complexity from Bayes evidence. This can be achieved by decomposing
+log evidence into two terms:
+
+lnZD
+M = ⟨lnLD⟩P,M −DD
+
+KL,M . (4.4)
+
+The first term is the posterior-weighted log likelihood, defined as
+
+⟨lnLD⟩P,M =
+
+∫
+lnL(D|θ,M)P(θ|D,M)dθ, (4.5)
+
+– 11 –
+
+
+
+Bij lnBij Interpretation
+
+< 1 < 0 Mj is favored
+
+(1, 101/2) (0,1.2) Negligibly small
+
+(101/2, 10) (1.2, 2.3) Substantial
+
+(10, 103/2) (2.3, 3.5) Strong
+
+(103/2, 102) (3.5, 4.6) Very strong
+
+> 102 > 4.6 Decisive
+
+Table 1. Linear and logarithmic Jeffreys’ scales and the corresponding interpretation
+
+which measures how well the model fits the data, averaged over the posterior distribution,
+with larger values meaning the posterior concentrates on parameter values that explain the
+data better. The second term is the Kullback–Leibler (KL) divergence [53, 54], defined as
+
+DD
+KL,M =
+
+∫
+P(θ|D,M) ln
+
+P(θ|D,M)
+
+π(θ|M)
+dθ, (4.6)
+
+which quantifies the overall compression of the posterior relative to the prior, weighted by the
+posterior distribution. This term represents the effective Occam penalty: models for which
+the data restrict the posterior to only a small fraction of the prior space will have a larger KL
+divergence. The decomposition of the log evidence using Eqs. (4.4), (4.5) and (4.6) enables
+contributions from model fit and the effective model complexity to be assessed separately
+across different models
+
+lnBD
+ij = ∆⟨lnLD⟩P,ij −∆DD
+
+KL,ij , (4.7)
+
+where ∆Xij = Xi −Xj . We use the Anesthetic package [55] to compute these quantities.
+
+5 Analyses
+
+In this section, we describe the setup adopted for the Bayesian analysis. Our main goal is to
+determine how well the cosmic string induced SGWB can fit PTA data in the presence of an
+intermediate non-standard cosmological era. To address this question, we consider a modified
+expansion history between BBN and recombination, following the sequence
+
+RD → MD → KD → RD.
+
+As discussed in Sec. 3, such a non-standard history deforms the broad cosmic string spectrum
+into a broken power-law shape with a characteristic bump. If the transition scales are between
+BBN and recombination, this feature can be shifted into the nanohertz frequency range probed
+by PTA experiments, where it may provide a better fit to the observed signal than the
+prediction from standard cosmology. This motivates the study of not only the PTA fit, but
+also whether the corresponding non-standard era remains consistent with BBN and the CMB.
+
+In realistic UV complete models [24], the transitions between these epochs are smooth.
+In the present analysis, however, we adopt a simplified description in which the background
+evolution is treated piecewise with instantaneous transitions in the scaling of the scalar field’s
+energy density with respect to the scale factor. This approximation captures the leading
+
+– 12 –
+
+
+
+impact of the non-standard era on the cosmic string gravitational wave spectrum while sim-
+plifying the numerical calculation for the Bayesian analysis. The expansion history is therefore
+specified by the characteristic transition temperatures TRM and TKR introduced in the previ-
+ous sections with TMK automatically determined by Eq. (2.19). These parameters determine
+the duration and timing of the MD and KD, and hence control the corresponding deformation
+of the cosmic string spectrum relevant for PTA observations. Consequently, we compute the
+time evolution of the scale factor a(t) from the first Friedmann equation
+
+H2 = H2
+0
+
+[
+∆r(a)Ωr
+
+(
+a
+
+a0
+
+)−4
+
++Ωm
+
+(
+a
+
+a0
+
+)−3
+
++ΩΛ +Ωk,θ
+
+(
+a
+
+aKR
+
+)−6
+
++Ωm,θ
+
+(
+a
+
+aMK
+
+)−3
+]
+,
+
+(5.1)
+
+where Ωm,θ = Ωr(
+aKR
+a0
+
+)−4(aMK
+aKR
+
+)−6Θ(aMK − a) and Ωk,θ = Ωr(
+aKR
+a0
+
+)−4Θ(a − aMK) are, re-
+spectively, the density parameters of the rotating condensate during early matter-dominated
+and kination-dominated eras relative to the current critical energy density ρc,0 =
+
+3H2
+0
+
+8πG .
+Ωr = 8.88 × 10−5, Ωm = 0.30, ΩΛ = 1 − Ωr − Ωm denote the present-day density pa-
+rameters for radiation, matter and dark energy, respectively, and the Hubble constant is
+H0 = 68.6 km s−1 Mpc−1. These values are obtained from the Bayesian inference which will
+be described in Sec. 5.1.2. The multiplicative factor
+
+∆r(a) =
+g∗(a)
+
+g∗(a0)
+
+(
+g∗s(a0)
+
+g∗s(a)
+
+)4/3
+
+(5.2)
+
+is inserted to account for the departure from the relation a ∝ T−1 owing to entropy conserva-
+tion and depends upon the relativistic degrees of freedom for which we use the tabular data
+computed in Ref. [56]. The case of Ωk,θ = Ωm,θ = 0 in Eq. (5.1) corresponds to ΛCDM. In the
+following sections, we examine the constraints from BBN and the CMB on the non-standard
+cosmology parameters TRM and TKR in Sec. 5.1, followed by PTA analysis in Sec. 5.2.
+
+5.1 Constraints
+
+Our inference proceeds in three stages. The non-standard expansion history is parametrized
+by the radiation-to-matter and kination-to-radiation transition temperatures, TRM and TKR,
+with TMK determined by Eq. (2.19). First, we use BBN light-element abundances to constrain
+TRM and construct its marginalized posterior distribution. We then fix TRM to the 2σ BBN
+upper bound, together with the corresponding helium abundance, and use CMB and baryon
+acoustic oscillations (BAO) observations to constrain TKR. The prior range for TKR is chosen
+to ensure that the Universe returns to radiation domination before recombination while main-
+taining the required ordering TKR ≤ TRM. As shown below, the inferred TKR distribution is
+largely insensitive to variations of TRM within its BBN-allowed range, motivating the separate
+BBN and CMB+BAO fits. Finally, kernel-density estimates of the marginalized BBN and
+CMB+BAO posteriors are used as informative priors for TRM and TKR, respectively, in the
+PTA analysis, where both transition temperatures are varied together with the cosmic-string
+and astrophysical parameters. Thus, BBN and CMB+BAO first determine the allowed non-
+standard expansion histories, while the NANOGrav and EPTA data subsequently test their
+imprint on the gravitational-wave spectrum.
+
+– 13 –
+
+
+
+877 878 879
+
+n[s]
+
+2.5
+
+3.0
+
+3.5
+
+4.0
+
+lo
+g 1
+
+0
+(T
+
+R
+M
+
+/e
+V
+
+)
+
+2.50
+
+2.55
+
+2.60
+
+D
+/H
+
+×
+10
+
+5
+
+0.247
+
+0.248
+
+0.249
+
+Y p
+
+6.0
+
+6.1
+
+6.2
+
+10
+
+6.0 6.1 6.2
+
+10
+
+0.247 0.249
+
+Yp
+
+2.50 2.55 2.60
+
+D/H × 105
+2.5 3.0 3.5 4.0
+
+log10 (TRM/eV)
+
+CDM
+Kination
+
+Figure 3. Marginalized posterior distributions (68% and 95% C.L.) for log10 TRM with TKR fixed
+to 150 eV, neutron lifetime τn, baryon-to-photon ratio η10 and the derived helium and deuterium
+abundances Yp, D/H × 105 in ΛCDM (red) and kination (blue). The grey bands correspond to Yp
+
+and D/H measurements [57–60].
+
+5.1.1 BBN
+
+An early matter domination will enhance the expansion rate. For a transient matter domina-
+tion at a temperature of the order O(keV), observations of primordial helium and deuterium
+abundances provide a sensitive probe to constrain TRM as faster expansion shortens the dura-
+tion of the nuclear-burning phase, thereby altering the primordial light-element abundances.
+
+To study the effect of a brief departure from standard cosmology on light-element abun-
+dances, we modify the publicly available BBN solver PRyMordial [61] to include the axion
+
+– 14 –
+
+
+
+energy density in the thermal background. We adopt a Gaussian prior N (η̄10, σ
+2
+η10) on the
+
+baryon-to-photon ratio, parametrized as η10 = 1010ηB, where η̄10 and ση10 are converted from
+Planck-inferred Ωbh
+
+2 [62]. We adopt the Particle Data Group [63] average neutron lifetime
+τn = 878.3±0.4 s, derived from eight measurements made with ultracold neutrons [64–71] and
+impose a Gaussian prior τn ∼ N (878.3, 0.42). Through smallnet=True flag in the PRyMor-
+dial configuration file, we marginalize over twelve key nuclear reaction rates from NACRE II
+compilation [72], Γ⃗ = (Γ1,Γ2, ...,Γ12), that are necessary to accurately predict the primordial
+helium and deuterium abundances. We model each nuclear rate as log-normal distributed:
+
+log Γi = log⟨Γi⟩+ βi log (∆Γi) , (5.3)
+
+where βi is the nuisance parameter governing the variation of i-th nuclear reaction rate sam-
+pled from a normal distribution, ⟨Γi⟩ denotes the median rate, and ∆Γi is the corresponding
+uncertainty factor. We define the log likelihood function
+
+logL = −
+(Yp − Y obs
+
+p )2
+
+2σ2
+Y obs
+p
+
+− ((D/H)− (D/H)obs)2
+
+2σ2
+(D/H)obs
+
+, (5.4)
+
+where Yp and D/H are the predicted primordial helium mass fraction and deuterium abun-
+dance derived from PRyMordial, Y obs
+
+p = 0.245 and (D/H)obs = 2.547 × 10−5 are the cen-
+tral values of light abundances from different measurements [57–60] and σY obs
+
+p
+= 0.003 and
+
+σ(D/H)obs = 0.025× 10−5 are their respective uncertainties.
+We use emcee [73], an affine-invariant ensemble sampler [74], to derive the posterior dis-
+
+tributions for the 15-dimensional parameter space (TRM, η10, τn, β⃗) with TKR fixed to 150 eV.
+We run Nwalker = 128 for 50000 iterations each. The first 35% of each chain is discarded
+as burn-in. We assess convergence by first finding the maximum integrated autocorrelation
+time τmax
+
+f across all parameters. We then obtain an estimate of the effective sample size
+ESS = Nwalker × Ns/τ
+
+max
+f , where Ns is the number of samples of each walker after burn-
+
+in. This yields an ESS ≈ 1.8 × 104. The one- and two-dimensional marginalized posterior
+distributions are shown in Fig. 3. We find the 68% and 95% C.L. upper bounds on TRM as
+
+TRM ≤ 6.45 keV, (5.5)
+TRM ≤ 12.6 keV. (5.6)
+
+In the joint CMB+BAO analysis presented in Sec. 5.1.2, when we impose the tempera-
+ture ordering TKR ≤ TRM, we adopt the 2σ value of TRM as the upper bound on TKR. The
+banana-shape in the TRM-Yp posterior reveals a strong correlation between the two parame-
+ters. This results in a stringent constraint on TRM from BBN. To obtain a representative Yp
+at the 2σ(1σ) upper bound of TRM, we select samples within a finite interval centered on the
+2σ(1σ) upper bound of TRM and take the corresponding median of Yp. This procedure yields
+Yp ∼ 0.2487(0.2478), which we adopt as an input to the Boltzmann solver CLASS. The TRM
+
+samples provide an informative prior for the GW background analysis in Sec. 5.2.
+
+5.1.2 CMB
+
+The presence of a kination epoch can affect the CMB anisotropies and CMB lensing power
+spectrum. As discussed in Ref. [11], the modified expansion rate can alter the evolution of
+cosmological perturbations and reduce the comoving sound horizon rs. This modifies the
+acoustic scale and can also alter the matter power spectrum, potentially leaving observable
+
+– 15 –
+
+
+
+signatures in structure-growth and distance-scale probes such as CMB lensing and BAO. To
+quantify these effects and constrain the non-standard cosmology parameters, we perform a
+joint likelihood analysis of the CMB and BAO data using CLASS [75], modified to incorporate
+the non-standard cosmological history described earlier, together with the Cobaya sampler [76,
+77]. We take six ΛCDM parameters and one non-standard cosmology parameter TKR,
+
+{ωb, ωc, H0, ln(10
+10As), ns, τreio, TKR}, (5.7)
+
+as free parameters while fixing TRM to a value near the upper bound allowed by BBN at the
+2σ level in Eq. (5.6), by which we require TKR to be bounded from above. The parameter
+priors used in the CMB analysis are summarized in Table 2. Since TRM is strongly correlated
+with the primordial helium abundance Yp (Fig. 3), we determine the median value of Yp for
+each fixed TRM. The resulting pair is (TRM, Yp) = (12.6 keV, 0.2487), which is adopted as
+an input for the background cosmology in CLASS. We verify that the posterior distribution
+of TKR is largely insensitive to variations in TRM. We therefore perform separate fits to the
+BBN and CMB data.
+
+Parameter Prior
+ωb U(0.020, 0.025)
+ωc U(0.095, 0.145)
+H0 U(60, 75)
+ln(1010As) U(2.5, 3.9)
+ns U(0.86, 1.06)
+τreio U(0.01, 0.15)
+log10(TKR/eV) U(0, 4.10)
+
+Table 2. Prior used in the CMB analysis. Here U denotes a uniform distribution.
+
+For the CMB likelihoods, we use the Planck 2018 temperature and polarization power
+spectra, including the low-ℓ TT, EE, high-ℓ TTTEEE likelihoods [62], and CMB lensing [78].
+For the BAO likelihood, we include BAO measurements from DESI DR2 [79]. The posterior is
+sampled using MCMC implemented in Cobaya, and convergence is declared once the Gelman–
+Rubin criterion [80] satisfies |R− 1| < 0.005. The posterior distribution for the cosmological
+parameters is shown in Fig. 4.
+
+5.2 PTAs and analyses setup
+
+A passing gravitational wave perturbs the spacetime metric along the line of sight between
+millisecond pulsars and Earth, which induces a time-dependent perturbation in pulse time-of-
+arrival measurements. This effect can be parametrized by a one-sided timing-residual power
+spectral density (PSD) S(fi) = Φ(fi)Tobs at each frequency bin fi = i/Tobs, where Tobs is
+the observation baseline and i is the harmonic number. The fractional GW energy density is
+related to the PSD via the relation
+
+ΩGW(f)h2 =
+8π4f5
+
+H2
+100
+
+S(f). (5.8)
+
+In this work, we perform separate Bayesian analyses of the NANOGrav 15-year (NG15)
+and the EPTA Data Release 2 New+ (EPTA DR2 New+) datasets, using the probability den-
+sity distributions inferred from the Hellings–Downs (HD) correlated free-spectrum analyses
+
+– 16 –
+
+
+
+0.0222 0.0227
+
+b
+
+2
+
+3
+
+lo
+g 1
+
+0(
+T K
+
+R
+/e
+
+V
+)
+
+0.04
+
+0.06
+
+0.08
+
+0.96
+
+0.97
+
+0.98
+
+n s
+
+3.02
+
+3.06
+
+3.10
+
+lo
+g(
+
+10
+10
+
+A s
+)
+
+68
+
+69
+
+H
+0
+
+0.117
+
+0.118
+
+0.119
+
+0.120
+
+c
+
+0.117 0.119
+
+c
+
+68 69
+
+H0
+
+3.01 3.05 3.09
+
+log(1010As)
+0.96 0.97
+
+ns
+
+0.04 0.06 0.08 2 3
+
+log10(TKR/eV)
+
+CDM
+kination
+
+Figure 4. Marginalized posterior distributions showing 68% and 95% regions for cosmological pa-
+rameters and log10(TKR/eV) for ΛCDM (red) and kination (blue) CMB (including Planck 2018 low-ℓ
+TT, EE, high-ℓ TTTEEE and lensing likelihoods) and DESI DR2 BAO. For kination, TRM is fixed to
+12.6 keV and Yp is fixed to 0.2487.
+
+from the respective datasets [2, 81, 82]. The EPTA DR2 New+ dataset combines a 10.3-year
+subset of the EPTA observations obtained with improved observing systems with the data
+from the Indian Pulsar Timing Array (InPTA) dataset [83]. For NG15, we use the publicly
+available kernel density estimation (KDE)-based likelihood representation released through
+PTArcade [84]. For EPTA DR2 New+, we use the publicly available Ceffyl package [85] to
+
+– 17 –
+
+
+
+construct a KDE-based representation of the likelihood. The total log-likelihood is given by
+
+lnLD =
+n∑
+i
+
+lnLD
+i (θ⃗),
+
+where D labels the dataset and i represents the bin index. We restrict our analysis to the first
+14 and the 10 frequency components in NG15 and EPTA DR2 New+, respectively. These
+likelihoods are implemented in UltraNest.
+Baseline model: Supermassive black hole binaries— As our baseline astrophysical
+interpretation of the nanohertz gravitational wave background, we consider a population of
+SMBHBs. SMBHBs are one of the most popular astrophysical sources of an SGWB in the
+nanohertz frequency regime. This is mainly because SMBHBs are expected to be abundant
+in the Universe, and because the GWs emitted during their inspiral can easily fall within the
+frequency band probed by pulsar timing arrays.
+
+The GW spectrum from SMBHBs can be parametrized as [86]
+
+ΩGWh2 =
+2π2f2
+
+yrA
+2
+SMBHB
+
+3H2
+100
+
+(
+f
+
+fyr
+
+)5−γSMBHB
+
+, (5.9)
+
+where H100 = 100 km s−1Mpc−1, fyr = 1/yr, ASMBHB is the GW amplitude from the SMBHB
+population, and γSMBHB is the power law spectral index. The amplitude is primarily deter-
+mined by the masses of the SMBHBs and by the abundance of SMBHBs contributing to the
+population. On the other hand, the spectral index encodes information about how SMBHBs
+evolve before and during the GW driven inspiral phase.
+
+Currently, both the amplitude and the spectral index remain weakly constrained by
+observations and numerical simulations. The current constraint is obtained from astrophys-
+ical simulations using the holodeck package [87], which implements semi-analytic modeling
+of SMBHB population. For our baseline hypothesis H0, we therefore adopt a simulation-
+informed prior on the parameters (log10ASMBHB, γSMBHB). Specifically, they follow a two-
+dimensional Gaussian distribution whose mean and covariance matrix are obtained from fit-
+ting to numerical simulations [88],
+
+µSMBHB =
+
+(
+−15.6
+4.7
+
+)
+, ΣSMBHB =
+
+(
+0.28 −0.0026
+
+−0.0026 0.12
+
+)
+. (5.10)
+
+Alternative hypotheses: cosmic strings— We consider four alternative hypotheses:
+cosmic-string models within either ΛCDM or the modified cosmology (kin) described in
+Sec. 3.3, with SMBHB contributions (CS+SMBHBs, kin-CS+SMBHBs) or without them
+(CS, kin-CS). The descriptions and parameters of each model are summarized in Table 3. For
+all alternative models, the cosmic-string GW spectrum in Eq. (3.1) is truncated to the first 104
+
+modes1 and we assume that the GW power spectrum is dominated by cusps (q = 4/3). For
+the kination parameters, we use the posterior samples of log10(TRM/eV) and log10(TKR/eV)
+from the independent BBN and CMB analyses directly as informative priors. We implement
+prior transformations that map unit cube variables to log10 TRM and log10 TKR in UltraNest
+according to the empirical posterior distribution encoded in the corresponding BBN and
+CMB chains. We adopt a stopping criterion of frac_remain=0.01 and require a minimum of
+nlive=400 live points and an effective sample size of at least 1000 to declare convergence.
+
+1Higher harmonics contribute to higher frequency GW as can be seen from Eq. (3.6). We truncate the
+harmonic sum at 104 beyond which we find no appreciable change in the predicted GW spectrum in the
+nanohertz regime.
+
+– 18 –
+
+
+
+Model Descriptions Parameters Prior
+
+H0 SMBHBs (log10ASMBHB, γSMBHB) N (µSMBHB,ΣSMBHB)
+
+H1 CS log10Gµ U(−14,−6)
+
+H2 CS+SMBHBs log10Gµ U(−14,−6)
+
+(log10ASMBHB, γSMBHB) N (µSMBHB,ΣSMBHB)
+
+H3 kin-CS log10Gµ U(−14,−6)
+
+log10(TRM/eV) BBN posterior samples
+
+log10(TKR/eV) CMB posterior samples
+
+H4 kin-CS+SMBHBs log10Gµ U(−14,−6)
+
+log10(TRM/eV) BBN posterior samples
+
+log10(TKR/eV) CMB posterior samples
+
+(log10ASMBHB, γSMBHB) N (µSMBHB,ΣSMBHB)
+
+Table 3. A summary of the five hypotheses analyzed in this work and their model parameters,
+together with the prior ranges adopted in the SGWB analysis. Here U and N denote uniform and
+normal distributions, respectively. The quantities µSMBHB and ΣSMBHB denote the two-dimensional
+Gaussian prior mean vector and covariance matrix determined from simulation in Ref. [88] and given in
+Eq. (5.10). The informative priors for log10(TRM/eV) and log10(TKR/eV) are respectively constructed
+from the posterior samples obtained in the BBN and CMB analyses described in Sec. 5.1.1 and
+Sec. 5.1.2, respectively.
+
+6 Results
+
+We now present the results of our Bayesian analyses of the NG15 and EPTA DR2 New+
+datasets. To isolate the impact of the modified expansion history associated with kination,
+we first compare the cosmic-string models in ΛCDM and kination cosmologies, taking the
+SMBHB-only model as the common baseline H0. We then perform the same comparison for
+models that include an additional SMBHB contribution. Finally, we directly compare the
+ΛCDM and kination scenarios within the cosmic-string framework, both with and without an
+additional SMBHB contribution.
+
+The inferred parameter constraints for all models are summarized in Tables 4 and 5
+for the NG15 and EPTA DR2 New+ datasets, respectively. The corresponding Bayes factors
+relative to the baseline hypothesis H0 are reported in Table 6. The direct comparisons between
+kination and ΛCDM within the cosmic-string framework with and without SMBHBs are
+summarized in Table 7. All quoted parameter constraints correspond to 68% credible intervals.
+
+6.1 Bayesian inference and model comparison
+
+6.1.1 Results for NG15 dataset
+
+CS: ΛCDM vs kination— The posterior distributions of the cosmic-string model in ΛCDM
+H1 and in the presence of a matter-kination epoch H3 obtained from the NG15 analy-
+sis are shown in Fig. 5. We find log10Gµ = −10.10+0.21
+
+−0.24 for ΛCDM while log10Gµ =
+
+−10.15+0.17
+−0.17 for the kination scenario. For the latter, the two additional transition tem-
+
+peratures log10(TRM/eV) and log10(TKR/eV) are constrained to log10(TRM/eV) = 3.82+0.23
+−0.32
+
+– 19 –
+
+
+
+Model log10Gµ log10(TRM/eV) log10(TKR/eV) log10ASMBHB γSMBHB
+
+H1 −10.10+0.21
+−0.24 - - - -
+
+H2 −11.26+1.07
+−1.84 - - −14.64+0.18
+
+−0.85 4.27+0.42
+−0.33
+
+H3 −10.15+0.17
+−0.17 3.82+0.23
+
+−0.32 2.49+0.54
+−0.25 - -
+
+H4 −10.45+0.36
+−2.28 3.79+0.25
+
+−0.34 2.79+0.61
+−0.45 −14.90+0.40
+
+−1.00 4.38+0.44
+−0.39
+
+Table 4. Summary of 68% credible intervals for the model parameters of different hypotheses fit to
+the NG15 dataset.
+
+Model log10Gµ log10(TRM/eV) log10(TKR/eV) log10ASMBHB γSMBHB
+
+H1 −9.99+0.25
+−0.24 - - - -
+
+H2 −10.16+0.30
+−1.62 - - −15.31+0.53
+
+−0.72 4.66+0.37
+−0.35
+
+H3 −10.03+0.23
+−0.23 3.77+0.25
+
+−0.35 2.99+0.51
+−0.48 - -
+
+H4 −10.16+0.29
+−1.23 3.76+0.25
+
+−0.32 3.03+0.50
+−0.49 −15.44+0.62
+
+−0.59 4.66+0.34
+−0.35
+
+Table 5. Summary of 68% credible intervals for the model parameters of different hypotheses fit to
+the EPTA DR2 New+ dataset.
+
+Model Comparison lnBNG15
+i0 (±σ) lnBEPTA
+
+i0 (±σ)
+
+H1 vs. H0 −1.74± 0.07 0.14± 0.06
+H2 vs. H0 −0.50± 0.08 0.47± 0.09
+H3 vs. H0 −0.45± 0.07 0.28± 0.07
+H4 vs. H0 0.25± 0.11 0.63± 0.08
+
+Table 6. Natural log Bayes factors comparing different SGWB source models given the NANOGrav
+15-year and EPTA DR2 New+ datasets under the baseline SMBHB hypothesis H0. A log Bayes
+factor with lnBD
+
+i0 > 0 indicates a preference over the reference model H0.
+
+Model Comparisons
+lnBD
+
+ij
+
+D=NG15 D=EPTA
+H3 vs H1 1.29± 0.06 0.14± 0.06
+H4 vs H2 0.75± 0.11 0.16± 0.10
+
+Table 7. Natural log Bayes factors comparing models with kination and their counterpart in ΛCDM.
+lnBD
+
+ij > 0 indicates a preference for model i over model j with the dataset D.
+
+and log10(TKR/eV) = 2.49+0.54
+−0.25, corresponding to the credible intervals TRM ∈ [3.1, 11.2] keV
+
+and TKR ∈ [174, 1077] eV. The Bayes factors relative to the baseline SMBHB model H0 are
+
+lnBNG15
+10 = −1.74± 0.07, (6.1)
+
+lnBNG15
+30 = −0.45± 0.07. (6.2)
+
+Although both hypotheses H1 and H3 have lower Bayesian evidence than H0, introducing
+a transient matter-kination epoch substantially reduces the evidence deficit relative to the
+
+– 20 –
+
+
+
+13 12 11 10
+
+log10 G
+
+2.5
+
+3.0
+
+3.5
+
+4.0
+
+lo
+g 1
+
+0
+( T
+
+K
+R
+/e
+
+V
+)
+
+2.5
+
+3.0
+
+3.5
+
+4.0
+
+lo
+g 1
+
+0
+( T
+
+R
+M
+
+/e
+V
+
+)
+
+2.5 3.0 3.5 4.0
+
+log10 (TRM/eV)
+2.5 3.0 3.5
+
+log10 (TKR/eV)
+
+CS
+kin-CS
+
+Figure 5. Marginalized posterior distributions (68% and 95% C.L.) for cosmic-string-only hypotheses
+H1 and H3 in ΛCDM (red) and kination (blue). Constraints are derived from fits to NG15 discussed
+in Sec. 5.2
+
+baseline H0 while leaving the marginalized posterior distributions of log10Gµ in the two
+scenarios virtually invariant.
+CS+SMBHBs: ΛCDM vs kination— We next present the posterior distributions and
+Bayes factors when contributions from SMBHBs are superimposed on those of cosmic strings
+in the two cosmological scenarios. The posterior distributions of hypotheses H2 and H4
+
+are shown in Fig. 6. The inferred cosmic-string tension in H2 is log10Gµ = −11.26+1.07
+−1.84
+
+while that in H4 is log10Gµ = −10.45+0.36
+−2.28. For SMBHB model parameters, the amplitude
+
+and slope in H2 are constrained at log10ASMBHB = −14.64+0.18
+−0.85 and γSMBHB = 4.27+0.42
+
+−0.33
+
+whereas for H4 the constraints are log10ASMBHB = −14.90+0.40
+−1.00 and γSMBHB = 4.38+0.44
+
+−0.39. For
+the two non-standard cosmology parameters in H4, we find log10(TRM/eV) = 3.79+0.25
+
+−0.34 and
+log10(TKR/eV) = 2.79+0.61
+
+−0.45, corresponding to the intervals TRM ∈ [2.82, 10.90] keV and TKR ∈
+[222, 2537] eV. Including an SMBHB contribution reduces the difference in log evidence
+between the cosmic-string models and the SMBHB-only baseline H0:
+
+lnBNG15
+20 = −0.50± 0.08, (6.3)
+
+lnBNG15
+40 = 0.25± 0.10. (6.4)
+
+6.1.2 Results for EPTA DR2 New+ dataset
+
+CS: ΛCDM vs kination— The posterior distributions of hypotheses H1 and H3 fitted
+to EPTA DR2 New+ are shown in Fig. 7. For model parameters, we obtain log10Gµ =
+
+– 21 –
+
+
+
+13 12 11 10
+
+log10 G
+
+2.5
+
+3.0
+
+3.5
+
+lo
+g 1
+
+0
+( T
+
+K
+R
+/e
+
+V
+)
+
+2.5
+
+3.0
+
+3.5
+
+4.0
+
+lo
+g 1
+
+0
+( T
+
+R
+M
+
+/e
+V
+
+)
+
+3.5
+
+4.0
+
+4.5
+
+5.0
+
+5.5
+
+SM
+B
+
+H
+B
+
+17
+
+16
+
+15
+
+lo
+g 1
+
+0
+A
+
+SM
+B
+
+H
+B
+
+17 16 15
+
+log10 ASMBHB
+
+4 5
+
+SMBHB
+
+2.5 3.0 3.5 4.0
+
+log10 (TRM/eV)
+2.5 3.0 3.5
+
+log10 (TKR/eV)
+
+CS+SMBHBs
+kin-CS+SMBHBs
+
+Figure 6. Marginalized posterior distributions (68% and 95% C.L.) for cosmic-string hypotheses
+with SMBHB contributions, H2 and H4, in ΛCDM (red) and kination cosmology (blue). Constraints
+are derived from fits to NG15 discussed in Sec. 5.2
+
+−9.99+0.25
+−0.24 for H1 and log10Gµ = −10.03+0.23
+
+−0.23 for H3. The constraints on transition tem-
+peratures are log10(TRM/eV) = 3.77+0.25
+
+−0.35 and log10(TKR/eV) = 2.99+0.51
+−0.48, yielding TRM ∈
+
+[2.6, 10.4] keV and TKR ∈ [329, 3180] eV while the Bayes factors of the two hypotheses com-
+pared to H0 are calculated as
+
+lnBEPTA
+10 = 0.14± 0.06, (6.5)
+
+lnBEPTA
+30 = 0.28± 0.07. (6.6)
+
+The best estimates of the log Bayes factors of both hypotheses are positive but remain close to
+zero, indicating a mild preference over H0. In addition, introducing kination slightly improves
+
+– 22 –
+
+
+
+13 12 11 10
+
+log10 G
+
+2.5
+
+3.0
+
+3.5
+
+lo
+g 1
+
+0
+( T
+
+K
+R
+/e
+
+V
+)
+
+2.5
+
+3.0
+
+3.5
+
+4.0
+
+lo
+g 1
+
+0
+( T
+
+R
+M
+
+/e
+V
+
+)
+
+2.5 3.0 3.5 4.0
+
+log10 (TRM/eV)
+2.5 3.0 3.5
+
+log10 (TKR/eV)
+
+CS
+kin-CS
+
+Figure 7. Marginalized posterior distributions (68% and 95% C.L.) for cosmic-string-only hypotheses,
+H1 and H3, in ΛCDM (red) and kination (blue), obtained from fits to EPTA DR2 New+ discussed
+in Sec. 5.2
+
+the posterior-averaged log-likelihood, but the improvement is partially offset by an increase
+in the KL divergence, resulting in a net positive change in the log Bayes factor.
+
+CS+SMBHBs: ΛCDM vs kination— The posterior distributions of hypotheses H2 and
+H4 fitted to EPTA DR2 New+ are shown in Fig. 8. Their Bayes factors relative to H0 are
+estimated as
+
+lnBEPTA
+20 = 0.47± 0.09, (6.7)
+
+lnBEPTA
+40 = 0.63± 0.08. (6.8)
+
+The inclusion of an SMBHB contribution alongside cosmic strings slightly increases
+the relative log Bayes factor in both the ΛCDM and kination scenarios. For the derived
+constraints in H2 and H4, we find that the string tension peaks at similar values in both
+scenarios log10Gµ = −10.16+0.30
+
+−1.62 and log10Gµ = −10.16+0.29
+−1.23, respectively. For the astro-
+
+physical parameters, we find log10ASMBHB = −15.31+0.53
+−0.72 and γSMBHB = 4.66+0.37
+
+−0.35 for H2 and
+log10ASMBHB = −15.44+0.62
+
+−0.59 and γSMBHB = 4.66+0.34
+−0.35 for H4. The two temperature parame-
+
+ters in H4 are constrained at log10(TRM/eV) = 3.76+0.25
+−0.32 and log10(TKR/eV) = 3.03+0.50
+
+−0.49. In
+linear units, these correspond to TRM ∈ [2.8, 10.3] keV and TKR ∈ [349, 3394] eV.
+
+– 23 –
+
+
+
+13 12 11 10
+
+log10 G
+
+2.5
+
+3.0
+
+3.5
+
+lo
+g 1
+
+0
+( T
+
+K
+R
+/e
+
+V
+)
+
+2.5
+
+3.0
+
+3.5
+
+4.0
+
+lo
+g 1
+
+0
+( T
+
+R
+M
+
+/e
+V
+
+)
+
+4.0
+
+4.5
+
+5.0
+
+5.5
+
+SM
+B
+
+H
+B
+
+17
+
+16
+
+15
+
+lo
+g 1
+
+0
+A
+
+SM
+B
+
+H
+B
+
+17 16 15
+
+log10 ASMBHB
+
+4.0 4.5 5.0 5.5
+
+SMBHB
+
+2.5 3.0 3.5 4.0
+
+log10 (TRM/eV)
+2.5 3.0 3.5
+
+log10 (TKR/eV)
+
+CS+SMBHBs
+kin-CS+SMBHBs
+
+Figure 8. Marginalized posterior distributions (68% and 95% C.L.) for cosmic-string hypotheses
+with SMBHB contributions, H2 and H4, in ΛCDM (red) and kination cosmology (blue), obtained
+from fits to EPTA DR2 New+ discussed in Sec. 5.2
+
+6.1.3 Model comparison
+
+The log Bayes factors in Eqs. (6.1)-(6.8) can be decomposed, based on Eq. (4.7), in the form
+of lnBD
+
+ij = ∆⟨lnLD⟩P,ij −∆DD
+KL,ij . The decomposition shows whether a change in Bayesian
+
+model support originates from an improved posterior-weighted log likelihood or from the
+corresponding KL divergence. The log evidence decompositions of all models relative to H0
+
+are summarized in Table 8.
+For NG15 dataset analysis, none of the alternative hypotheses yields a better posterior-
+
+weighted log likelihood compared to SMBHBs. Despite being close to zero, H4 is the only
+
+– 24 –
+
+
+
+Model comparison ∆⟨lnLNG15⟩P,i0 ∆DNG15
+KL,i0 ∆⟨lnLEPTA⟩P,i0 ∆DEPTA
+
+KL,i0
+
+H1 −H0 −4.41± 0.03 −2.66± 0.06 −0.29± 0.03 −0.43± 0.06
+H2 −H0 −1.39± 0.09 −0.89± 0.07 −0.12± 0.04 −0.59± 0.09
+H3 −H0 −2.05± 0.04 −1.60± 0.07 0.03± 0.03 −0.25± 0.06
+H4 −H0 −1.12± 0.09 −1.37± 0.06 0.07± 0.03 −0.57± 0.07
+
+Table 8. Decomposition of log Bayes factor comparing the alternative hypotheses against baseline
+model across the NG15 and EPTA datasets. The first and second columns under each dataset represent
+the posterior-weighted likelihood and KL divergence term.
+
+alternative hypothesis favored over the SMBHB-only baseline H0, owing to its more favorable
+KL-divergence contribution. For the EPTA DR2 New+ dataset, H3 and H4 yield marginally
+higher log likelihood terms than H0; however, the improvements in the Bayes factors are
+primarily driven by the more favorable KL-divergence contributions.
+
+We next assess the effect of kination by directly comparing the kination hypothesis
+with its ΛCDM counterpart within the cosmic-string framework. For the cosmic-string-only
+model, this corresponds to comparing H3 with H1, while for models including SMBHBs, we
+compare H4 with H2. The corresponding log Bayes factors are summarized in Table 7. The
+direct comparison between H3 and H1 in NG15 dataset indicates substantial support for
+kination over ΛCDM, yielding lnBNG15
+
+31 = 1.29 ± 0.06, or equivalently BNG15
+31 = 3.63+0.22
+
+−0.21.
+This comparison is particularly relevant if the SMBHB contribution to the SGWB is small,
+as hinted at by astrophysical population simulations, in which case the PTA signal may be
+predominantly sourced by cosmic strings. The role of kination cosmology is apparent; the
+presence of a brief matter-kination epoch leads to a spectral enhancement over its counterpart
+in ΛCDM through the modified expansion history, improving the fit sufficiently to overcome
+the associated increase in the KL penalty and consequently increasing the log Bayes factor.
+This improvement occurs because the GW spectrum depends on the expansion history of the
+universe when the cosmic-string loops emit GWs. As discussed in Sec. 3.3, a brief period of
+matter-kination epoch modifies the expansion history and hence the relation between loop
+formation and emission times and the observed GW frequency, altering the spectral shape
+relative to ΛCDM. As shown by Eq. (3.14), these effects produce a blue-tilted spectrum,
+ΩGW ∝ f , for loops associated with the kination era, enhancing the higher-frequency part of
+the spectrum relative to ΛCDM, despite the nearly unchanged constraints on cosmic-string
+tension. This enhancement allows the model to better accommodate the blue-tilted ΩGWh2
+
+spectrum inferred from the NG15 data. This preference, however, is reduced once contri-
+butions from SMBHBs are included. In contrast, EPTA shows little ability to distinguish
+between the two cosmologies, with kination yielding a slightly positive log Bayes factor.
+
+6.2 Gravitational-wave spectra
+
+The SGWB spectra for all hypotheses and PTA dataset considered in this work are presented
+in this section. For each hypothesis, parameter samples are redrawn from the posterior and
+mapped onto the corresponding GW energy-density spectrum, ΩGWh2. The median spectrum
+and 68% credible interval are determined from the resulting ensemble of spectral realizations
+at each frequency. For comparison, we show the SMBHB contributions to the SGWB denoted
+by a black dashed line in each plot throughout this section, adopting the fiducial values
+log10ASMBHB = −15.6 and γSMBHB = 4.7, obtained from astrophysical simulations [88].
+
+– 25 –
+
+
+
+10 12
+
+10 11
+
+10 10
+
+10 9
+
+10 8
+
+10 7
+
+10 6
+
+10 5
+
+10 4
+
+G
+W
+
+h2
+(a)
+
+CS
+kin-CS
+NG15 HD
+
+10 9 10 8 10 7
+
+f [Hz]
+
+10 12
+
+10 11
+
+10 10
+
+10 9
+
+10 8
+
+10 7
+
+10 6
+
+10 5
+
+10 4
+
+G
+W
+
+h2
+
+(b)
+CS+SMBHBs
+kin-CS+SMBHBs
+NG15 HD
+
+Figure 9. The median gravitational wave spectra induced by the four alternative hypotheses for the
+NG15 dataset. The blue violins represent the HD-correlated free spectra. (a) Cosmic-string spectra
+in ΛCDM (CS, blue) and kination (kin-CS, red) cosmologies. (b) The corresponding spectra super-
+imposed with an additional SMBHB contribution (CS+SMBHBs, green; kin-CS+SMBHBs, orange).
+The shaded bands indicate the 68% credible intervals. The black dashed lines represent the GW
+signal from SMBHBs with log10 ASMBHB = −15.6 and γSMBHB = 4.7, which are the mean values from
+astrophysical simulations [88].
+
+The SGWB spectra of the alternative models fitted to the NG15 dataset are shown in
+Fig. 9. The cosmic-string-only models in the two cosmologies are shown in Fig. 9(a). The
+kination scenario produces a modest enhancement toward the high-frequency end compared
+to ΛCDM although the cosmic-string tension posteriors remain largely consistent between H1
+
+and H3 (Fig. 5). Fig. 9(b) reveals that once contributions from SMBHBs are included in the
+two scenarios, the spectra become more similar, with the median spectra and the credible
+intervals overlapping significantly over the frequencies probed by NG15. This indicates that
+the additional degrees of freedom from SMBHBs can effectively absorb the spectral differences
+between the two cosmological frameworks and therefore the modifications associated with a
+non-standard cosmological expansion history can only be weakly resolved by NG15.
+
+Figure 10 shows the SGWB spectra for the EPTA DR2 New+ dataset. Similar to
+the NG15 results, the SGWB spectra for the cosmic-string-only model in the ΛCDM and
+kination scenarios are broadly consistent across the frequency range probed by EPTA, with
+substantial overlap between their 68% credible intervals as shown in figure 10(a). While the
+inferred string tensions remain consistent between the two cosmologies, the presence of a
+non-standard cosmology leads to a slight enhancement of the reconstructed spectrum toward
+the high-frequency end. When an additional SMBHB contribution is included, however, the
+spectral differences between the two cosmological scenarios become less pronounced, with the
+reconstructed spectra remaining largely overlapping across the EPTA frequency range.
+
+– 26 –
+
+
+
+10 12
+
+10 11
+
+10 10
+
+10 9
+
+10 8
+
+10 7
+
+10 6
+
+10 5
+
+10 4
+
+G
+W
+
+h2
+(a)
+
+CS
+kin-CS
+EPTA HD
+
+10 9 10 8 10 7
+
+f [Hz]
+
+10 12
+
+10 11
+
+10 10
+
+10 9
+
+10 8
+
+10 7
+
+10 6
+
+10 5
+
+10 4
+
+G
+W
+
+h2
+
+(b)
+CS+SMBHBs
+kin-CS+SMBHBs
+EPTA HD
+
+Figure 10. The median GW spectra induced by the four hypotheses for the EPTA dataset. The grey
+violins represent the HD-correlated free-spectrum posteriors. (a) Cosmic-string spectra in ΛCDM
+(CS, blue) and kination (kin-CS, red) cosmologies. (b) The corresponding spectra superimposed
+with an additional SMBHB contribution (CS+SMBHBs, green; kin-CS+SMBHBs, orange). The
+shaded bands indicate the 68% credible intervals. The black dashed lines represent the GW signal
+from SMBHBs with log10 ASMBHB = −15.6 and γSMBHB = 4.7, which are the mean values from
+astrophysical simulations [88].
+
+7 Conclusion and outlook
+
+Our primary objective here is to investigate how a non-standard expansion history featuring
+an early matter-dominated era followed by a kination phase between BBN and recombination
+can leave characteristic imprints on the SGWB sourced by cosmic strings in the nanohertz
+regime probed by NG15 and EPTA DR2 New+ pulsar timing array datasets. We perform
+a comprehensive Bayesian analysis and model comparison for cosmic strings in both ΛCDM
+and kination cosmologies, with and without additional SMBHB contributions.
+
+Our analysis finds no strong evidence favoring any of the alternative hypotheses over
+the SMBHB-only baseline H0, in either dataset. The underperformance of the cosmic-string
+model in describing NG15 arises from the preference for a blue-tilted ΩGWh2 spectrum. A blue
+tilt can be accommodated within the cosmic-string framework by moving toward smaller string
+tensions, but the resulting reduction in the overall amplitude makes it difficult to account for
+the large amplitude inferred by the dataset. Consequently, the cosmic-string spectrum in
+ΛCDM is either too weak or too flat to simultaneously account for the inferred amplitude
+and spectral tilt. The kination scenario considered in this work enhances the SGWB spectrum
+toward the high-frequency end, resulting in a more pronounced blue tilt and thereby providing
+a better fit compared to the counterpart in ΛCDM. In contrast to NG15, the EPTA DR2
+New+ data slightly favor a flatter SGWB spectrum ΩGWh2, which is readily accommodated
+by larger cosmic-string tension. This is consistent with the higher median values of log10Gµ
+
+– 27 –
+
+
+
+inferred from EPTA relative to NG15 across four alternative models. Nonetheless, within
+the cosmic string framework, with or without contributions from SMBHBs, both datasets
+mildly favor kination over ΛCDM, with the strength of preference ranging from negligibly
+small in EPTA to substantial for the cosmic-string-only model in NG15. In spite of the
+differences in evidence, the inferred cosmic-string-tension posteriors remain largely consistent
+between the two cosmologies. The ΩGWh2 credible intervals also show substantial overlap
+across the frequency range probed by NG15 and EPTA DR2 New+. We also show that
+the current EPTA DR2 New+ dataset does not provide sufficient sensitivity to distinguish
+the kination and ΛCDM expansion histories within the cosmic-string framework. The NG15
+dataset shows a stronger preference for kination with the cosmic-string-only model providing
+substantial evidence lnBNG15
+
+31 = 1.29 ± 0.06. This preference diminishes once SMBHBs are
+included.
+
+A joint analysis of the NG15 and EPTA DR2 NEW+ datasets could, in principle, im-
+prove the statistical sensitivity and provide tighter constraints on model parameters and
+model evidences. However, the two PTA datasets contain overlapping pulsars; combining the
+two likelihoods will double count information associated with the common pulsars, potentially
+biasing the model constraints and model evidences. A statistically consistent joint analysis
+will therefore require dedicated statistical treatments of the correlations between overlapping
+datasets. The forthcoming International Pulsar Timing Array Third Data Release (IPTA
+DR3) [89] will combine observations from multiple PTA collaborations and will provide a
+more comprehensive joint dataset for characterizing the SGWB. This is particularly relevant
+for the present work since NG15 and EPTA DR2 New+ exhibit different spectral preferences
+and yield somewhat different statistical supports for kination cosmology. A consistent joint
+analysis will clarify the nature of the SGWB and its implication for the early expansion
+history, which we leave to future work.
+
+Acknowledgments
+
+We acknowledge Kai Schmitz and Sai Chaitanya Tadepalli for helpful discussions. We thank
+Akshay Ghalsasi for his help on PRyMordial. This work was supported by the Depart-
+ment of Energy under Grant No. DE-SC0025611. For facilitating portions of this research,
+R.C. wishes to acknowledge the Center for Theoretical Underground Physics and Related
+Areas (CETUP*), the Institute for Underground Science at Sanford Underground Research
+Facility (SURF), and the South Dakota Science and Technology Authority for hospitality
+and financial support, as well as for providing a stimulating environment when this work was
+finalized. This research was supported in part by Lilly Endowment, Inc., through its support
+for the Indiana University Pervasive Technology Institute.
+
+References
+
+[1] NANOGrav collaboration, The NANOGrav 15 yr Data Set: Evidence for a
+Gravitational-wave Background, Astrophys. J. Lett. 951 (2023) L8 [2306.16213].
+
+[2] EPTA, InPTA collaboration, The second data release from the European Pulsar Timing Array
+- II. Customised pulsar noise models for spatially correlated gravitational waves, Astron.
+Astrophys. 678 (2023) A49 [2306.16225].
+
+[3] A. Zic et al., The Parkes Pulsar Timing Array third data release, Publ. Astron. Soc. Austral.
+40 (2023) e049 [2306.16230].
+
+– 28 –
+
+https://doi.org/10.3847/2041-8213/acdac6
+https://arxiv.org/abs/2306.16213
+https://doi.org/10.1051/0004-6361/202346842
+https://doi.org/10.1051/0004-6361/202346842
+https://arxiv.org/abs/2306.16225
+https://doi.org/10.1017/pasa.2023.36
+https://doi.org/10.1017/pasa.2023.36
+https://arxiv.org/abs/2306.16230
+
+
+[4] S. Chen et al., The Chinese Pulsar Timing Array Data Release I - Single pulsar noise analysis,
+Astron. Astrophys. 699 (2025) A165 [2506.04850].
+
+[5] T. Vachaspati and A. Vilenkin, Gravitational Radiation from Cosmic Strings, Phys. Rev. D 31
+(1985) 3052.
+
+[6] R.R. Caldwell and B. Allen, Cosmological constraints on cosmic string gravitational radiation,
+Phys. Rev. D 45 (1992) 3447.
+
+[7] C.J. Hogan, Gravitational radiation from cosmological phase transitions, Mon. Not. Roy.
+Astron. Soc. 218 (1986) 629.
+
+[8] M. Kamionkowski, A. Kosowsky and M.S. Turner, Gravitational radiation from first order
+phase transitions, Phys. Rev. D 49 (1994) 2837 [astro-ph/9310044].
+
+[9] K.N. Ananda, C. Clarkson and D. Wands, The Cosmological gravitational wave background
+from primordial density perturbations, Phys. Rev. D 75 (2007) 123518 [gr-qc/0612013].
+
+[10] D. Baumann, P.J. Steinhardt, K. Takahashi and K. Ichiki, Gravitational Wave Spectrum
+Induced by Primordial Scalar Perturbations, Phys. Rev. D 76 (2007) 084019 [hep-th/0703290].
+
+[11] R.T. Co, D. Dunsky, N. Fernandez, A. Ghalsasi, L.J. Hall, K. Harigaya et al., Gravitational
+wave and CMB probes of axion kination, JHEP 09 (2022) 116 [2108.09299].
+
+[12] K. Harigaya, K. Inomata and T. Terada, Induced gravitational waves with kination era for
+recent pulsar timing array signals, Phys. Rev. D 108 (2023) 123538 [2309.00228].
+
+[13] T.W.B. Kibble, Topology of Cosmic Domains and Strings, J. Phys. A 9 (1976) 1387.
+
+[14] T.W.B. Kibble, Some Implications of a Cosmological Phase Transition, Phys. Rept. 67 (1980)
+183.
+
+[15] P. Minkowski, µ → eγ at a Rate of One Out of 109 Muon Decays?, Phys. Lett. B 67 (1977) 421.
+
+[16] T. Yanagida, Horizontal gauge symmetry and masses of neutrinos, Conf. Proc. C 7902131
+(1979) 95.
+
+[17] M. Gell-Mann, P. Ramond and R. Slansky, Complex Spinors and Unified Theories, Conf. Proc.
+C 790927 (1979) 315 [1306.4669].
+
+[18] T.W.B. Kibble, G. Lazarides and Q. Shafi, Strings in SO(10), Phys. Lett. B 113 (1982) 237.
+
+[19] A. Vilenkin, Gravitational radiation from cosmic strings, Phys. Lett. B 107 (1981) 47.
+
+[20] N. Turok, Grand Unified Strings and Galaxy Formation, Nucl. Phys. B 242 (1984) 520.
+
+[21] C.J. Burden, Gravitational Radiation From a Particular Class of Cosmic Strings, Phys. Lett. B
+164 (1985) 277.
+
+[22] B. Spokoiny, Deflationary universe scenario, Phys. Lett. B 315 (1993) 40 [gr-qc/9306008].
+
+[23] M. Joyce, Electroweak Baryogenesis and the Expansion Rate of the Universe, Phys. Rev. D 55
+(1997) 1875 [hep-ph/9606223].
+
+[24] R.T. Co and K. Harigaya, Axiogenesis, Phys. Rev. Lett. 124 (2020) 111602 [1910.02080].
+
+[25] R. Holman, S.D.H. Hsu, T.W. Kephart, E.W. Kolb, R. Watkins and L.M. Widrow, Solutions to
+the strong CP problem in a world with gravity, Phys. Lett. B 282 (1992) 132 [hep-ph/9203206].
+
+[26] S.M. Barr and D. Seckel, Planck scale corrections to axion models, Phys. Rev. D 46 (1992) 539.
+
+[27] M. Kamionkowski and J. March-Russell, Planck scale physics and the Peccei-Quinn
+mechanism, Phys. Lett. B 282 (1992) 137 [hep-th/9202003].
+
+[28] M. Dine, Problems of naturalness: Some lessons from string theory, in Conference on Topics in
+Quantum Gravity, 7, 1992 [hep-th/9207045].
+
+– 29 –
+
+https://doi.org/10.1051/0004-6361/202452550
+https://arxiv.org/abs/2506.04850
+https://doi.org/10.1103/PhysRevD.31.3052
+https://doi.org/10.1103/PhysRevD.31.3052
+https://doi.org/10.1103/PhysRevD.45.3447
+https://doi.org/10.1093/mnras/218.4.629
+https://doi.org/10.1093/mnras/218.4.629
+https://doi.org/10.1103/PhysRevD.49.2837
+https://arxiv.org/abs/astro-ph/9310044
+https://doi.org/10.1103/PhysRevD.75.123518
+https://arxiv.org/abs/gr-qc/0612013
+https://doi.org/10.1103/PhysRevD.76.084019
+https://arxiv.org/abs/hep-th/0703290
+https://doi.org/10.1007/JHEP09(2022)116
+https://arxiv.org/abs/2108.09299
+https://doi.org/10.1103/PhysRevD.108.123538
+https://arxiv.org/abs/2309.00228
+https://doi.org/10.1088/0305-4470/9/8/029
+https://doi.org/10.1016/0370-1573(80)90091-5
+https://doi.org/10.1016/0370-1573(80)90091-5
+https://doi.org/10.1016/0370-2693(77)90435-X
+https://arxiv.org/abs/1306.4669
+https://doi.org/10.1016/0370-2693(82)90829-2
+https://doi.org/10.1016/0370-2693(81)91144-8
+https://doi.org/10.1016/0550-3213(84)90407-3
+https://doi.org/10.1016/0370-2693(85)90326-0
+https://doi.org/10.1016/0370-2693(85)90326-0
+https://doi.org/10.1016/0370-2693(93)90155-B
+https://arxiv.org/abs/gr-qc/9306008
+https://doi.org/10.1103/PhysRevD.55.1875
+https://doi.org/10.1103/PhysRevD.55.1875
+https://arxiv.org/abs/hep-ph/9606223
+https://doi.org/10.1103/PhysRevLett.124.111602
+https://arxiv.org/abs/1910.02080
+https://doi.org/10.1016/0370-2693(92)90491-L
+https://arxiv.org/abs/hep-ph/9203206
+https://doi.org/10.1103/PhysRevD.46.539
+https://doi.org/10.1016/0370-2693(92)90492-M
+https://arxiv.org/abs/hep-th/9202003
+https://arxiv.org/abs/hep-th/9207045
+
+
+[29] S.B. Giddings and A. Strominger, Loss of incoherence and determination of coupling constants
+in quantum gravity, Nucl. Phys. B 307 (1988) 854.
+
+[30] S.R. Coleman, Why There Is Nothing Rather Than Something: A Theory of the Cosmological
+Constant, Nucl. Phys. B 310 (1988) 643.
+
+[31] G. Gilbert, WORMHOLE INDUCED PROTON DECAY, Nucl. Phys. B 328 (1989) 159.
+
+[32] D. Harlow and H. Ooguri, Constraints on Symmetries from Holography, Phys. Rev. Lett. 122
+(2019) 191601 [1810.05337].
+
+[33] D. Harlow and H. Ooguri, Symmetries in quantum field theory and quantum gravity, Commun.
+Math. Phys. 383 (2021) 1669 [1810.05338].
+
+[34] I. Affleck and M. Dine, A New Mechanism for Baryogenesis, Nucl. Phys. B 249 (1985) 361.
+
+[35] P. Moxhay and K. Yamamoto, Peccei-Quinn Symmetry Breaking by Radiative Corrections in
+Supergravity, Phys. Lett. B 151 (1985) 363.
+
+[36] R.T. Co, N. Fernandez, A. Ghalsasi, L.J. Hall and K. Harigaya, Lepto-Axiogenesis, JHEP 03
+(2021) 017 [2006.05687].
+
+[37] T. Vachaspati and A. Vilenkin, Formation and Evolution of Cosmic Strings, Phys. Rev. D 30
+(1984) 2036.
+
+[38] D.P. Bennett and F.R. Bouchet, Evidence for a Scaling Solution in Cosmic String Evolution,
+Phys. Rev. Lett. 60 (1988) 257.
+
+[39] J.J. Blanco-Pillado and K.D. Olum, Stochastic gravitational wave background from smoothed
+cosmic string loops, Phys. Rev. D 96 (2017) 104046 [1709.02693].
+
+[40] Y. Cui, M. Lewicki, D.E. Morrissey and J.D. Wells, Cosmic Archaeology with Gravitational
+Waves from Cosmic Strings, Phys. Rev. D 97 (2018) 123505 [1711.03104].
+
+[41] S. Blasi, V. Brdar and K. Schmitz, Fingerprint of low-scale leptogenesis in the primordial
+gravitational-wave spectrum, Phys. Rev. Res. 2 (2020) 043321 [2004.02889].
+
+[42] Y. Cui, M. Lewicki, D.E. Morrissey and J.D. Wells, Probing the pre-BBN universe with
+gravitational waves from cosmic strings, JHEP 01 (2019) 081 [1808.08968].
+
+[43] Y. Gouttenoire, G. Servant and P. Simakachorn, Beyond the Standard Models with Cosmic
+Strings, JCAP 07 (2020) 032 [1912.02569].
+
+[44] A. Ghoshal, Y. Gouttenoire, L. Heurtier and P. Simakachorn, Primordial black hole archaeology
+with gravitational waves from cosmic strings, JHEP 08 (2023) 196 [2304.04793].
+
+[45] M. Eto, Y. Hamada and M. Nitta, Tying Knots in Particle Physics, Phys. Rev. Lett. 135
+(2025) 091603 [2407.11731].
+
+[46] Y. Gouttenoire, G. Servant and P. Simakachorn, Revealing the Primordial Irreducible
+Inflationary Gravitational-Wave Background with a Spinning Peccei-Quinn Axion, 2108.10328.
+
+[47] D.S. Sivia, Data Analysis: A Bayesian Tutorial, Oxford University Press (06, 2006),
+10.1093/oso/9780198568315.001.0001.
+
+[48] F. James, Statistical methods in experimental physics, Singapore : World Scientific (2006).
+
+[49] H. Jeffreys, The Theory of Probability, Oxford Classic Texts in the Physical Sciences (1939).
+
+[50] C.P. Robert, N. Chopin and J. Rousseau, Harold Jeffreys’s Theory of Probability Revisited,
+0804.3173.
+
+[51] J. Buchner, UltraNest - a robust, general purpose Bayesian inference engine, J. Open Source
+Softw. 6 (2021) 3001 [2101.09604].
+
+[52] A. Lewis, GetDist: a Python package for analysing Monte Carlo samples, JCAP 08 (2025) 025
+[1910.13970].
+
+– 30 –
+
+https://doi.org/10.1016/0550-3213(88)90109-5
+https://doi.org/10.1016/0550-3213(88)90097-1
+https://doi.org/10.1016/0550-3213(89)90097-7
+https://doi.org/10.1103/PhysRevLett.122.191601
+https://doi.org/10.1103/PhysRevLett.122.191601
+https://arxiv.org/abs/1810.05337
+https://doi.org/10.1007/s00220-021-04040-y
+https://doi.org/10.1007/s00220-021-04040-y
+https://arxiv.org/abs/1810.05338
+https://doi.org/10.1016/0550-3213(85)90021-5
+https://doi.org/10.1016/0370-2693(85)91655-7
+https://doi.org/10.1007/JHEP03(2021)017
+https://doi.org/10.1007/JHEP03(2021)017
+https://arxiv.org/abs/2006.05687
+https://doi.org/10.1103/PhysRevD.30.2036
+https://doi.org/10.1103/PhysRevD.30.2036
+https://doi.org/10.1103/PhysRevLett.60.257
+https://doi.org/10.1103/PhysRevD.96.104046
+https://arxiv.org/abs/1709.02693
+https://doi.org/10.1103/PhysRevD.97.123505
+https://arxiv.org/abs/1711.03104
+https://doi.org/10.1103/PhysRevResearch.2.043321
+https://arxiv.org/abs/2004.02889
+https://doi.org/10.1007/JHEP01(2019)081
+https://arxiv.org/abs/1808.08968
+https://doi.org/10.1088/1475-7516/2020/07/032
+https://arxiv.org/abs/1912.02569
+https://doi.org/10.1007/JHEP08(2023)196
+https://arxiv.org/abs/2304.04793
+https://doi.org/10.1103/s3vd-brsn
+https://doi.org/10.1103/s3vd-brsn
+https://arxiv.org/abs/2407.11731
+https://arxiv.org/abs/2108.10328
+https://doi.org/10.1093/oso/9780198568315.001.0001
+https://arxiv.org/abs/0804.3173
+https://doi.org/10.21105/joss.03001
+https://doi.org/10.21105/joss.03001
+https://arxiv.org/abs/2101.09604
+https://doi.org/10.1088/1475-7516/2025/08/025
+https://arxiv.org/abs/1910.13970
+
+
+[53] S. Kullback and R.A. Leibler, On Information and Sufficiency, The Annals of Mathematical
+Statistics 22 (1951) 79.
+
+[54] W. Handley and P. Lemos, Quantifying dimensionality: Bayesian cosmological model
+complexities, Phys. Rev. D 100 (2019) 023512 [1903.06682].
+
+[55] W. Handley, anesthetic: nested sampling visualisation, J. Open Source Softw. 4 (2019) 1414
+[1905.04768].
+
+[56] K. Saikawa and S. Shirai, Precise WIMP Dark Matter Abundance and Standard Model
+Thermodynamics, JCAP 08 (2020) 011 [2005.03544].
+
+[57] E. Aver, D.A. Berg, A.S. Hirschauer, K.A. Olive, R.W. Pogge, N.S.J. Rogers et al., A
+comprehensive chemical abundance analysis of the extremely metal poor Leoncino Dwarf galaxy
+(AGC 198691), Mon. Not. Roy. Astron. Soc. 510 (2021) 373 [2109.00178].
+
+[58] V. Fernández, E. Terlevich, A.I. Díaz and R. Terlevich, A Bayesian direct method
+implementation to fit emission line spectra: Application to the primordial He abundance
+determination, Mon. Not. Roy. Astron. Soc. 487 (2019) 3221 [1905.09215].
+
+[59] E. Aver, D.A. Berg, K.A. Olive, R.W. Pogge, J.J. Salzer and E.D. Skillman, Improving helium
+abundance determinations with Leo P as a case study, JCAP 03 (2021) 027 [2010.04180].
+
+[60] T. Hsyu, R.J. Cooke, J.X. Prochaska and M. Bolte, The PHLEK Survey: A New
+Determination of the Primordial Helium Abundance, Astrophys. J. 896 (2020) 77 [2005.12290].
+
+[61] A.-K. Burns, T.M.P. Tait and M. Valli, PRyMordial: the first three minutes, within and beyond
+the standard model, Eur. Phys. J. C 84 (2024) 86 [2307.07061].
+
+[62] Planck collaboration, Planck 2018 results. VI. Cosmological parameters, Astron. Astrophys.
+641 (2020) A6 [1807.06209].
+
+[63] Particle Data Group collaboration, Review of Particle Physics, PTEP 2020 (2020) 083C01.
+
+[64] R. Musedinovic et al., Measurement of the free neutron lifetime in a magneto-gravitational trap
+with in situ detection, Phys. Rev. C 111 (2025) 045501 [2409.05560].
+
+[65] V.F. Ezhov et al., Measurement of the neutron lifetime with ultra-cold neutrons stored in a
+magneto-gravitational trap, JETP Lett. 107 (2018) 671 [1412.7434].
+
+[66] R.W. Pattie, Jr. et al., Measurement of the neutron lifetime using a magneto-gravitational trap
+and in situ detection, Science 360 (2018) 627 [1707.01817].
+
+[67] A.P. Serebrov et al., Neutron lifetime measurements with a large gravitational trap for ultracold
+neutrons, Phys. Rev. C 97 (2018) 055503 [1712.05663].
+
+[68] S. Arzumanov, L. Bondarenko, S. Chernyavsky, P. Geltenbort, V. Morozov, V.V. Nesvizhevsky
+et al., A measurement of the neutron lifetime using the method of storage of ultracold neutrons
+and detection of inelastically up-scattered neutrons, Phys. Lett. B 745 (2015) 79.
+
+[69] A. Steyerl, J.M. Pendlebury, C. Kaufman, S.S. Malik and A.M. Desai, Quasielastic scattering
+in the interaction of ultracold neutrons with a liquid wall and application in a reanalysis of the
+Mambo I neutron-lifetime experiment, Phys. Rev. C 85 (2012) 065503.
+
+[70] A. Pichlmaier, V. Varlamov, K. Schreckenbach and P. Geltenbort, Neutron lifetime
+measurement with the UCN trap-in-trap MAMBO II, Phys. Lett. B 693 (2010) 221.
+
+[71] A. Serebrov et al., Measurement of the neutron lifetime using a gravitational trap and a
+low-temperature Fomblin coating, Phys. Lett. B 605 (2005) 72 [nucl-ex/0408009].
+
+[72] Y. Xu, K. Takahashi, S. Goriely, M. Arnould, M. Ohta and H. Utsunomiya, NACRE II: an
+update of the NACRE compilation of charged-particle-induced thermonuclear reaction rates for
+nuclei with mass number A < 16, Nucl. Phys. A 918 (2013) 61 [1310.7099].
+
+– 31 –
+
+https://doi.org/10.1214/aoms/1177729694
+https://doi.org/10.1214/aoms/1177729694
+https://doi.org/10.1103/PhysRevD.100.023512
+https://arxiv.org/abs/1903.06682
+https://doi.org/10.21105/joss.01414
+https://arxiv.org/abs/1905.04768
+https://doi.org/10.1088/1475-7516/2020/08/011
+https://arxiv.org/abs/2005.03544
+https://doi.org/10.1093/mnras/stab3226
+https://arxiv.org/abs/2109.00178
+https://doi.org/10.1093/mnras/stz1433
+https://arxiv.org/abs/1905.09215
+https://doi.org/10.1088/1475-7516/2021/03/027
+https://arxiv.org/abs/2010.04180
+https://doi.org/10.3847/1538-4357/ab91af
+https://arxiv.org/abs/2005.12290
+https://doi.org/10.1140/epjc/s10052-024-12442-0
+https://arxiv.org/abs/2307.07061
+https://doi.org/10.1051/0004-6361/201833910
+https://doi.org/10.1051/0004-6361/201833910
+https://arxiv.org/abs/1807.06209
+https://doi.org/10.1093/ptep/ptaa104
+https://doi.org/10.1103/PhysRevC.111.045501
+https://arxiv.org/abs/2409.05560
+https://doi.org/10.1134/S0021364018110024
+https://arxiv.org/abs/1412.7434
+https://doi.org/10.1126/science.aan8895
+https://arxiv.org/abs/1707.01817
+https://doi.org/10.1103/PhysRevC.97.055503
+https://arxiv.org/abs/1712.05663
+https://doi.org/10.1016/j.physletb.2015.04.021
+https://doi.org/10.1103/PhysRevC.85.065503
+https://doi.org/10.1016/j.physletb.2010.08.032
+https://doi.org/10.1016/j.physletb.2004.11.013
+https://arxiv.org/abs/nucl-ex/0408009
+https://doi.org/10.1016/j.nuclphysa.2013.09.007
+https://arxiv.org/abs/1310.7099
+
+
+[73] D. Foreman-Mackey, D.W. Hogg, D. Lang and J. Goodman, emcee: The MCMC Hammer,
+Publ. Astron. Soc. Pac. 125 (2013) 306 [1202.3665].
+
+[74] J. Goodman and J. Weare, Ensemble samplers with affine invariance, Commun. Appl. Math.
+Comput. Sc. 5 (2010) 65.
+
+[75] D. Blas, J. Lesgourgues and T. Tram, The Cosmic Linear Anisotropy Solving System (CLASS)
+II: Approximation schemes, JCAP 07 (2011) 034 [1104.2933].
+
+[76] J. Torrado and A. Lewis, Cobaya: Code for Bayesian Analysis of hierarchical physical models,
+JCAP 05 (2021) 057 [2005.05290].
+
+[77] J. Torrado and A. Lewis, “Cobaya: Bayesian analysis in cosmology.” Astrophysics Source Code
+Library, record ascl:1910.019, Oct., 2019.
+
+[78] Planck collaboration, Planck 2018 results. VIII. Gravitational lensing, Astron. Astrophys.
+641 (2020) A8 [1807.06210].
+
+[79] DESI collaboration, DESI DR2 results. II. Measurements of baryon acoustic oscillations and
+cosmological constraints, Phys. Rev. D 112 (2025) 083515 [2503.14738].
+
+[80] A. Gelman and D.B. Rubin, Inference from Iterative Simulation Using Multiple Sequences,
+Statist. Sci. 7 (1992) 457.
+
+[81] T.N. Collaboration, Kde representations of the gravitational wave background free spectra
+present in the nanograv 15-year dataset, June, 2023. 10.5281/zenodo.10344086.
+
+[82] J. Antoniadis et al., The second data release from the european pulsar timing array iii. search
+for gravitational wave signals, June, 2023. 10.5281/zenodo.8091568.
+
+[83] P. Tarafdar et al., The Indian Pulsar Timing Array: First data release, Publ. Astron. Soc.
+Austral. 39 (2022) e053 [2206.09289].
+
+[84] A. Mitridate, D. Wright, R. von Eckardstein, T. Schröder, J. Nay, K. Olum et al., PTArcade,
+2306.16377.
+
+[85] W.G. Lamb, S.R. Taylor and R. van Haasteren, Rapid refitting techniques for Bayesian spectral
+characterization of the gravitational wave background using pulsar timing arrays, Phys. Rev. D
+108 (2023) 103019 [2303.15442].
+
+[86] J. Ellis and M. Lewicki, Cosmic String Interpretation of NANOGrav Pulsar Timing Data,
+Phys. Rev. Lett. 126 (2021) 041304 [2009.06555].
+
+[87] NANOGrav collaboration, The NANOGrav 15 yr Data Set: Constraints on Supermassive
+Black Hole Binaries from the Gravitational-wave Background, Astrophys. J. Lett. 952 (2023)
+L37 [2306.16220].
+
+[88] NANOGrav collaboration, The NANOGrav 15 yr Data Set: Search for Signals from New
+Physics, Astrophys. J. Lett. 951 (2023) L11 [2306.16219].
+
+[89] IPTA collaboration, From a Rumble to a Roar: The International Pulsar Timing Array’s
+Third Data Release, J. Phys. Conf. Ser. 3177 (2026) 012065.
+
+– 32 –
+
+https://doi.org/10.1086/670067
+https://arxiv.org/abs/1202.3665
+https://doi.org/10.2140/camcos.2010.5.65
+https://doi.org/10.2140/camcos.2010.5.65
+https://doi.org/10.1088/1475-7516/2011/07/034
+https://arxiv.org/abs/1104.2933
+https://doi.org/10.1088/1475-7516/2021/05/057
+https://arxiv.org/abs/2005.05290
+https://doi.org/10.1051/0004-6361/201833886
+https://doi.org/10.1051/0004-6361/201833886
+https://arxiv.org/abs/1807.06210
+https://doi.org/10.1103/tr6y-kpc6
+https://arxiv.org/abs/2503.14738
+https://doi.org/10.1214/ss/1177011136
+https://doi.org/10.1017/pasa.2022.46
+https://doi.org/10.1017/pasa.2022.46
+https://arxiv.org/abs/2206.09289
+https://arxiv.org/abs/2306.16377
+https://doi.org/10.1103/PhysRevD.108.103019
+https://doi.org/10.1103/PhysRevD.108.103019
+https://arxiv.org/abs/2303.15442
+https://doi.org/10.1103/PhysRevLett.126.041304
+https://arxiv.org/abs/2009.06555
+https://doi.org/10.3847/2041-8213/ace18b
+https://doi.org/10.3847/2041-8213/ace18b
+https://arxiv.org/abs/2306.16220
+https://doi.org/10.3847/2041-8213/acdc91
+https://arxiv.org/abs/2306.16219
+https://doi.org/10.1088/1742-6596/3177/1/012065
+
+	Introduction
+	Axion rotation and kination
+	Matter-like evolution
+	Kination-like evolution
+	Characteristic temperatures
+
+	Cosmic string gravitational waves
+	Local cosmic strings and their gravitational wave background
+	GW spectrum in standard cosmology
+	GW spectrum modified by matter and kination eras
+
+	Bayesian analysis framework
+	Analyses
+	Constraints
+	BBN
+	CMB
+
+	PTAs and analyses setup
+
+	Results
+	Bayesian inference and model comparison
+	Results for NG15 dataset
+	Results for EPTA DR2 New+ dataset
+	Model comparison
+
+	Gravitational-wave spectra
+
+	Conclusion and outlook
+
