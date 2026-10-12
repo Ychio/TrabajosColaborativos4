@@ -27,7 +27,41 @@ import org.apache.tika.sax.Link;
 import org.apache.tika.sax.LinkContentHandler;
 import org.apache.tika.sax.TeeContentHandler;
 
+import org.apache.tika.metadata.TikaCoreProperties;
+import org.apache.tika.parser.RecursiveParserWrapper;
+import org.apache.tika.sax.BasicContentHandlerFactory;
+import org.apache.tika.sax.RecursiveParserWrapperHandler;
+
 public class Main {
+    private static void analizarContenedor(Path fichero, LanguageDetector langDetector) throws Exception {
+        RecursiveParserWrapper wrapper = new RecursiveParserWrapper(new AutoDetectParser());
+        RecursiveParserWrapperHandler handler = new RecursiveParserWrapperHandler(
+                new BasicContentHandlerFactory(BasicContentHandlerFactory.HANDLER_TYPE.TEXT, -1));
+
+        try (TikaInputStream tis = TikaInputStream.get(fichero)) {
+            wrapper.parse(tis, handler, new Metadata(), new ParseContext());
+        }
+
+        List<Metadata> recursos = handler.getMetadataList();
+        System.out.println("\nContenedor: " + fichero.getFileName());
+        System.out.println("Recursos encontrados (contenedor incluido): " + recursos.size());
+        for (Metadata m : recursos) {
+            String ruta = m.get(TikaCoreProperties.EMBEDDED_RESOURCE_PATH);
+            String texto = m.get(TikaCoreProperties.TIKA_CONTENT);
+            String idioma = "-";
+            if (texto != null && !texto.isBlank()) {
+                String muestra = texto.substring(0, Math.min(texto.length(), 100_000));
+                LanguageResult r = langDetector.detect(muestra);
+                idioma = r.isUnknown() ? "?" : r.getLanguage();
+            }
+            String enc = m.get("Content-Encoding");
+            System.out.println("  " + (ruta == null ? "(contenedor)" : ruta)
+                    + "  |  " + m.get("Content-Type")
+                    + "  |  codificacion: " + (enc == null ? "-" : enc)
+                    + "  |  idioma: " + idioma
+                    + "  |  caracteres: " + (texto == null ? 0 : texto.length()));
+        }
+    }//parte 7.3 analizando recursivamente
     public static void main(String[] args) throws Exception {
         if (args.length != 1) {
             System.err.println("Uso: mvn exec:java -Dexec.args=\"documentos\"");
@@ -122,6 +156,10 @@ public class Main {
         try (PrintWriter pw = new PrintWriter("inventario.csv", StandardCharsets.UTF_8)) {
             filas.forEach(pw::println);
         }//Utilizando la biblioteca printwriter fija UTF-8 y para cada linea de la lista filas lo mete en el csv
+        Path zip = dir.resolve("comprimido.zip");
+        if (Files.isRegularFile(zip)) {
+            analizarContenedor(zip, langDetector);
+        }
         System.out.println("\nGuardado correctamente en inventario.csv");
     }
 }
