@@ -1,0 +1,121 @@
+img	embedded:image1.png	
+a		
+a	#_x8jkrcbr5zpt	Índice	1
+a	#_ntep2z85gcve	1. Estudio teórico	3
+a	#_aqlb5gep7mdx	1.1. Descripción del pipeline RAG	3
+a	#_qhzuyri73nnc	1.1.1. Indexación [2] [3]	3
+a	#_c0b2pp6si3yz	1.1.1.1. Preparación de los documentos	3
+a	#_r6n8zr7yjjic	1.1.1.2. Fragmentación o chunking	3
+a	#_g8ovozq1i1iw	1.1.1.3. Generación de embeddings	4
+a	#_91bmanarhwwr	1.1.2. Recuperación	4
+a	#_dwt846oangky	1.1.2.1. Recuperación dispersa o sparse retrieval [7]	4
+a	#_dfk75jqdk58z	1.1.2.2. Recuperación densa o dense retrieval [2] [3]	5
+a	#_hwklozhzblfw	1.1.2.3. Recuperación híbrida [2] [11]	6
+a	#_c1bppavlvgau	1.1.2. Generación y grounding [3]	6
+a	#_80qusbmilvt5	1.1.3. Papel de Lucene y ejemplos de productos que empleen RAG	6
+a	#_co1dw5ddy5dn	1.2. Taxonomías de variantes	7
+a	#_kd5bz37nu31p	1.2.1 Naive RAG, Advanced RAG y Modular RAG [1]	7
+a	#_lvvkchlezp2s	1.3. Reflexión sobre limitaciones de RAG y comparativa con la recuperación de información clásica	8
+a	#_sy4s3r29gsoj	Parte experimental:	9
+a	#_oypa7gw1ds81	Experimento A : Evaluación de RAG Correcto(Alta Relevancia)	9
+a	#_3perckje5fd4	Experimento B :Fallo de Cobertura / Recall(Vocabulary Mismatch):	11
+a	#_l89kdmn7u7se	Experimento C :Inyección de Ruido:	13
+a	#_s1symvtajjou	Bibliografía	15
+a		
+a		
+a		
+a	#xg9319agl0ga	[6]
+a		
+a	#sxiwfmx4cte5	[2]
+a	#l4d2saclmdfy	[3]
+a		
+a		
+a		
+a	#xg9319agl0ga	[6]
+a		
+a		
+a	#in19hiwdet80	[7]
+a		
+a	#sxiwfmx4cte5	[2]
+a	#l4d2saclmdfy	[3]
+a		
+a	#sxiwfmx4cte5	[2]
+a	#lwa13stft88l	[11]
+a	#lwa13stft88l	
+a		
+a	#l4d2saclmdfy	[3]
+a	#xg9319agl0ga	[6]
+a		
+a	#6g2mt7b4xzem	[8]
+a	#6g2mt7b4xzem	[8]
+a	#w46mm4muj035	[9]
+a	#sq6ufewggobs	[10]
+a		
+a		
+a	#2zejvpu6epm8	[1]
+a	#sxiwfmx4cte5	[2]
+a	#l4d2saclmdfy	[3]
+a	#p54qi8tnqqn7	[4]
+a		
+a		
+a		
+a		
+img	embedded:image6.png	
+img	embedded:image4.png	
+img	embedded:image2.png	
+a		
+img	embedded:image9.png	
+img	embedded:image7.png	
+img	embedded:image5.png	
+a	#aqtbyq2ropc4	[5]
+a		
+img	embedded:image8.png	
+img	embedded:image10.png	
+img	embedded:image3.png	
+a		
+a		
+a		
+a	https://arxiv.org/html/2312.10997v5	Gao, Y. et al. (2023). “Retrieval-Augmented Generation for Large Language Models: A Survey”. Referencia clave para la taxonomía Naive/Advanced/Modular RAG.
+a		
+a	https://www.llamaindex.ai/	LlamaIndex
+a	https://developers.llamaindex.ai/python/framework/	documentación oficial
+a		
+a	https://www.langchain.com/	LangChain
+a	https://docs.langchain.com/oss/python/langchain/overview	documentación oficial
+a		
+a	https://towardsdatascience.com/enhancing-rag-pipelines-in-haystack-45f14e2bc9f5/?gi=3503a30e5475	V. Blagojevi, “Enhancing rag pipelines in haystack: Introducing diversityranker and lostinthemiddleranker
+a		
+a	https://unstructured.io/insights/vector-embeddings-the-key-to-better-search-relevance	Vector Embeddings: The Key to Better Search Relevance
+a		
+a	https://arxiv.org/abs/2005.11401	[6]
+a	https://arxiv.org/abs/2005.11401	Lewis, P., Perez, E., Pineda, A., Petroni, F., Riedel, S., Goyal, N., Fan, A., Lewis, M., Yih, W., Rocktäschel, T., Karpukhin, V., & Riedel, S. (2020). “Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks”. Advances in Neural Information Processing Systems, 33, 9459–9474.
+a	https://arxiv.org/abs/2005.11401	
+a		
+a	https://www.researchgate.net/publication/220613776_The_Probabilistic_Relevance_Framework_BM25_and_Beyond	[7]
+a	https://www.researchgate.net/publication/220613776_The_Probabilistic_Relevance_Framework_BM25_and_Beyond	Robertson, S., & Zaragoza, H. (2009). “The Probabilistic Relevance Framework: BM25 and Beyond”. Foundations and Trends in Information Retrieval, 3(4), 333–389.
+a		
+a	https://lucene.apache.org/core/10_3_0/	[8]
+a	https://lucene.apache.org/core/10_3_0/	Apache Lucene Documentation
+a		
+a	https://learn.microsoft.com/en-us/Azure/search/retrieval-augmented-generation-overview?tabs=videos	Azure AI Search
+a		
+a	https://sourcegraph.com/docs/cody	Sourcegraph Cody
+a		
+a	https://haystack.deepset.ai/	Haystack
+a	https://arxiv.org/html/2312.10997v5	
+a	https://www.llamaindex.ai/	
+a	https://developers.llamaindex.ai/python/framework/	
+a	https://www.langchain.com/	
+a	https://docs.langchain.com/oss/python/langchain/overview	
+a	https://towardsdatascience.com/enhancing-rag-pipelines-in-haystack-45f14e2bc9f5/?gi=3503a30e5475	
+a	https://unstructured.io/insights/vector-embeddings-the-key-to-better-search-relevance	
+a	https://arxiv.org/abs/2005.11401	
+a	https://arxiv.org/abs/2005.11401	
+a	https://arxiv.org/abs/2005.11401	
+a	https://www.researchgate.net/publication/220613776_The_Probabilistic_Relevance_Framework_BM25_and_Beyond	
+a	https://www.researchgate.net/publication/220613776_The_Probabilistic_Relevance_Framework_BM25_and_Beyond	
+a	https://lucene.apache.org/core/10_3_0/	
+a	https://lucene.apache.org/core/10_3_0/	
+a	https://learn.microsoft.com/en-us/Azure/search/retrieval-augmented-generation-overview?tabs=videos	
+a	https://sourcegraph.com/docs/cody	
+a	https://haystack.deepset.ai/	

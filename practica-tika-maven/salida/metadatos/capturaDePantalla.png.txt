@@ -1,0 +1,28 @@
+Transparency Alpha = nonpremultipled
+X-TIKA:Parsed-By-Full-Set = org.apache.tika.parser.DefaultParser | org.apache.tika.parser.image.ImageParser
+tiff:ImageLength = 550
+Compression CompressionTypeName = deflate
+Data BitsPerSample = 8 8 8 8
+Data PlanarConfiguration = PixelInterleaved
+Dimension VerticalPixelSize = 0.21168502
+IHDR = width=915, height=550, bitDepth=8, colorType=RGBAlpha, compressionMethod=deflate, filterMethod=adaptive, interlaceMethod=none
+Chroma ColorSpaceType = RGB
+tiff:BitsPerSample = 8 8 8 8
+Content-Type = image/png
+height = 550
+imagereader:NumImages = 1
+gAMA = 45455
+pHYs = pixelsPerUnitXAxis=4724, pixelsPerUnitYAxis=4724, unitSpecifier=meter
+Chroma Gamma = 0.45455
+Dimension PixelAspectRatio = 1.0
+sRGB = Perceptual
+Compression NumProgressiveScans = 1
+X-TIKA:Parsed-By = org.apache.tika.parser.DefaultParser | org.apache.tika.parser.image.ImageParser
+Dimension HorizontalPixelSize = 0.21168502
+Chroma BlackIsZero = true
+Compression Lossless = true
+width = 915
+Dimension ImageOrientation = Normal
+tiff:ImageWidth = 915
+Chroma NumChannels = 4
+Data SampleFormat = UnsignedIntegral

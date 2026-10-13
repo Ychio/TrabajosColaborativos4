@@ -1,0 +1,61 @@
+link	images/cover.jpg	
+link	http://purl.org/dc/elements/1.1/	
+link	http://purl.org/dc/terms/	
+link	http://www.gutenberg.org/ebooks/1513	
+a	https://www.gutenberg.org	www.gutenberg.org
+a	https://www.gutenberg.org/ebooks/1513	www.gutenberg.org/ebooks/1513
+a	#sceneI_30.0	THE PROLOGUE.
+a	#sceneI_30.1	Scene I. A public place.
+a	#sceneI_30.2	Scene II. A Street.
+a	#sceneI_30.3	Scene III. Room in Capulet’s House.
+a	#sceneI_30.4	Scene IV. A Street.
+a	#sceneI_30.5	Scene V. A Hall in Capulet’s House.
+a	#sceneII_30.0	CHORUS.
+a	#sceneII_30.1	Scene I. An open place adjoining Capulet’s Garden.
+a	#sceneII_30.2	Scene II. Capulet’s Garden.
+a	#sceneII_30.3	Scene III. Friar Lawrence’s Cell.
+a	#sceneII_30.4	Scene IV. A Street.
+a	#sceneII_30.5	Scene V. Capulet’s Garden.
+a	#sceneII_30.6	Scene VI. Friar Lawrence’s Cell.
+a	#sceneIII_30.1	Scene I. A public Place.
+a	#sceneIII_30.2	Scene II. A Room in Capulet’s House.
+a	#sceneIII_30.3	Scene III. Friar Lawrence’s cell.
+a	#sceneIII_30.4	Scene IV. A Room in Capulet’s House.
+a	#sceneIII_30.5	Scene V. An open Gallery to Juliet’s Chamber, overlooking the Garden.
+a	#sceneIV_30.1	Scene I. Friar Lawrence’s Cell.
+a	#sceneIV_30.2	Scene II. Hall in Capulet’s House.
+a	#sceneIV_30.3	Scene III. Juliet’s Chamber.
+a	#sceneIV_30.4	Scene IV. Hall in Capulet’s House.
+a	#sceneIV_30.5	Scene V. Juliet’s Chamber; Juliet on the bed.
+a	#sceneV_30.1	Scene I. Mantua. A Street.
+a	#sceneV_30.2	Scene II. Friar Lawrence’s Cell.
+a	#sceneV_30.3	Scene III. A churchyard; in it a Monument belonging to the Capulets.
+a		
+a		
+a		
+a		
+a		
+a		
+a		
+a		
+a		
+a		
+a		
+a		
+a		
+a		
+a		
+a		
+a		
+a		
+a		
+a		
+a		
+a		
+a		
+a		
+a		
+a		
+a	https://www.gutenberg.org	www.gutenberg.org
+a	https://www.gutenberg.org/donate/	www.gutenberg.org/donate
+a	https://www.gutenberg.org	www.gutenberg.org

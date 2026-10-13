@@ -1,0 +1,220 @@
+
+Práctica 1
+Autores: Yuntao Chen, Adrian Perez Rodriguez
+Asignatura: Recuperación de Información
+
+
+
+
+
+
+Índice
+	Índice	1
+	1. Estudio teórico	3
+	1.1. Descripción del pipeline RAG	3
+	1.1.1. Indexación [2] [3]	3
+	1.1.1.1. Preparación de los documentos	3
+	1.1.1.2. Fragmentación o chunking	3
+	1.1.1.3. Generación de embeddings	4
+	1.1.2. Recuperación	4
+	1.1.2.1. Recuperación dispersa o sparse retrieval [7]	4
+	1.1.2.2. Recuperación densa o dense retrieval [2] [3]	5
+	1.1.2.3. Recuperación híbrida [2] [11]	6
+	1.1.2. Generación y grounding [3]	6
+	1.1.3. Papel de Lucene y ejemplos de productos que empleen RAG	6
+	1.2. Taxonomías de variantes	7
+	1.2.1 Naive RAG, Advanced RAG y Modular RAG [1]	7
+	1.3. Reflexión sobre limitaciones de RAG y comparativa con la recuperación de información clásica	8
+	Parte experimental:	9
+	Experimento A : Evaluación de RAG Correcto(Alta Relevancia)	9
+	Experimento B :Fallo de Cobertura / Recall(Vocabulary Mismatch):	11
+	Experimento C :Inyección de Ruido:	13
+	Bibliografía	15
+
+
+1. Estudio teórico
+1.1. Descripción del pipeline RAG
+La generación aumentada mediante recuperación, que se conoce como Retrieval-Augmented Generation o RAG, combina dos tipos de conocimiento: el paramétrico, almacenado en los pesos del modelo de lenguaje, y el no paramétrico, almacenado externamente en una colección de documentos o índice. Así, el modelo puede consultar información específica antes de generar una respuesta. Esta es la idea central del trabajo de Lewis et al., quienes propusieron un modelo RAG basado en un modelo secuencia-a-secuencia (conocimiento paramétrico) y un índice vectorial denso de Wikipedia (conocimiento no paramétrico). [6]
+Un pipeline RAG convencional se divide en tres fases principales:
+1. Indexación.
+2. Recuperación.
+3. Generación.
+1.1.1. Indexación [2] [3]
+Es la fase que ocurre antes de que el usuario formule su consulta. El objetivo es transformar una colección de documentos en una estructura que permita localizar rápidamente la información relevante.
+1.1.1.1. Preparación de los documentos 
+Se recopilan todos los distintos tipos de documentos que use el sistema. El problema es que estos documentos suelen tener formatos y elementos que no son directamente adecuados para un modelo de lenguaje (etiquetas HTML, cabeceras repetidas, pies de página, tablas, caracteres innecesarios, etc).
+
+Esto conlleva una etapa de preparación que suele incluir:
+· Extracción del texto.
+· Eliminación de contenido duplicado o irrelevante.
+· Normalización de espacios y caracteres.
+· Conservación de metadatos, como el título, la fecha, el autor o la página.
+· Conversión de los documentos a un formato común.
+
+Los metadatos, además, son importantes porque después pueden usarse para filtrar resultados o proporcionar citas y referencias
+1.1.1.2. Fragmentación o chunking
+Un documento entero es muy largo para introducirlo directamente en la consulta de un modelo de lenguaje, así que se divide en fragmentos más pequeños, llamados “chunks”. Un chunk no puede ser muy grande, pues podría conservar información irrelevante, ni muy pequeño, pues debe ser lo suficientemente grande para conservar el significado de la información. Una técnica común es el solapamiento entre chunks consecutivos, de esta manera si, por ejemplo, un chunk termina a mitad de una explicación, el siguiente repite información del anterior. Así una idea no queda separada entre dos fragmentos y se pierde contexto. Igualmente no se debe abusar de él porque aumenta el tamaño del índice y puede provocar que se recuperen muchas veces los mismos contenidos.
+1.1.1.3. Generación de embeddings 
+Los chunks mencionados pueden convertirse en vectores numéricos con un modelo de embeddings. Este vector representa semánticamente el contenido del chunk. 
+
+El plan es que los chunks con significados similares queden cerca en el espacio vectorial, aunque no usen como tal las mismas palabras. Así un chunk que hable de “contraseñas seguras” puede quedar cerca de uno sobre “cómo proteger credenciales”.
+Durante la indexación se almacenan, normalmente:
+· El texto original del fragmento.
+· Su vector o embedding.
+· Los metadatos asociados.
+· Una estructura de búsqueda que permita encontrar fragmentos similares.
+En el planteamiento de Lewis et al., el conocimiento externo se almacenaba en un índice vectorial denso y un recuperador neuronal seleccionaba los pasajes relevantes para el modelo generativo, comparando sus vectores con el vector de la consulta. [6]
+1.1.2. Recuperación
+Ocurre cuando el usuario formula una consulta. El sistema transforma la consulta en una representación adecuada y busca dentro del índice los fragmentos que probablemente contengan la información necesaria para responder.
+El resultado de esta fase suele ser un conjunto de k fragmentos, ordenados de mayor a menor relevancia. Estos fragmentos no son todavía la respuesta: funcionan como contexto que se entregará al modelo de lenguaje en la fase de generación.
+Hay 3 enfoques principales:
+1.1.2.1. Recuperación dispersa o sparse retrieval [7]
+Este tipo de recuperación representa los documentos mediante términos y estadísticas de aparición. No intenta representar todo el significado del texto en un único vector denso, sino que utiliza las palabras que aparecen en la consulta y en los documentos.
+Un método clásico es BM25, basado en el marco probabilístico de recuperación de Robertson y Zaragoza. BM25 asigna una puntuación a cada documento considerando, entre otros aspectos:
+· La frecuencia con la que aparece un término en el documento.
+· La rareza del término en la colección.
+· La longitud del documento.
+· La frecuencia de los términos de la consulta.
+Por ejemplo, si el usuario busca “política de copias de seguridad”, BM25 favorecerá los fragmentos que contengan esos términos, especialmente si aparecen de forma relevante y no están presentes en todos los documentos.
+Las ventajas principales de la recuperación dispersa son:
+· Funciona muy bien cuando la consulta comparte palabras con los documentos.
+· Se puede interpretar, porque se puede observar qué términos han contribuido a la puntuación.
+· Es apropiada para nombres propios, identificadores, códigos, números de versión y términos técnicos.
+· No necesita necesariamente un modelo de embeddings.
+Su limitación es que puede tener dificultades con sinónimos o consultas expresadas con palabras diferentes a las del documento. Una consulta sobre “cancelar una suscripción”, por ejemplo, podría no recuperar adecuadamente un texto que solo utilice la expresión “dar de baja el servicio”.
+1.1.2.3. Recuperación densa o dense retrieval [2] [3]
+La recuperación densa utiliza embeddings para representar tanto la consulta como los fragmentos documentales. Después calcula la similitud entre sus vectores y devuelve aquellos fragmentos cuyos embeddings están más próximos.
+La similitud puede calcularse mediante distancia coseno, producto escalar u otra función vectorial. La proximidad pretende indicar que la consulta y el fragmento tienen un significado relacionado, aunque no compartan las mismas palabras.
+Por ejemplo, una consulta como “¿cómo puedo modificar mi domicilio?” podría recuperar un fragmento titulado “Actualización de datos personales”, aunque la palabra “domicilio” no aparezca exactamente en el título.
+El enfoque denso resulta especialmente útil para:
+· Consultas formuladas de forma natural.
+· Búsqueda semántica.
+· Documentos que utilizan vocabulario diferente al de la consulta.
+· Colecciones donde la relación conceptual es más importante que la coincidencia literal.
+Su principal inconveniente es que puede no dar suficiente importancia a términos exactos. Esto puede ser problemático en identificadores de productos, referencias legales, nombres de funciones o fragmentos de código.
+1.1.2.3. Recuperación híbrida [2] [11] 
+La recuperación híbrida combina los enfoques disperso y denso. El sistema puede ejecutar simultáneamente una búsqueda BM25 y una búsqueda vectorial, y después combinar sus resultados mediante una función de puntuación, una unión de candidatos o un re-ranking posterior.
+Esta estrategia aprovecha las fortalezas de ambas técnicas:
+· BM25 aporta coincidencia exacta y sensibilidad a términos específicos.
+· La búsqueda densa aporta similitud semántica y tolerancia a diferencias de vocabulario.
+Por ejemplo, en una consulta sobre “error de autenticación OAuth 2.0”, BM25 puede localizar fragmentos que contienen exactamente “OAuth 2.0”, mientras que el recuperador denso puede encontrar explicaciones relacionadas con “fallos en el proceso de autorización”. Un sistema híbrido puede combinar ambos tipos de evidencia.
+Los sistemas de recuperación también pueden incluir una etapa de re-ranking. En ella, un segundo modelo vuelve a ordenar un conjunto reducido de candidatos para seleccionar los fragmentos más útiles antes de enviarlos al modelo generativo.
+1.1.2. Generación y grounding [3]
+En la fase de generación, los fragmentos recuperados se incorporan al prompt junto con la consulta original del usuario. El modelo de lenguaje usará ese contexto para responder.
+El modelo procesa la pregunta y los fragmentos a la vez. La información recuperada (los fragmentos) sirve como una fuente externa que orienta la respuesta. Este proceso se denomina grounding, porque la generación queda fundamentada en evidencias recuperadas y no únicamente en el conocimiento aprendido durante el entrenamiento (el paramétrico).
+El grounding puede aportar varias ventajas:
+· Permite utilizar información específica de una organización.
+· Facilita la actualización de la base de conocimiento sin reentrenar todo el modelo.
+· Puede mejorar la factualidad de las respuestas.
+· Hace posible incluir referencias a los documentos utilizados.
+· Reduce la dependencia exclusiva de la memoria paramétrica del modelo.
+Lewis et al. observaron que los modelos RAG podían producir respuestas más específicas, diversas y factuales que un modelo secuencia-a-secuencia que solo utilizara su memoria paramétrica. [6]
+1.1.3. Papel de Lucene y ejemplos de productos que empleen RAG
+Apache Lucene es una biblioteca de búsqueda que puede utilizarse en las fases de indexación y recuperación de un sistema RAG. Puede almacenar cada chunk como un documento y recuperar los más relevantes para incorporarlos posteriormente al prompt del modelo de lenguaje. No realiza la generación de texto, esa tarea es del LLM. [8]
+En recuperación dispersa, Lucene indexa los términos de los documentos y puede aplicar BM25 para encontrar fragmentos que coinciden con las palabras de la consulta. Desde la versión 9.0 también admite recuperación densa: almacena los embeddings de los chunks y realiza búsquedas de vectores cercanos mediante grafos HNSW. Por tanto, puede emplearse también en un enfoque híbrido que combine BM25 y búsqueda vectorial antes de enviar los fragmentos seleccionados al modelo generativo. [8]
+Como ejemplos de productos reales que emplean RAG, Sourcegraph Cody es un copilot de código que recupera fragmentos relevantes del repositorio, archivos abiertos y otros elementos del contexto del proyecto antes de enviarlos, junto con la petición del desarrollador, al modelo de lenguaje. Así, puede generar explicaciones o código teniendo en cuenta una base de código concreta y actualizada. Por otro lado, Azure AI Search es una solución de búsqueda empresarial para construir aplicaciones RAG sobre documentación propia: indexa contenido corporativo, recupera información mediante búsqueda textual, vectorial o híbrida y entrega los resultados al LLM como datos de grounding. [9] [10]
+1.2. Taxonomías de variantes
+1.2.1 Naive RAG, Advanced RAG y Modular RAG [1]
+Naive RAG: es el  RAG clásico sigue un proceso tradicional de tres fases, conocido como “Retrieve-Read”.
+· Desafíos de recuperación : presenta problemas con la precisión y exhaustividad, pudiendo causar pérdida de información.
+· Dificultades en la generación de respuestas: puede que produzca respuesta que no tenga nada que ver con la pregunta realizada.
+· Obstáculos para la ampliación de datos: puede que recupere información redundante dando lugar a respuestas repetitivas.
+· Además puede que dependa demasiado de la información aumentada que simplemente repiten el contenido recuperado sin realizar ninguna síntesis sobre ella.
+Advanced RAG: Introduce mejoras sobre el Naive RAG, enfocándose en la calidad de la recuperación, con estrategias aplicadas antes y después de recuperar la información.
+· Pre-retrieval process : se optimiza la indexación mediante la mejora de la granularidad de los datos, optimizar estructura de índice, añadir metadatos, optimizar la alineación y una recuperación mixta. Y también la consulta, con la reescritura, transformación y expansión de consultas.
+· Post-Retrival Process: Una vez obtiene el contexto, se realiza una reordenación de fragmentos(reranking), es decir, se coloca el contenido más relevante en los bordes del prompt, implementados en LlamaIndex [2], LangChain [3] y HayStack [4].
+Modular RAG: Este es el paradigma más avanzado de RAG, ofrece un mayor adaptabilidad y versatilidad, es decir que permite la sustitución o reconfiguración de componentes, y admite tanto procesamiento secuencial como un entrenamiento integrado extremo a extremo.Pero también se apoya en los principios de los dos anteriores.
+· Nuevos Módulos:  amplían las capacidades de recuperación y procesamiento mediante componentes especializados.
+· Search: realiza búsqueda directa en buscadores, bases de datos y grafos de conocimiento.
+· RAG-Fusion: expande la consulta en varias perspectivas con búsquedas paralelas y reordenación.
+· Memory: utiliza la memoria del LLM para guiar la recuperación.
+· Routing: elige la mejor tura para cada consulta.
+· Predict: reduce ruido y redundancia generando el contexto con el LLM
+· Task Adapter: adapta el sistema a tareas concretas tanto zero-shot cómo few-shot.
+· Nuevos patrones: supera el esquema fijo de “Retrieve-Read” al permitir sustituir módulos, añadir otros nuevos o cambiar su flujo de interacción con patrones como Rewwrite-Retrieve-Read,Generate-Read,Recite-Read,también emplea recuperación híbrida sub-consultas y HyDE para mejorar la relevancia, flujos reordenados,recuperación adaptativa e integración con fine-tuning del recuperador, del generador o de ambos, además de aprendizaje por refuerzo. 
+1.3. Reflexión sobre limitaciones de RAG y comparativa con la recuperación de información clásica
+RAG mejora a los modelos de lenguaje al permitirles consultar documentos externos, pero no elimina los problemas de búsqueda ni garantiza respuestas correctas. Su principal limitación es que la calidad final depende en gran medida de la recuperación: si el sistema no encuentra el fragmento adecuado, o recupera contenido irrelevante o contradictorio, el modelo generativo puede dar una respuesta incorrecta aunque esté bien redactada. La calidad de la fragmentación también es importante: chunks demasiado pequeños pueden separar una idea de su contexto, mientras que fragmentos demasiado grandes introducen ruido, ocupan más espacio en el prompt y aumentan el coste de procesamiento.
+Además, RAG añade coste y latencia respecto a usar únicamente un modelo de lenguaje. El sistema debe generar o comparar vectores, consultar un índice, seleccionar documentos y procesar un prompt más largo; si se añade re-ranking, el resultado puede ser más preciso, pero normalmente tarda más. Estas operaciones pueden dificultar su uso en aplicaciones que requieren respuestas inmediatas o que manejan grandes colecciones de documentos.
+Comparándolo con la recuperación de información clásica con Lucene y BM25, RAG gana capacidad para responder en lenguaje natural y sintetizar varios documentos en una única respuesta. Sin embargo, pierde parte de la explicabilidad y del control. En una búsqueda clásica se puede observar qué documentos se han recuperado, con qué términos y qué puntuación han obtenido. En RAG, aunque se muestren las fuentes recuperadas, la respuesta final depende también de un LLM cuyo proceso de generación es menos transparente y puede añadir interpretaciones, omisiones o información no presente de forma explícita en los documentos. Por ello, hay que ver a Lucene y RAG como alternativas que no son excluyentes porque Lucene puede aportar una recuperación controlable y trazable, mientras que RAG añade una interfaz conversacional y capacidad de sintetizar.
+
+Parte experimental:
+Experimento A : Evaluación de RAG Correcto(Alta Relevancia)
+
+Podemos observar que el texto con mayor puntuación es el documento 3(1.59) frente a la correcta que sería el documento 4(0.49), seguramente sea porque en el documento 3 encuentra las palabras “en” y “un” mientras en el documento 4 solamente “en”.
+
+Cuestión A.1: Compara la respuesta obtenida con el contexto de Lucene frente a hacerle la pregunta a Ollama sin contexto. ¿Ocurre alucinación en el segundo caso?
+-Caso 1: Con contexto erróneo
+
+
+Observamos que el LLM nos ha proporcionado una respuesta acorde al contenido que le hemos pasado sobre la revisión del examen, no responde a la pregunta pero ha intentado conectar el contenido que le hemos pasado con la preguntas inventando consecuencias posible del fraude en un examen.
+-Caso 2: Sin contexto
+
+Vemos claramente que se produce una alucinación ya que observamos que empieza su respuesta con una afirmación de “Sí, copio en un examen” y luego menciona “exámenes de conciencia personal” que no contesta en absoluto a nuestra pregunta.
+
+
+
+Experimento B :Fallo de Cobertura / Recall(Vocabulary Mismatch):
+
+
+Observamos que gana el documento 1, pero seguramente sea porque no haya entendido la intención, sino que haya coincidido en más términos, “solicitud” , “de”, “extraordinaria”,
+-Ejecución Ollama con contexto Vacío:
+
+Observamos cómo se produce una alucinación indicando que “aquí tienes la solicitud de gracia extraordinaria” debido a que no tiene ningún contexto en el que basarse y además confunde la palabra extraordinaria con extraña.
+
+
+
+Cuestión B.1: Explica por qué ha fallado el sistema de RI relacionándolo con el problema del descalce vocabular en modelos léxicos. ¿Cómo mitigaría este problema un motor de búsqueda vectorial basado en embedding?
+-Porque modelos léxicos como BM25 en el que se basa Opensearch solo puntúan las coincidencias exactas entre los términos de la consulta que realizamos y los del índice, y en nuestro caso “solicitud e prueba de gracia extraordinaria ”,se ha dado la casualidad de que ha puntuado más al documento 1 debido a que hay más coincidencia léxica, pero “prueba” y “gracia” son sinónimos de evaluación extraordinaria que no aparece en ningún lado por lo que no son evaluados ni siquiera.  La búsqueda vectorial lo mitiga porque convierte consulta y documentos en embedding y mide su cercanía en el espacio vectorial, y no sus palabras en común. Así ciertos términos quedan próximos aunque apenas compartan términos, de este modo resolvería el descalce vocabular.[5]
+
+
+
+Experimento C :Inyección de Ruido:
+Recuperación mediante Opensearch:
+
+
+Observamos que recupera los 4 documentos debido a que todos contienen la palabra “de” aunque ninguno de los otros estén dentro de los documentos.
+
+
+Ollama:
+
+Cuestión C.1: Evalúa la fidelidad del LLm: ¿El modelo detecta que el documento no es relevante o alucina intentando responder con información ajena o inventada?
+-El modelo responde que no existe un plazo específico para pedir la evaluación extraordinaria primero, lo cual está bien ya que el contexto no estaba relacionada con la pregunta, pero luego se produce una alucinación por parte suya intentando dar explicación de las causas por la puede haber plazas lo cual no aparece en ningún lado, podríamos considerar que la fidelidad aquí es parcial, el modelo intuye que el contexto no responde a la pregunta pero que en lugar de decir que carece de información afirma que el plazo no existe, que es falso.
+
+
+Bibliografía
+[1] Gao, Y. et al. (2023). “Retrieval-Augmented Generation for Large Language Models: A Survey”. Referencia clave para la taxonomía Naive/Advanced/Modular RAG.
+[2] LlamaIndex y su documentación oficial.
+[3] LangChain y su documentación oficial.
+[4] V. Blagojevi, “Enhancing rag pipelines in haystack: Introducing diversityranker and lostinthemiddleranker. 
+[5] Vector Embeddings: The Key to Better Search Relevance. 
+[6] Lewis, P., Perez, E., Pineda, A., Petroni, F., Riedel, S., Goyal, N., Fan, A., Lewis, M., Yih, W., Rocktäschel, T., Karpukhin, V., & Riedel, S. (2020). “Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks”. Advances in Neural Information Processing Systems, 33, 9459–9474. 
+[7] Robertson, S., & Zaragoza, H. (2009). “The Probabilistic Relevance Framework: BM25 and Beyond”. Foundations and Trends in Information Retrieval, 3(4), 333–389. 
+[8] Apache Lucene Documentation.
+[9] Azure AI Search.
+[10] Sourcegraph Cody.
+[11] Haystack. 
+
+
+
+
+
+image9.png
+
+image7.png
+
+image5.png
+
+image8.png
+
+image10.png
+
+image3.png
+
+image1.png
+
+image6.png
+
+image4.png
+
+image2.png
+
