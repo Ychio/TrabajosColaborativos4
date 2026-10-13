@@ -32,6 +32,10 @@ import org.apache.tika.parser.RecursiveParserWrapper;
 import org.apache.tika.sax.BasicContentHandlerFactory;
 import org.apache.tika.sax.RecursiveParserWrapperHandler;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ArrayNode;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+
 public class Main {
     private static void analizarContenedor(Path fichero, LanguageDetector langDetector) throws Exception {
         RecursiveParserWrapper wrapper = new RecursiveParserWrapper(new AutoDetectParser());
@@ -95,7 +99,12 @@ public class Main {
         List<String> filas = new ArrayList<>();
         filas.add("Fichero;MIME (contenido);MIME (solo extension);Codificacion;Idioma;Caracteres;Estado");
 
+        ObjectMapper mapper = new ObjectMapper();
+        List<String> jsonl = new ArrayList<>();
+        int contador = 0;
         for (Path p : ficheros) {
+            contador++;
+            String id = String.format("doc%04d", contador);
             String nombre = dir.relativize(p).toString();
             String mimeContenido = "-";
             String mimeNombre = tika.detect(p.getFileName().toString());
@@ -103,6 +112,11 @@ public class Main {
             String idioma = "-";
             int caracteres = 0;
             String estado = "OK";
+
+            String titulo = null;
+            String autor = null;
+            String texto = "";
+            List<String> destinos = new ArrayList<>();
             //Preparamos el estado inicial de cada fichero 
             try{
                 try(TikaInputStream tis = TikaInputStream.get(p)){
@@ -116,7 +130,7 @@ public class Main {
                 try (TikaInputStream tis = TikaInputStream.get(p)) {
                     parser.parse(tis, tee, md, new ParseContext()); //el parser actua de locutor y va soltando contenido, mientras el tee unifica los dos habndler y cada handler pilla lo que necesite
                 }
-                String texto = handler.toString();
+                texto = handler.toString();
                 caracteres = texto.length(); //abrimos un flujo y vamos leyendo poco a poco e introduciendo los metadatos y el contenido en el sitio correspondiente
                 Files.writeString(dirTexto.resolve(nombre + ".txt"), texto,StandardCharsets.UTF_8);
 
@@ -143,12 +157,40 @@ public class Main {
                     lineasEnl.add(l.getType() + "\t" + l.getUri() + "\t" + l.getText().trim());
                 }
                 Files.write(dirEnlaces.resolve(nombre + ".txt"), lineasEnl, StandardCharsets.UTF_8);
+                titulo = md.get("dc:title");
+                if (titulo == null) titulo = md.get("og:title");
+                if (titulo == null) titulo = md.get("pdf:docinfo:title");
+
+                autor = md.get("dc:creator");
+                if (autor == null) autor = md.get("meta:author");
+
+                for (Link l : enlaces) {
+                    if ("a".equals(l.getType()) && l.getUri() != null && !l.getUri().isBlank() && !l.getUri().startsWith("#")) {
+                        destinos.add(l.getUri());
+                    }
+                }
             }catch (Exception e) {
                 estado = "Error: " + e.getClass().getSimpleName();
             } // try catch para cada archivo para que si un archivo falla no reviente el programa directamente
 
+            if ("OK".equals(estado) && texto.isBlank()) estado = "SIN_TEXTO";
+            String lang = "-".equals(idioma) ? null : idioma;
 
-           filas.add(String.join(";", nombre, mimeContenido, mimeNombre,codificacion, idioma, String.valueOf(caracteres), estado));//Ponemos cada uno de estos como una fila de datos
+            ObjectNode reg = mapper.createObjectNode();
+            reg.put("id", id);
+            reg.put("path", p.toString());
+            reg.put("mime_type", mimeContenido);
+            reg.put("language", lang);
+            reg.put("title", titulo);
+            reg.put("author", autor);
+            reg.put("text", texto);
+            reg.put("num_characters", caracteres);
+            ArrayNode arr = reg.putArray("links");
+            destinos.forEach(arr::add);
+            reg.put("status", estado);
+
+            jsonl.add(mapper.writeValueAsString(reg));
+            filas.add(String.join(";", nombre, mimeContenido, mimeNombre,codificacion, idioma, String.valueOf(caracteres), estado));//Ponemos cada uno de estos como una fila de datos
         }
         for (String f : filas) {
             System.out.println(f);
@@ -160,6 +202,8 @@ public class Main {
         if (Files.isRegularFile(zip)) {
             analizarContenedor(zip, langDetector);
         }
+        Files.write(Path.of("coleccion.jsonl"), jsonl, StandardCharsets.UTF_8);
+        System.out.println("Guardado coleccion.jsonl con " + jsonl.size() + " registros");
         System.out.println("\nGuardado correctamente en inventario.csv");
     }
 }
