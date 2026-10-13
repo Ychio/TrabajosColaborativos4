@@ -36,7 +36,7 @@ public class Main {
     private static void analizarContenedor(Path fichero, LanguageDetector langDetector) throws Exception {
         RecursiveParserWrapper wrapper = new RecursiveParserWrapper(new AutoDetectParser());
         RecursiveParserWrapperHandler handler = new RecursiveParserWrapperHandler(
-                new BasicContentHandlerFactory(BasicContentHandlerFactory.HANDLER_TYPE.TEXT, -1));
+                new BasicContentHandlerFactory(BasicContentHandlerFactory.HANDLER_TYPE.TEXT, -1));// utilizamos estos dos para tratar los recursos del zip por separado en vez de tratarlo junto como uno único
 
         try (TikaInputStream tis = TikaInputStream.get(fichero)) {
             wrapper.parse(tis, handler, new Metadata(), new ParseContext());
@@ -49,7 +49,7 @@ public class Main {
             String ruta = m.get(TikaCoreProperties.EMBEDDED_RESOURCE_PATH);
             String texto = m.get(TikaCoreProperties.TIKA_CONTENT);
             String idioma = "-";
-            if (texto != null && !texto.isBlank()) {
+            if (!texto.isBlank()) {
                 String muestra = texto.substring(0, Math.min(texto.length(), 100_000));
                 LanguageResult r = langDetector.detect(muestra);
                 idioma = r.isUnknown() ? "?" : r.getLanguage();
