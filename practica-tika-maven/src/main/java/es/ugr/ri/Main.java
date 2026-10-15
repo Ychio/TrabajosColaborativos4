@@ -36,7 +36,46 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Main {
+    private static void generarFrecuencias(String texto) throws Exception {
+        //Convertimos a minusculas
+        texto = texto.toLowerCase(java.util.Locale.ROOT);
+        //Tokenizamos considerando cada secuencia de letras una palabra
+        Pattern patron = Pattern.compile("\\p{L}+");
+        Matcher matcher = patron.matcher(texto);
+        //Contamos las apariciones de cada termino usando un map
+        Map<String, Integer> frecuencias = new HashMap<>();
+        while (matcher.find()) {
+            String termino = matcher.group();
+            frecuencias.merge(termino, 1, Integer::sum);
+        }
+        //Ordenamos por orden descendente y, en caso de empate, alfabeticamente
+        List<Map.Entry<String, Integer>> ordenadas =
+                new ArrayList<>(frecuencias.entrySet());
+        ordenadas.sort(
+                Comparator.<Map.Entry<String, Integer>>
+                                comparingInt(Map.Entry::getValue)
+                        .reversed()
+                        .thenComparing(Map.Entry::getKey)
+        );
+        //Generamos el CSV
+        Path salida = Path.of("frecuencias.csv");
+        try (PrintWriter pw = new PrintWriter(
+                Files.newBufferedWriter(salida, StandardCharsets.UTF_8))) {
+            pw.println("Termino;Frecuencia");
+            for (Map.Entry<String, Integer> entrada : ordenadas) {
+                pw.println(entrada.getKey() + ";" + entrada.getValue());
+            }
+        }
+        System.out.println("\nFrecuencias guardadas en frecuencias.csv");
+    }
+
     private static void analizarContenedor(Path fichero, LanguageDetector langDetector) throws Exception {
         RecursiveParserWrapper wrapper = new RecursiveParserWrapper(new AutoDetectParser());
         RecursiveParserWrapperHandler handler = new RecursiveParserWrapperHandler(
@@ -205,5 +244,14 @@ public class Main {
         Files.write(Path.of("coleccion.jsonl"), jsonl, StandardCharsets.UTF_8);
         System.out.println("Guardado coleccion.jsonl con " + jsonl.size() + " registros");
         System.out.println("\nGuardado correctamente en inventario.csv");
+
+        //Calculamos frecuencias del texto espanol2
+        Path archivo = Path.of("salida", "texto", "espanol2.txt.txt");
+        if (Files.exists(archivo)) {
+            String texto = Files.readString(archivo, StandardCharsets.UTF_8);
+            generarFrecuencias(texto);
+        } else {
+            System.out.println("No se encuentra el archivo: " + archivo);
+        }
     }
 }
