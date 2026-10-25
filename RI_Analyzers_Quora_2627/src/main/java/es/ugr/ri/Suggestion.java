@@ -125,17 +125,19 @@ public class Suggestion {
         private final CharArraySet stemExclusions;
 
         QuestionAnalyzer() {
-            CharArraySet stops = CharArraySet.copy(EnglishAnalyzer.getDefaultStopSet());
-            for (String term : List.of(
-                    "what", "why", "when", "where", "who", "how", "which",
-                    "can", "could", "should", "would", "do", "does", "did",
-                    "is", "are", "was", "were")) {
-                stops.remove(term);
+            Set<String> conservar = Set.of(
+            "what", "why", "when", "where", "who", "how", "which",
+            "can", "could", "should", "would", "do", "does", "did",
+            "is", "are", "was", "were",
+            "not", "no", "or");
+            CharArraySet stops = new CharArraySet(40, true);
+            for (Object o : EnglishAnalyzer.getDefaultStopSet()) {
+                String s = new String((char[]) o);
+                if (!conservar.contains(s)) stops.add(s);
             }
             this.stopwords = CharArraySet.unmodifiableSet(stops);
-
-            // Punto de partida. Modificar y justificar en la actividad 2.
-            this.stemExclusions = CharArraySet.EMPTY_SET;
+            this.stemExclusions = CharArraySet.unmodifiableSet(
+            new CharArraySet(List.of("are", "was", "does", "has", "his"), true));
         }
 
         @Override

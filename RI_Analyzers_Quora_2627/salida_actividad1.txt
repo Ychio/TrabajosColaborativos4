@@ -1,0 +1,228 @@
+##### ANALIZADOR: standard
+Cargadas 50,000 preguntas únicas por qid.
+
+1. Inspeccionar tokens  2. Prefix  3. Fuzzy  4. Infix  5. Next-term  6. Salir
+opción> texto>   what                     pos=0   offsets=[0,4)
+  is                       pos=1   offsets=[5,7)
+  the                      pos=2   offsets=[8,11)
+  best                     pos=3   offsets=[12,16)
+  way                      pos=4   offsets=[17,20)
+  to                       pos=5   offsets=[21,23)
+  inprove                  pos=6   offsets=[24,31)
+  my                       pos=7   offsets=[32,34)
+  english                  pos=8   offsets=[35,42)
+  writing                  pos=9   offsets=[43,50)
+  ability                  pos=10  offsets=[51,58)
+
+1. Inspeccionar tokens  2. Prefix  3. Fuzzy  4. Infix  5. Next-term  6. Salir
+opción> texto>   how                      pos=0   offsets=[0,3)
+  do                       pos=1   offsets=[4,6)
+  i                        pos=2   offsets=[7,8)
+  learn                    pos=3   offsets=[9,14)
+  how                      pos=4   offsets=[15,18)
+  to                       pos=5   offsets=[19,21)
+  draw                     pos=6   offsets=[22,26)
+
+1. Inspeccionar tokens  2. Prefix  3. Fuzzy  4. Infix  5. Next-term  6. Salir
+opción> texto>   why                      pos=0   offsets=[0,3)
+  do                       pos=1   offsets=[4,6)
+  many                     pos=2   offsets=[7,11)
+  quora                    pos=3   offsets=[12,17)
+  users                    pos=4   offsets=[18,23)
+  ask                      pos=5   offsets=[24,27)
+  questions                pos=6   offsets=[28,37)
+  they                     pos=7   offsets=[38,42)
+  could                    pos=8   offsets=[43,48)
+  look                     pos=9   offsets=[49,53)
+  up                       pos=10  offsets=[54,56)
+  online                   pos=11  offsets=[57,63)
+
+1. Inspeccionar tokens  2. Prefix  3. Fuzzy  4. Infix  5. Next-term  6. Salir
+opción> texto>   should                   pos=0   offsets=[0,6)
+  i                        pos=1   offsets=[7,8)
+  buy                      pos=2   offsets=[9,12)
+  the                      pos=3   offsets=[13,16)
+  iphone                   pos=4   offsets=[17,23)
+  7                        pos=5   offsets=[24,25)
+  galaxy                   pos=6   offsets=[27,33)
+  s7                       pos=7   offsets=[34,36)
+  or                       pos=8   offsets=[38,40)
+  note                     pos=9   offsets=[41,45)
+  7                        pos=10  offsets=[46,47)
+
+1. Inspeccionar tokens  2. Prefix  3. Fuzzy  4. Infix  5. Next-term  6. Salir
+opción> texto>   what                     pos=0   offsets=[0,4)
+  are                      pos=1   offsets=[5,8)
+  the                      pos=2   offsets=[9,12)
+  various                  pos=3   offsets=[13,20)
+  tips                     pos=4   offsets=[21,25)
+  while                    pos=5   offsets=[26,31)
+  learning                 pos=6   offsets=[32,40)
+  to                       pos=7   offsets=[41,43)
+  play                     pos=8   offsets=[44,48)
+  the                      pos=9   offsets=[49,52)
+  piano                    pos=10  offsets=[53,58)
+
+1. Inspeccionar tokens  2. Prefix  3. Fuzzy  4. Infix  5. Next-term  6. Salir
+opción> texto>   are                      pos=0   offsets=[0,3)
+  the                      pos=1   offsets=[4,7)
+  pope's                   pos=2   offsets=[8,14)
+  personal                 pos=3   offsets=[15,23)
+  security                 pos=4   offsets=[24,32)
+  guards                   pos=5   offsets=[33,39)
+  on                       pos=6   offsets=[40,42)
+  his                      pos=7   offsets=[43,46)
+  us                       pos=8   offsets=[47,49)
+  visit                    pos=9   offsets=[50,55)
+  part                     pos=10  offsets=[56,60)
+  of                       pos=11  offsets=[61,63)
+  the                      pos=12  offsets=[64,67)
+  swiss                    pos=13  offsets=[68,73)
+  guard                    pos=14  offsets=[74,79)
+  or                       pos=15  offsets=[81,83)
+  are                      pos=16  offsets=[84,87)
+  they                     pos=17  offsets=[88,92)
+  separate                 pos=18  offsets=[93,101)
+
+1. Inspeccionar tokens  2. Prefix  3. Fuzzy  4. Infix  5. Next-term  6. Salir
+opción> ##### ANALIZADOR: english
+Cargadas 50,000 preguntas únicas por qid.
+
+1. Inspeccionar tokens  2. Prefix  3. Fuzzy  4. Infix  5. Next-term  6. Salir
+opción> texto>   what                     pos=0   offsets=[0,4)
+  best                     pos=3   offsets=[12,16)
+  wai                      pos=4   offsets=[17,20)
+  inprov                   pos=6   offsets=[24,31)
+  my                       pos=7   offsets=[32,34)
+  english                  pos=8   offsets=[35,42)
+  write                    pos=9   offsets=[43,50)
+  abil                     pos=10  offsets=[51,58)
+
+1. Inspeccionar tokens  2. Prefix  3. Fuzzy  4. Infix  5. Next-term  6. Salir
+opción> texto>   how                      pos=0   offsets=[0,3)
+  do                       pos=1   offsets=[4,6)
+  i                        pos=2   offsets=[7,8)
+  learn                    pos=3   offsets=[9,14)
+  how                      pos=4   offsets=[15,18)
+  draw                     pos=6   offsets=[22,26)
+
+1. Inspeccionar tokens  2. Prefix  3. Fuzzy  4. Infix  5. Next-term  6. Salir
+opción> texto>   why                      pos=0   offsets=[0,3)
+  do                       pos=1   offsets=[4,6)
+  mani                     pos=2   offsets=[7,11)
+  quora                    pos=3   offsets=[12,17)
+  user                     pos=4   offsets=[18,23)
+  ask                      pos=5   offsets=[24,27)
+  question                 pos=6   offsets=[28,37)
+  could                    pos=8   offsets=[43,48)
+  look                     pos=9   offsets=[49,53)
+  up                       pos=10  offsets=[54,56)
+  onlin                    pos=11  offsets=[57,63)
+
+1. Inspeccionar tokens  2. Prefix  3. Fuzzy  4. Infix  5. Next-term  6. Salir
+opción> texto>   should                   pos=0   offsets=[0,6)
+  i                        pos=1   offsets=[7,8)
+  bui                      pos=2   offsets=[9,12)
+  iphon                    pos=4   offsets=[17,23)
+  7                        pos=5   offsets=[24,25)
+  galaxi                   pos=6   offsets=[27,33)
+  s7                       pos=7   offsets=[34,36)
+  note                     pos=9   offsets=[41,45)
+  7                        pos=10  offsets=[46,47)
+
+1. Inspeccionar tokens  2. Prefix  3. Fuzzy  4. Infix  5. Next-term  6. Salir
+opción> texto>   what                     pos=0   offsets=[0,4)
+  variou                   pos=3   offsets=[13,20)
+  tip                      pos=4   offsets=[21,25)
+  while                    pos=5   offsets=[26,31)
+  learn                    pos=6   offsets=[32,40)
+  plai                     pos=8   offsets=[44,48)
+  piano                    pos=10  offsets=[53,58)
+
+1. Inspeccionar tokens  2. Prefix  3. Fuzzy  4. Infix  5. Next-term  6. Salir
+opción> texto>   pope                     pos=2   offsets=[8,14)
+  person                   pos=3   offsets=[15,23)
+  secur                    pos=4   offsets=[24,32)
+  guard                    pos=5   offsets=[33,39)
+  hi                       pos=7   offsets=[43,46)
+  us                       pos=8   offsets=[47,49)
+  visit                    pos=9   offsets=[50,55)
+  part                     pos=10  offsets=[56,60)
+  swiss                    pos=13  offsets=[68,73)
+  guard                    pos=14  offsets=[74,79)
+  separ                    pos=18  offsets=[93,101)
+
+1. Inspeccionar tokens  2. Prefix  3. Fuzzy  4. Infix  5. Next-term  6. Salir
+opción> ##### ANALIZADOR: question
+Cargadas 50,000 preguntas únicas por qid.
+
+1. Inspeccionar tokens  2. Prefix  3. Fuzzy  4. Infix  5. Next-term  6. Salir
+opción> texto>   what                     pos=0   offsets=[0,4)
+  is                       pos=1   offsets=[5,7)
+  best                     pos=3   offsets=[12,16)
+  wai                      pos=4   offsets=[17,20)
+  inprov                   pos=6   offsets=[24,31)
+  my                       pos=7   offsets=[32,34)
+  english                  pos=8   offsets=[35,42)
+  write                    pos=9   offsets=[43,50)
+  abil                     pos=10  offsets=[51,58)
+
+1. Inspeccionar tokens  2. Prefix  3. Fuzzy  4. Infix  5. Next-term  6. Salir
+opción> texto>   how                      pos=0   offsets=[0,3)
+  do                       pos=1   offsets=[4,6)
+  i                        pos=2   offsets=[7,8)
+  learn                    pos=3   offsets=[9,14)
+  how                      pos=4   offsets=[15,18)
+  draw                     pos=6   offsets=[22,26)
+
+1. Inspeccionar tokens  2. Prefix  3. Fuzzy  4. Infix  5. Next-term  6. Salir
+opción> texto>   why                      pos=0   offsets=[0,3)
+  do                       pos=1   offsets=[4,6)
+  mani                     pos=2   offsets=[7,11)
+  quora                    pos=3   offsets=[12,17)
+  user                     pos=4   offsets=[18,23)
+  ask                      pos=5   offsets=[24,27)
+  question                 pos=6   offsets=[28,37)
+  could                    pos=8   offsets=[43,48)
+  look                     pos=9   offsets=[49,53)
+  up                       pos=10  offsets=[54,56)
+  onlin                    pos=11  offsets=[57,63)
+
+1. Inspeccionar tokens  2. Prefix  3. Fuzzy  4. Infix  5. Next-term  6. Salir
+opción> texto>   should                   pos=0   offsets=[0,6)
+  i                        pos=1   offsets=[7,8)
+  bui                      pos=2   offsets=[9,12)
+  iphon                    pos=4   offsets=[17,23)
+  7                        pos=5   offsets=[24,25)
+  galaxi                   pos=6   offsets=[27,33)
+  s7                       pos=7   offsets=[34,36)
+  note                     pos=9   offsets=[41,45)
+  7                        pos=10  offsets=[46,47)
+
+1. Inspeccionar tokens  2. Prefix  3. Fuzzy  4. Infix  5. Next-term  6. Salir
+opción> texto>   what                     pos=0   offsets=[0,4)
+  ar                       pos=1   offsets=[5,8)
+  variou                   pos=3   offsets=[13,20)
+  tip                      pos=4   offsets=[21,25)
+  while                    pos=5   offsets=[26,31)
+  learn                    pos=6   offsets=[32,40)
+  plai                     pos=8   offsets=[44,48)
+  piano                    pos=10  offsets=[53,58)
+
+1. Inspeccionar tokens  2. Prefix  3. Fuzzy  4. Infix  5. Next-term  6. Salir
+opción> texto>   ar                       pos=0   offsets=[0,3)
+  pope                     pos=2   offsets=[8,14)
+  person                   pos=3   offsets=[15,23)
+  secur                    pos=4   offsets=[24,32)
+  guard                    pos=5   offsets=[33,39)
+  hi                       pos=7   offsets=[43,46)
+  us                       pos=8   offsets=[47,49)
+  visit                    pos=9   offsets=[50,55)
+  part                     pos=10  offsets=[56,60)
+  swiss                    pos=13  offsets=[68,73)
+  guard                    pos=14  offsets=[74,79)
+  ar                       pos=16  offsets=[84,87)
+  separ                    pos=18  offsets=[93,101)
+
+1. Inspeccionar tokens  2. Prefix  3. Fuzzy  4. Infix  5. Next-term  6. Salir
+opción> 

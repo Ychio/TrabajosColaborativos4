@@ -1,0 +1,42 @@
+Cargadas 50,000 preguntas únicas por qid.
+
+1. Inspeccionar tokens  2. Prefix  3. Fuzzy  4. Infix  5. Next-term  6. Salir
+opción> texto>   why                      pos=0   offsets=[0,3)
+  is                       pos=1   offsets=[4,6)
+  reserv                   pos=2   offsets=[7,18)
+  cast                     pos=3   offsets=[19,23)
+  base                     pos=4   offsets=[24,29)
+  not                      pos=6   offsets=[34,37)
+  incom                    pos=7   offsets=[38,44)
+  base                     pos=8   offsets=[45,50)
+
+1. Inspeccionar tokens  2. Prefix  3. Fuzzy  4. Infix  5. Next-term  6. Salir
+opción> texto>   should                   pos=0   offsets=[0,6)
+  i                        pos=1   offsets=[7,8)
+  bui                      pos=2   offsets=[9,12)
+  iphon                    pos=4   offsets=[17,23)
+  7                        pos=5   offsets=[24,25)
+  galaxi                   pos=6   offsets=[27,33)
+  s7                       pos=7   offsets=[34,36)
+  or                       pos=8   offsets=[38,40)
+  note                     pos=9   offsets=[41,45)
+  7                        pos=10  offsets=[46,47)
+
+1. Inspeccionar tokens  2. Prefix  3. Fuzzy  4. Infix  5. Next-term  6. Salir
+opción> texto>   ar                       pos=0   offsets=[0,3)
+  pope                     pos=2   offsets=[8,14)
+  person                   pos=3   offsets=[15,23)
+  secur                    pos=4   offsets=[24,32)
+  guard                    pos=5   offsets=[33,39)
+  hi                       pos=7   offsets=[43,46)
+  us                       pos=8   offsets=[47,49)
+  visit                    pos=9   offsets=[50,55)
+  part                     pos=10  offsets=[56,60)
+  swiss                    pos=13  offsets=[68,73)
+  guard                    pos=14  offsets=[74,79)
+  or                       pos=15  offsets=[81,83)
+  ar                       pos=16  offsets=[84,87)
+  separ                    pos=18  offsets=[93,101)
+
+1. Inspeccionar tokens  2. Prefix  3. Fuzzy  4. Infix  5. Next-term  6. Salir
+opción> 
