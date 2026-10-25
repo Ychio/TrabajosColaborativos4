@@ -1,0 +1,798 @@
+== Whitespaceanalyzer ==
+  Ayer	pos=0	offset=[0,4)	tipo=word
+  quedé	pos=1	offset=[5,10)	tipo=word
+  con	pos=2	offset=[11,14)	tipo=word
+  Lucía	pos=3	offset=[15,20)	tipo=word
+  y	pos=4	offset=[21,22)	tipo=word
+  Pablo	pos=5	offset=[23,28)	tipo=word
+  en	pos=6	offset=[29,31)	tipo=word
+  Madrid	pos=7	offset=[32,38)	tipo=word
+  para	pos=8	offset=[39,43)	tipo=word
+  tomar	pos=9	offset=[44,49)	tipo=word
+  algo	pos=10	offset=[50,54)	tipo=word
+  después	pos=11	offset=[55,62)	tipo=word
+  del	pos=12	offset=[63,66)	tipo=word
+  trabajo.	pos=13	offset=[67,75)	tipo=word
+  Llegué	pos=14	offset=[76,82)	tipo=word
+  a	pos=15	offset=[83,84)	tipo=word
+  las	pos=16	offset=[85,88)	tipo=word
+  18:30	pos=17	offset=[89,94)	tipo=word
+  y	pos=18	offset=[95,96)	tipo=word
+  ya	pos=19	offset=[97,99)	tipo=word
+  estaban	pos=20	offset=[100,107)	tipo=word
+  en	pos=21	offset=[108,110)	tipo=word
+  el	pos=22	offset=[111,113)	tipo=word
+  bar	pos=23	offset=[114,117)	tipo=word
+  de	pos=24	offset=[118,120)	tipo=word
+  siempre,	pos=25	offset=[121,129)	tipo=word
+  pidiendo	pos=26	offset=[130,138)	tipo=word
+  unas	pos=27	offset=[139,143)	tipo=word
+  cañas.	pos=28	offset=[144,150)	tipo=word
+  Pablo	pos=29	offset=[151,156)	tipo=word
+  nos	pos=30	offset=[157,160)	tipo=word
+  contó	pos=31	offset=[161,166)	tipo=word
+  que	pos=32	offset=[167,170)	tipo=word
+  se	pos=33	offset=[171,173)	tipo=word
+  va	pos=34	offset=[174,176)	tipo=word
+  a	pos=35	offset=[177,178)	tipo=word
+  Nueva	pos=36	offset=[179,184)	tipo=word
+  York	pos=37	offset=[185,189)	tipo=word
+  en	pos=38	offset=[190,192)	tipo=word
+  2027	pos=39	offset=[193,197)	tipo=word
+  con	pos=40	offset=[198,201)	tipo=word
+  una	pos=41	offset=[202,205)	tipo=word
+  beca	pos=42	offset=[206,210)	tipo=word
+  de	pos=43	offset=[211,213)	tipo=word
+  1.500	pos=44	offset=[214,219)	tipo=word
+  euros	pos=45	offset=[220,225)	tipo=word
+  al	pos=46	offset=[226,228)	tipo=word
+  mes,	pos=47	offset=[229,233)	tipo=word
+  ¡qué	pos=48	offset=[234,238)	tipo=word
+  envidia!	pos=49	offset=[239,247)	tipo=word
+  Lucía,	pos=50	offset=[248,254)	tipo=word
+  en	pos=51	offset=[255,257)	tipo=word
+  cambio,	pos=52	offset=[258,265)	tipo=word
+  está	pos=53	offset=[266,270)	tipo=word
+  harta	pos=54	offset=[271,276)	tipo=word
+  de	pos=55	offset=[277,279)	tipo=word
+  su	pos=56	offset=[280,282)	tipo=word
+  jefe:	pos=57	offset=[283,288)	tipo=word
+  «Me	pos=58	offset=[289,292)	tipo=word
+  escribe	pos=59	offset=[293,300)	tipo=word
+  a	pos=60	offset=[301,302)	tipo=word
+  las	pos=61	offset=[303,306)	tipo=word
+  23:00	pos=62	offset=[307,312)	tipo=word
+  y	pos=63	offset=[313,314)	tipo=word
+  quiere	pos=64	offset=[315,321)	tipo=word
+  respuesta	pos=65	offset=[322,331)	tipo=word
+  ya»,	pos=66	offset=[332,336)	tipo=word
+  decía.	pos=67	offset=[337,343)	tipo=word
+  Luego	pos=68	offset=[344,349)	tipo=word
+  pusimos	pos=69	offset=[350,357)	tipo=word
+  música	pos=70	offset=[358,364)	tipo=word
+  en	pos=71	offset=[365,367)	tipo=word
+  el	pos=72	offset=[368,370)	tipo=word
+  móvil	pos=73	offset=[371,376)	tipo=word
+  y	pos=74	offset=[377,378)	tipo=word
+  empezamos	pos=75	offset=[379,388)	tipo=word
+  a	pos=76	offset=[389,390)	tipo=word
+  discutir	pos=77	offset=[391,399)	tipo=word
+  si	pos=78	offset=[400,402)	tipo=word
+  la	pos=79	offset=[403,405)	tipo=word
+  canción	pos=80	offset=[406,413)	tipo=word
+  del	pos=81	offset=[414,417)	tipo=word
+  verano	pos=82	offset=[418,424)	tipo=word
+  era	pos=83	offset=[425,428)	tipo=word
+  buena.	pos=84	offset=[429,435)	tipo=word
+  Yo	pos=85	offset=[436,438)	tipo=word
+  defendía	pos=86	offset=[439,447)	tipo=word
+  que	pos=87	offset=[448,451)	tipo=word
+  da	pos=88	offset=[452,454)	tipo=word
+  igual	pos=89	offset=[455,460)	tipo=word
+  escribir	pos=90	offset=[461,469)	tipo=word
+  canción	pos=91	offset=[470,477)	tipo=word
+  o	pos=92	offset=[478,479)	tipo=word
+  cancion,	pos=93	offset=[480,488)	tipo=word
+  que	pos=94	offset=[489,492)	tipo=word
+  el	pos=95	offset=[493,495)	tipo=word
+  buscador	pos=96	offset=[496,504)	tipo=word
+  ya	pos=97	offset=[505,507)	tipo=word
+  lo	pos=98	offset=[508,510)	tipo=word
+  entenderá.	pos=99	offset=[511,521)	tipo=word
+  Al	pos=100	offset=[522,524)	tipo=word
+  final	pos=101	offset=[525,530)	tipo=word
+  pagamos	pos=102	offset=[531,538)	tipo=word
+  entre	pos=103	offset=[539,544)	tipo=word
+  los	pos=104	offset=[545,548)	tipo=word
+  tres,	pos=105	offset=[549,554)	tipo=word
+  unos	pos=106	offset=[555,559)	tipo=word
+  45,50	pos=107	offset=[560,565)	tipo=word
+  €	pos=108	offset=[566,567)	tipo=word
+  cada	pos=109	offset=[568,572)	tipo=word
+  uno,	pos=110	offset=[573,577)	tipo=word
+  y	pos=111	offset=[578,579)	tipo=word
+  volvimos	pos=112	offset=[580,588)	tipo=word
+  en	pos=113	offset=[589,591)	tipo=word
+  el	pos=114	offset=[592,594)	tipo=word
+  metro	pos=115	offset=[595,600)	tipo=word
+  hablando	pos=116	offset=[601,609)	tipo=word
+  del	pos=117	offset=[610,613)	tipo=word
+  viaje,	pos=118	offset=[614,620)	tipo=word
+  del	pos=119	offset=[621,624)	tipo=word
+  iPhone	pos=120	offset=[625,631)	tipo=word
+  15	pos=121	offset=[632,634)	tipo=word
+  de	pos=122	offset=[635,637)	tipo=word
+  Pablo	pos=123	offset=[638,643)	tipo=word
+  y	pos=124	offset=[644,645)	tipo=word
+  del	pos=125	offset=[646,649)	tipo=word
+  partido	pos=126	offset=[650,657)	tipo=word
+  del	pos=127	offset=[658,661)	tipo=word
+  Atlético–Real	pos=128	offset=[662,675)	tipo=word
+  Madrid	pos=129	offset=[676,682)	tipo=word
+  del	pos=130	offset=[683,686)	tipo=word
+  domingo.	pos=131	offset=[687,695)	tipo=word
+  Escríbeme	pos=132	offset=[696,705)	tipo=word
+  por	pos=133	offset=[706,709)	tipo=word
+  WhatsApp	pos=134	offset=[710,718)	tipo=word
+  o	pos=135	offset=[719,720)	tipo=word
+  a	pos=136	offset=[721,722)	tipo=word
+  juan@ejemplo.es	pos=137	offset=[723,738)	tipo=word
+  cuando	pos=138	offset=[739,745)	tipo=word
+  llegues.	pos=139	offset=[746,754)	tipo=word
+== StandardAnalyzer ==
+  ayer	pos=0	offset=[0,4)	tipo=<ALPHANUM>
+  quedé	pos=1	offset=[5,10)	tipo=<ALPHANUM>
+  con	pos=2	offset=[11,14)	tipo=<ALPHANUM>
+  lucía	pos=3	offset=[15,20)	tipo=<ALPHANUM>
+  y	pos=4	offset=[21,22)	tipo=<ALPHANUM>
+  pablo	pos=5	offset=[23,28)	tipo=<ALPHANUM>
+  en	pos=6	offset=[29,31)	tipo=<ALPHANUM>
+  madrid	pos=7	offset=[32,38)	tipo=<ALPHANUM>
+  para	pos=8	offset=[39,43)	tipo=<ALPHANUM>
+  tomar	pos=9	offset=[44,49)	tipo=<ALPHANUM>
+  algo	pos=10	offset=[50,54)	tipo=<ALPHANUM>
+  después	pos=11	offset=[55,62)	tipo=<ALPHANUM>
+  del	pos=12	offset=[63,66)	tipo=<ALPHANUM>
+  trabajo	pos=13	offset=[67,74)	tipo=<ALPHANUM>
+  llegué	pos=14	offset=[76,82)	tipo=<ALPHANUM>
+  a	pos=15	offset=[83,84)	tipo=<ALPHANUM>
+  las	pos=16	offset=[85,88)	tipo=<ALPHANUM>
+  18	pos=17	offset=[89,91)	tipo=<NUM>
+  30	pos=18	offset=[92,94)	tipo=<NUM>
+  y	pos=19	offset=[95,96)	tipo=<ALPHANUM>
+  ya	pos=20	offset=[97,99)	tipo=<ALPHANUM>
+  estaban	pos=21	offset=[100,107)	tipo=<ALPHANUM>
+  en	pos=22	offset=[108,110)	tipo=<ALPHANUM>
+  el	pos=23	offset=[111,113)	tipo=<ALPHANUM>
+  bar	pos=24	offset=[114,117)	tipo=<ALPHANUM>
+  de	pos=25	offset=[118,120)	tipo=<ALPHANUM>
+  siempre	pos=26	offset=[121,128)	tipo=<ALPHANUM>
+  pidiendo	pos=27	offset=[130,138)	tipo=<ALPHANUM>
+  unas	pos=28	offset=[139,143)	tipo=<ALPHANUM>
+  cañas	pos=29	offset=[144,149)	tipo=<ALPHANUM>
+  pablo	pos=30	offset=[151,156)	tipo=<ALPHANUM>
+  nos	pos=31	offset=[157,160)	tipo=<ALPHANUM>
+  contó	pos=32	offset=[161,166)	tipo=<ALPHANUM>
+  que	pos=33	offset=[167,170)	tipo=<ALPHANUM>
+  se	pos=34	offset=[171,173)	tipo=<ALPHANUM>
+  va	pos=35	offset=[174,176)	tipo=<ALPHANUM>
+  a	pos=36	offset=[177,178)	tipo=<ALPHANUM>
+  nueva	pos=37	offset=[179,184)	tipo=<ALPHANUM>
+  york	pos=38	offset=[185,189)	tipo=<ALPHANUM>
+  en	pos=39	offset=[190,192)	tipo=<ALPHANUM>
+  2027	pos=40	offset=[193,197)	tipo=<NUM>
+  con	pos=41	offset=[198,201)	tipo=<ALPHANUM>
+  una	pos=42	offset=[202,205)	tipo=<ALPHANUM>
+  beca	pos=43	offset=[206,210)	tipo=<ALPHANUM>
+  de	pos=44	offset=[211,213)	tipo=<ALPHANUM>
+  1.500	pos=45	offset=[214,219)	tipo=<NUM>
+  euros	pos=46	offset=[220,225)	tipo=<ALPHANUM>
+  al	pos=47	offset=[226,228)	tipo=<ALPHANUM>
+  mes	pos=48	offset=[229,232)	tipo=<ALPHANUM>
+  qué	pos=49	offset=[235,238)	tipo=<ALPHANUM>
+  envidia	pos=50	offset=[239,246)	tipo=<ALPHANUM>
+  lucía	pos=51	offset=[248,253)	tipo=<ALPHANUM>
+  en	pos=52	offset=[255,257)	tipo=<ALPHANUM>
+  cambio	pos=53	offset=[258,264)	tipo=<ALPHANUM>
+  está	pos=54	offset=[266,270)	tipo=<ALPHANUM>
+  harta	pos=55	offset=[271,276)	tipo=<ALPHANUM>
+  de	pos=56	offset=[277,279)	tipo=<ALPHANUM>
+  su	pos=57	offset=[280,282)	tipo=<ALPHANUM>
+  jefe	pos=58	offset=[283,287)	tipo=<ALPHANUM>
+  me	pos=59	offset=[290,292)	tipo=<ALPHANUM>
+  escribe	pos=60	offset=[293,300)	tipo=<ALPHANUM>
+  a	pos=61	offset=[301,302)	tipo=<ALPHANUM>
+  las	pos=62	offset=[303,306)	tipo=<ALPHANUM>
+  23	pos=63	offset=[307,309)	tipo=<NUM>
+  00	pos=64	offset=[310,312)	tipo=<NUM>
+  y	pos=65	offset=[313,314)	tipo=<ALPHANUM>
+  quiere	pos=66	offset=[315,321)	tipo=<ALPHANUM>
+  respuesta	pos=67	offset=[322,331)	tipo=<ALPHANUM>
+  ya	pos=68	offset=[332,334)	tipo=<ALPHANUM>
+  decía	pos=69	offset=[337,342)	tipo=<ALPHANUM>
+  luego	pos=70	offset=[344,349)	tipo=<ALPHANUM>
+  pusimos	pos=71	offset=[350,357)	tipo=<ALPHANUM>
+  música	pos=72	offset=[358,364)	tipo=<ALPHANUM>
+  en	pos=73	offset=[365,367)	tipo=<ALPHANUM>
+  el	pos=74	offset=[368,370)	tipo=<ALPHANUM>
+  móvil	pos=75	offset=[371,376)	tipo=<ALPHANUM>
+  y	pos=76	offset=[377,378)	tipo=<ALPHANUM>
+  empezamos	pos=77	offset=[379,388)	tipo=<ALPHANUM>
+  a	pos=78	offset=[389,390)	tipo=<ALPHANUM>
+  discutir	pos=79	offset=[391,399)	tipo=<ALPHANUM>
+  si	pos=80	offset=[400,402)	tipo=<ALPHANUM>
+  la	pos=81	offset=[403,405)	tipo=<ALPHANUM>
+  canción	pos=82	offset=[406,413)	tipo=<ALPHANUM>
+  del	pos=83	offset=[414,417)	tipo=<ALPHANUM>
+  verano	pos=84	offset=[418,424)	tipo=<ALPHANUM>
+  era	pos=85	offset=[425,428)	tipo=<ALPHANUM>
+  buena	pos=86	offset=[429,434)	tipo=<ALPHANUM>
+  yo	pos=87	offset=[436,438)	tipo=<ALPHANUM>
+  defendía	pos=88	offset=[439,447)	tipo=<ALPHANUM>
+  que	pos=89	offset=[448,451)	tipo=<ALPHANUM>
+  da	pos=90	offset=[452,454)	tipo=<ALPHANUM>
+  igual	pos=91	offset=[455,460)	tipo=<ALPHANUM>
+  escribir	pos=92	offset=[461,469)	tipo=<ALPHANUM>
+  canción	pos=93	offset=[470,477)	tipo=<ALPHANUM>
+  o	pos=94	offset=[478,479)	tipo=<ALPHANUM>
+  cancion	pos=95	offset=[480,487)	tipo=<ALPHANUM>
+  que	pos=96	offset=[489,492)	tipo=<ALPHANUM>
+  el	pos=97	offset=[493,495)	tipo=<ALPHANUM>
+  buscador	pos=98	offset=[496,504)	tipo=<ALPHANUM>
+  ya	pos=99	offset=[505,507)	tipo=<ALPHANUM>
+  lo	pos=100	offset=[508,510)	tipo=<ALPHANUM>
+  entenderá	pos=101	offset=[511,520)	tipo=<ALPHANUM>
+  al	pos=102	offset=[522,524)	tipo=<ALPHANUM>
+  final	pos=103	offset=[525,530)	tipo=<ALPHANUM>
+  pagamos	pos=104	offset=[531,538)	tipo=<ALPHANUM>
+  entre	pos=105	offset=[539,544)	tipo=<ALPHANUM>
+  los	pos=106	offset=[545,548)	tipo=<ALPHANUM>
+  tres	pos=107	offset=[549,553)	tipo=<ALPHANUM>
+  unos	pos=108	offset=[555,559)	tipo=<ALPHANUM>
+  45,50	pos=109	offset=[560,565)	tipo=<NUM>
+  cada	pos=110	offset=[568,572)	tipo=<ALPHANUM>
+  uno	pos=111	offset=[573,576)	tipo=<ALPHANUM>
+  y	pos=112	offset=[578,579)	tipo=<ALPHANUM>
+  volvimos	pos=113	offset=[580,588)	tipo=<ALPHANUM>
+  en	pos=114	offset=[589,591)	tipo=<ALPHANUM>
+  el	pos=115	offset=[592,594)	tipo=<ALPHANUM>
+  metro	pos=116	offset=[595,600)	tipo=<ALPHANUM>
+  hablando	pos=117	offset=[601,609)	tipo=<ALPHANUM>
+  del	pos=118	offset=[610,613)	tipo=<ALPHANUM>
+  viaje	pos=119	offset=[614,619)	tipo=<ALPHANUM>
+  del	pos=120	offset=[621,624)	tipo=<ALPHANUM>
+  iphone	pos=121	offset=[625,631)	tipo=<ALPHANUM>
+  15	pos=122	offset=[632,634)	tipo=<NUM>
+  de	pos=123	offset=[635,637)	tipo=<ALPHANUM>
+  pablo	pos=124	offset=[638,643)	tipo=<ALPHANUM>
+  y	pos=125	offset=[644,645)	tipo=<ALPHANUM>
+  del	pos=126	offset=[646,649)	tipo=<ALPHANUM>
+  partido	pos=127	offset=[650,657)	tipo=<ALPHANUM>
+  del	pos=128	offset=[658,661)	tipo=<ALPHANUM>
+  atlético	pos=129	offset=[662,670)	tipo=<ALPHANUM>
+  real	pos=130	offset=[671,675)	tipo=<ALPHANUM>
+  madrid	pos=131	offset=[676,682)	tipo=<ALPHANUM>
+  del	pos=132	offset=[683,686)	tipo=<ALPHANUM>
+  domingo	pos=133	offset=[687,694)	tipo=<ALPHANUM>
+  escríbeme	pos=134	offset=[696,705)	tipo=<ALPHANUM>
+  por	pos=135	offset=[706,709)	tipo=<ALPHANUM>
+  whatsapp	pos=136	offset=[710,718)	tipo=<ALPHANUM>
+  o	pos=137	offset=[719,720)	tipo=<ALPHANUM>
+  a	pos=138	offset=[721,722)	tipo=<ALPHANUM>
+  juan	pos=139	offset=[723,727)	tipo=<ALPHANUM>
+  ejemplo.es	pos=140	offset=[728,738)	tipo=<ALPHANUM>
+  cuando	pos=141	offset=[739,745)	tipo=<ALPHANUM>
+  llegues	pos=142	offset=[746,753)	tipo=<ALPHANUM>
+== SpanishAnalyzer ==
+  ayer	pos=0	offset=[0,4)	tipo=<ALPHANUM>
+  qued	pos=1	offset=[5,10)	tipo=<ALPHANUM>
+  luci	pos=3	offset=[15,20)	tipo=<ALPHANUM>
+  pabl	pos=5	offset=[23,28)	tipo=<ALPHANUM>
+  madrid	pos=7	offset=[32,38)	tipo=<ALPHANUM>
+  tomar	pos=9	offset=[44,49)	tipo=<ALPHANUM>
+  despu	pos=11	offset=[55,62)	tipo=<ALPHANUM>
+  trabaj	pos=13	offset=[67,74)	tipo=<ALPHANUM>
+  llegu	pos=14	offset=[76,82)	tipo=<ALPHANUM>
+  18	pos=17	offset=[89,91)	tipo=<NUM>
+  30	pos=18	offset=[92,94)	tipo=<NUM>
+  bar	pos=24	offset=[114,117)	tipo=<ALPHANUM>
+  siempr	pos=26	offset=[121,128)	tipo=<ALPHANUM>
+  pidiend	pos=27	offset=[130,138)	tipo=<ALPHANUM>
+  unas	pos=28	offset=[139,143)	tipo=<ALPHANUM>
+  cañ	pos=29	offset=[144,149)	tipo=<ALPHANUM>
+  pabl	pos=30	offset=[151,156)	tipo=<ALPHANUM>
+  cont	pos=32	offset=[161,166)	tipo=<ALPHANUM>
+  va	pos=35	offset=[174,176)	tipo=<ALPHANUM>
+  nuev	pos=37	offset=[179,184)	tipo=<ALPHANUM>
+  york	pos=38	offset=[185,189)	tipo=<ALPHANUM>
+  2027	pos=40	offset=[193,197)	tipo=<NUM>
+  beca	pos=43	offset=[206,210)	tipo=<ALPHANUM>
+  1.500	pos=45	offset=[214,219)	tipo=<NUM>
+  eur	pos=46	offset=[220,225)	tipo=<ALPHANUM>
+  mes	pos=48	offset=[229,232)	tipo=<ALPHANUM>
+  envidi	pos=50	offset=[239,246)	tipo=<ALPHANUM>
+  luci	pos=51	offset=[248,253)	tipo=<ALPHANUM>
+  cambi	pos=53	offset=[258,264)	tipo=<ALPHANUM>
+  hart	pos=55	offset=[271,276)	tipo=<ALPHANUM>
+  jefe	pos=58	offset=[283,287)	tipo=<ALPHANUM>
+  escrib	pos=60	offset=[293,300)	tipo=<ALPHANUM>
+  23	pos=63	offset=[307,309)	tipo=<NUM>
+  00	pos=64	offset=[310,312)	tipo=<NUM>
+  quier	pos=66	offset=[315,321)	tipo=<ALPHANUM>
+  respuest	pos=67	offset=[322,331)	tipo=<ALPHANUM>
+  deci	pos=69	offset=[337,342)	tipo=<ALPHANUM>
+  lueg	pos=70	offset=[344,349)	tipo=<ALPHANUM>
+  pusim	pos=71	offset=[350,357)	tipo=<ALPHANUM>
+  music	pos=72	offset=[358,364)	tipo=<ALPHANUM>
+  movil	pos=75	offset=[371,376)	tipo=<ALPHANUM>
+  empezam	pos=77	offset=[379,388)	tipo=<ALPHANUM>
+  discutir	pos=79	offset=[391,399)	tipo=<ALPHANUM>
+  si	pos=80	offset=[400,402)	tipo=<ALPHANUM>
+  cancion	pos=82	offset=[406,413)	tipo=<ALPHANUM>
+  veran	pos=84	offset=[418,424)	tipo=<ALPHANUM>
+  buen	pos=86	offset=[429,434)	tipo=<ALPHANUM>
+  defendi	pos=88	offset=[439,447)	tipo=<ALPHANUM>
+  da	pos=90	offset=[452,454)	tipo=<ALPHANUM>
+  igual	pos=91	offset=[455,460)	tipo=<ALPHANUM>
+  escribir	pos=92	offset=[461,469)	tipo=<ALPHANUM>
+  cancion	pos=93	offset=[470,477)	tipo=<ALPHANUM>
+  cancion	pos=95	offset=[480,487)	tipo=<ALPHANUM>
+  buscador	pos=98	offset=[496,504)	tipo=<ALPHANUM>
+  entender	pos=101	offset=[511,520)	tipo=<ALPHANUM>
+  final	pos=103	offset=[525,530)	tipo=<ALPHANUM>
+  pagam	pos=104	offset=[531,538)	tipo=<ALPHANUM>
+  tres	pos=107	offset=[549,553)	tipo=<ALPHANUM>
+  45,50	pos=109	offset=[560,565)	tipo=<NUM>
+  cada	pos=110	offset=[568,572)	tipo=<ALPHANUM>
+  volvim	pos=113	offset=[580,588)	tipo=<ALPHANUM>
+  metr	pos=116	offset=[595,600)	tipo=<ALPHANUM>
+  habland	pos=117	offset=[601,609)	tipo=<ALPHANUM>
+  viaj	pos=119	offset=[614,619)	tipo=<ALPHANUM>
+  iphon	pos=121	offset=[625,631)	tipo=<ALPHANUM>
+  15	pos=122	offset=[632,634)	tipo=<NUM>
+  pabl	pos=124	offset=[638,643)	tipo=<ALPHANUM>
+  partid	pos=127	offset=[650,657)	tipo=<ALPHANUM>
+  atletic	pos=129	offset=[662,670)	tipo=<ALPHANUM>
+  real	pos=130	offset=[671,675)	tipo=<ALPHANUM>
+  madrid	pos=131	offset=[676,682)	tipo=<ALPHANUM>
+  doming	pos=133	offset=[687,694)	tipo=<ALPHANUM>
+  escribem	pos=134	offset=[696,705)	tipo=<ALPHANUM>
+  whatsapp	pos=136	offset=[710,718)	tipo=<ALPHANUM>
+  juan	pos=139	offset=[723,727)	tipo=<ALPHANUM>
+  ejemplo.	pos=140	offset=[728,738)	tipo=<ALPHANUM>
+  llegu	pos=142	offset=[746,753)	tipo=<ALPHANUM>
+== Standard + acentos ==
+  ayer	pos=0	offset=[0,4)	tipo=<ALPHANUM>
+  quede	pos=1	offset=[5,10)	tipo=<ALPHANUM>
+  con	pos=2	offset=[11,14)	tipo=<ALPHANUM>
+  lucia	pos=3	offset=[15,20)	tipo=<ALPHANUM>
+  y	pos=4	offset=[21,22)	tipo=<ALPHANUM>
+  pablo	pos=5	offset=[23,28)	tipo=<ALPHANUM>
+  en	pos=6	offset=[29,31)	tipo=<ALPHANUM>
+  madrid	pos=7	offset=[32,38)	tipo=<ALPHANUM>
+  para	pos=8	offset=[39,43)	tipo=<ALPHANUM>
+  tomar	pos=9	offset=[44,49)	tipo=<ALPHANUM>
+  algo	pos=10	offset=[50,54)	tipo=<ALPHANUM>
+  despues	pos=11	offset=[55,62)	tipo=<ALPHANUM>
+  del	pos=12	offset=[63,66)	tipo=<ALPHANUM>
+  trabajo	pos=13	offset=[67,74)	tipo=<ALPHANUM>
+  llegue	pos=14	offset=[76,82)	tipo=<ALPHANUM>
+  a	pos=15	offset=[83,84)	tipo=<ALPHANUM>
+  las	pos=16	offset=[85,88)	tipo=<ALPHANUM>
+  18	pos=17	offset=[89,91)	tipo=<NUM>
+  30	pos=18	offset=[92,94)	tipo=<NUM>
+  y	pos=19	offset=[95,96)	tipo=<ALPHANUM>
+  ya	pos=20	offset=[97,99)	tipo=<ALPHANUM>
+  estaban	pos=21	offset=[100,107)	tipo=<ALPHANUM>
+  en	pos=22	offset=[108,110)	tipo=<ALPHANUM>
+  el	pos=23	offset=[111,113)	tipo=<ALPHANUM>
+  bar	pos=24	offset=[114,117)	tipo=<ALPHANUM>
+  de	pos=25	offset=[118,120)	tipo=<ALPHANUM>
+  siempre	pos=26	offset=[121,128)	tipo=<ALPHANUM>
+  pidiendo	pos=27	offset=[130,138)	tipo=<ALPHANUM>
+  unas	pos=28	offset=[139,143)	tipo=<ALPHANUM>
+  canas	pos=29	offset=[144,149)	tipo=<ALPHANUM>
+  pablo	pos=30	offset=[151,156)	tipo=<ALPHANUM>
+  nos	pos=31	offset=[157,160)	tipo=<ALPHANUM>
+  conto	pos=32	offset=[161,166)	tipo=<ALPHANUM>
+  que	pos=33	offset=[167,170)	tipo=<ALPHANUM>
+  se	pos=34	offset=[171,173)	tipo=<ALPHANUM>
+  va	pos=35	offset=[174,176)	tipo=<ALPHANUM>
+  a	pos=36	offset=[177,178)	tipo=<ALPHANUM>
+  nueva	pos=37	offset=[179,184)	tipo=<ALPHANUM>
+  york	pos=38	offset=[185,189)	tipo=<ALPHANUM>
+  en	pos=39	offset=[190,192)	tipo=<ALPHANUM>
+  2027	pos=40	offset=[193,197)	tipo=<NUM>
+  con	pos=41	offset=[198,201)	tipo=<ALPHANUM>
+  una	pos=42	offset=[202,205)	tipo=<ALPHANUM>
+  beca	pos=43	offset=[206,210)	tipo=<ALPHANUM>
+  de	pos=44	offset=[211,213)	tipo=<ALPHANUM>
+  1.500	pos=45	offset=[214,219)	tipo=<NUM>
+  euros	pos=46	offset=[220,225)	tipo=<ALPHANUM>
+  al	pos=47	offset=[226,228)	tipo=<ALPHANUM>
+  mes	pos=48	offset=[229,232)	tipo=<ALPHANUM>
+  que	pos=49	offset=[235,238)	tipo=<ALPHANUM>
+  envidia	pos=50	offset=[239,246)	tipo=<ALPHANUM>
+  lucia	pos=51	offset=[248,253)	tipo=<ALPHANUM>
+  en	pos=52	offset=[255,257)	tipo=<ALPHANUM>
+  cambio	pos=53	offset=[258,264)	tipo=<ALPHANUM>
+  esta	pos=54	offset=[266,270)	tipo=<ALPHANUM>
+  harta	pos=55	offset=[271,276)	tipo=<ALPHANUM>
+  de	pos=56	offset=[277,279)	tipo=<ALPHANUM>
+  su	pos=57	offset=[280,282)	tipo=<ALPHANUM>
+  jefe	pos=58	offset=[283,287)	tipo=<ALPHANUM>
+  me	pos=59	offset=[290,292)	tipo=<ALPHANUM>
+  escribe	pos=60	offset=[293,300)	tipo=<ALPHANUM>
+  a	pos=61	offset=[301,302)	tipo=<ALPHANUM>
+  las	pos=62	offset=[303,306)	tipo=<ALPHANUM>
+  23	pos=63	offset=[307,309)	tipo=<NUM>
+  00	pos=64	offset=[310,312)	tipo=<NUM>
+  y	pos=65	offset=[313,314)	tipo=<ALPHANUM>
+  quiere	pos=66	offset=[315,321)	tipo=<ALPHANUM>
+  respuesta	pos=67	offset=[322,331)	tipo=<ALPHANUM>
+  ya	pos=68	offset=[332,334)	tipo=<ALPHANUM>
+  decia	pos=69	offset=[337,342)	tipo=<ALPHANUM>
+  luego	pos=70	offset=[344,349)	tipo=<ALPHANUM>
+  pusimos	pos=71	offset=[350,357)	tipo=<ALPHANUM>
+  musica	pos=72	offset=[358,364)	tipo=<ALPHANUM>
+  en	pos=73	offset=[365,367)	tipo=<ALPHANUM>
+  el	pos=74	offset=[368,370)	tipo=<ALPHANUM>
+  movil	pos=75	offset=[371,376)	tipo=<ALPHANUM>
+  y	pos=76	offset=[377,378)	tipo=<ALPHANUM>
+  empezamos	pos=77	offset=[379,388)	tipo=<ALPHANUM>
+  a	pos=78	offset=[389,390)	tipo=<ALPHANUM>
+  discutir	pos=79	offset=[391,399)	tipo=<ALPHANUM>
+  si	pos=80	offset=[400,402)	tipo=<ALPHANUM>
+  la	pos=81	offset=[403,405)	tipo=<ALPHANUM>
+  cancion	pos=82	offset=[406,413)	tipo=<ALPHANUM>
+  del	pos=83	offset=[414,417)	tipo=<ALPHANUM>
+  verano	pos=84	offset=[418,424)	tipo=<ALPHANUM>
+  era	pos=85	offset=[425,428)	tipo=<ALPHANUM>
+  buena	pos=86	offset=[429,434)	tipo=<ALPHANUM>
+  yo	pos=87	offset=[436,438)	tipo=<ALPHANUM>
+  defendia	pos=88	offset=[439,447)	tipo=<ALPHANUM>
+  que	pos=89	offset=[448,451)	tipo=<ALPHANUM>
+  da	pos=90	offset=[452,454)	tipo=<ALPHANUM>
+  igual	pos=91	offset=[455,460)	tipo=<ALPHANUM>
+  escribir	pos=92	offset=[461,469)	tipo=<ALPHANUM>
+  cancion	pos=93	offset=[470,477)	tipo=<ALPHANUM>
+  o	pos=94	offset=[478,479)	tipo=<ALPHANUM>
+  cancion	pos=95	offset=[480,487)	tipo=<ALPHANUM>
+  que	pos=96	offset=[489,492)	tipo=<ALPHANUM>
+  el	pos=97	offset=[493,495)	tipo=<ALPHANUM>
+  buscador	pos=98	offset=[496,504)	tipo=<ALPHANUM>
+  ya	pos=99	offset=[505,507)	tipo=<ALPHANUM>
+  lo	pos=100	offset=[508,510)	tipo=<ALPHANUM>
+  entendera	pos=101	offset=[511,520)	tipo=<ALPHANUM>
+  al	pos=102	offset=[522,524)	tipo=<ALPHANUM>
+  final	pos=103	offset=[525,530)	tipo=<ALPHANUM>
+  pagamos	pos=104	offset=[531,538)	tipo=<ALPHANUM>
+  entre	pos=105	offset=[539,544)	tipo=<ALPHANUM>
+  los	pos=106	offset=[545,548)	tipo=<ALPHANUM>
+  tres	pos=107	offset=[549,553)	tipo=<ALPHANUM>
+  unos	pos=108	offset=[555,559)	tipo=<ALPHANUM>
+  45,50	pos=109	offset=[560,565)	tipo=<NUM>
+  cada	pos=110	offset=[568,572)	tipo=<ALPHANUM>
+  uno	pos=111	offset=[573,576)	tipo=<ALPHANUM>
+  y	pos=112	offset=[578,579)	tipo=<ALPHANUM>
+  volvimos	pos=113	offset=[580,588)	tipo=<ALPHANUM>
+  en	pos=114	offset=[589,591)	tipo=<ALPHANUM>
+  el	pos=115	offset=[592,594)	tipo=<ALPHANUM>
+  metro	pos=116	offset=[595,600)	tipo=<ALPHANUM>
+  hablando	pos=117	offset=[601,609)	tipo=<ALPHANUM>
+  del	pos=118	offset=[610,613)	tipo=<ALPHANUM>
+  viaje	pos=119	offset=[614,619)	tipo=<ALPHANUM>
+  del	pos=120	offset=[621,624)	tipo=<ALPHANUM>
+  iphone	pos=121	offset=[625,631)	tipo=<ALPHANUM>
+  15	pos=122	offset=[632,634)	tipo=<NUM>
+  de	pos=123	offset=[635,637)	tipo=<ALPHANUM>
+  pablo	pos=124	offset=[638,643)	tipo=<ALPHANUM>
+  y	pos=125	offset=[644,645)	tipo=<ALPHANUM>
+  del	pos=126	offset=[646,649)	tipo=<ALPHANUM>
+  partido	pos=127	offset=[650,657)	tipo=<ALPHANUM>
+  del	pos=128	offset=[658,661)	tipo=<ALPHANUM>
+  atletico	pos=129	offset=[662,670)	tipo=<ALPHANUM>
+  real	pos=130	offset=[671,675)	tipo=<ALPHANUM>
+  madrid	pos=131	offset=[676,682)	tipo=<ALPHANUM>
+  del	pos=132	offset=[683,686)	tipo=<ALPHANUM>
+  domingo	pos=133	offset=[687,694)	tipo=<ALPHANUM>
+  escribeme	pos=134	offset=[696,705)	tipo=<ALPHANUM>
+  por	pos=135	offset=[706,709)	tipo=<ALPHANUM>
+  whatsapp	pos=136	offset=[710,718)	tipo=<ALPHANUM>
+  o	pos=137	offset=[719,720)	tipo=<ALPHANUM>
+  a	pos=138	offset=[721,722)	tipo=<ALPHANUM>
+  juan	pos=139	offset=[723,727)	tipo=<ALPHANUM>
+  ejemplo.es	pos=140	offset=[728,738)	tipo=<ALPHANUM>
+  cuando	pos=141	offset=[739,745)	tipo=<ALPHANUM>
+  llegues	pos=142	offset=[746,753)	tipo=<ALPHANUM>
+== Standard + shingles ==
+  ayer	pos=0	offset=[0,4)	tipo=<ALPHANUM>
+  ayer quedé	pos=0	offset=[0,10)	tipo=shingle
+  quedé	pos=1	offset=[5,10)	tipo=<ALPHANUM>
+  quedé con	pos=1	offset=[5,14)	tipo=shingle
+  con	pos=2	offset=[11,14)	tipo=<ALPHANUM>
+  con lucía	pos=2	offset=[11,20)	tipo=shingle
+  lucía	pos=3	offset=[15,20)	tipo=<ALPHANUM>
+  lucía y	pos=3	offset=[15,22)	tipo=shingle
+  y	pos=4	offset=[21,22)	tipo=<ALPHANUM>
+  y pablo	pos=4	offset=[21,28)	tipo=shingle
+  pablo	pos=5	offset=[23,28)	tipo=<ALPHANUM>
+  pablo en	pos=5	offset=[23,31)	tipo=shingle
+  en	pos=6	offset=[29,31)	tipo=<ALPHANUM>
+  en madrid	pos=6	offset=[29,38)	tipo=shingle
+  madrid	pos=7	offset=[32,38)	tipo=<ALPHANUM>
+  madrid para	pos=7	offset=[32,43)	tipo=shingle
+  para	pos=8	offset=[39,43)	tipo=<ALPHANUM>
+  para tomar	pos=8	offset=[39,49)	tipo=shingle
+  tomar	pos=9	offset=[44,49)	tipo=<ALPHANUM>
+  tomar algo	pos=9	offset=[44,54)	tipo=shingle
+  algo	pos=10	offset=[50,54)	tipo=<ALPHANUM>
+  algo después	pos=10	offset=[50,62)	tipo=shingle
+  después	pos=11	offset=[55,62)	tipo=<ALPHANUM>
+  después del	pos=11	offset=[55,66)	tipo=shingle
+  del	pos=12	offset=[63,66)	tipo=<ALPHANUM>
+  del trabajo	pos=12	offset=[63,74)	tipo=shingle
+  trabajo	pos=13	offset=[67,74)	tipo=<ALPHANUM>
+  trabajo llegué	pos=13	offset=[67,82)	tipo=shingle
+  llegué	pos=14	offset=[76,82)	tipo=<ALPHANUM>
+  llegué a	pos=14	offset=[76,84)	tipo=shingle
+  a	pos=15	offset=[83,84)	tipo=<ALPHANUM>
+  a las	pos=15	offset=[83,88)	tipo=shingle
+  las	pos=16	offset=[85,88)	tipo=<ALPHANUM>
+  las 18	pos=16	offset=[85,91)	tipo=shingle
+  18	pos=17	offset=[89,91)	tipo=<NUM>
+  18 30	pos=17	offset=[89,94)	tipo=shingle
+  30	pos=18	offset=[92,94)	tipo=<NUM>
+  30 y	pos=18	offset=[92,96)	tipo=shingle
+  y	pos=19	offset=[95,96)	tipo=<ALPHANUM>
+  y ya	pos=19	offset=[95,99)	tipo=shingle
+  ya	pos=20	offset=[97,99)	tipo=<ALPHANUM>
+  ya estaban	pos=20	offset=[97,107)	tipo=shingle
+  estaban	pos=21	offset=[100,107)	tipo=<ALPHANUM>
+  estaban en	pos=21	offset=[100,110)	tipo=shingle
+  en	pos=22	offset=[108,110)	tipo=<ALPHANUM>
+  en el	pos=22	offset=[108,113)	tipo=shingle
+  el	pos=23	offset=[111,113)	tipo=<ALPHANUM>
+  el bar	pos=23	offset=[111,117)	tipo=shingle
+  bar	pos=24	offset=[114,117)	tipo=<ALPHANUM>
+  bar de	pos=24	offset=[114,120)	tipo=shingle
+  de	pos=25	offset=[118,120)	tipo=<ALPHANUM>
+  de siempre	pos=25	offset=[118,128)	tipo=shingle
+  siempre	pos=26	offset=[121,128)	tipo=<ALPHANUM>
+  siempre pidiendo	pos=26	offset=[121,138)	tipo=shingle
+  pidiendo	pos=27	offset=[130,138)	tipo=<ALPHANUM>
+  pidiendo unas	pos=27	offset=[130,143)	tipo=shingle
+  unas	pos=28	offset=[139,143)	tipo=<ALPHANUM>
+  unas cañas	pos=28	offset=[139,149)	tipo=shingle
+  cañas	pos=29	offset=[144,149)	tipo=<ALPHANUM>
+  cañas pablo	pos=29	offset=[144,156)	tipo=shingle
+  pablo	pos=30	offset=[151,156)	tipo=<ALPHANUM>
+  pablo nos	pos=30	offset=[151,160)	tipo=shingle
+  nos	pos=31	offset=[157,160)	tipo=<ALPHANUM>
+  nos contó	pos=31	offset=[157,166)	tipo=shingle
+  contó	pos=32	offset=[161,166)	tipo=<ALPHANUM>
+  contó que	pos=32	offset=[161,170)	tipo=shingle
+  que	pos=33	offset=[167,170)	tipo=<ALPHANUM>
+  que se	pos=33	offset=[167,173)	tipo=shingle
+  se	pos=34	offset=[171,173)	tipo=<ALPHANUM>
+  se va	pos=34	offset=[171,176)	tipo=shingle
+  va	pos=35	offset=[174,176)	tipo=<ALPHANUM>
+  va a	pos=35	offset=[174,178)	tipo=shingle
+  a	pos=36	offset=[177,178)	tipo=<ALPHANUM>
+  a nueva	pos=36	offset=[177,184)	tipo=shingle
+  nueva	pos=37	offset=[179,184)	tipo=<ALPHANUM>
+  nueva york	pos=37	offset=[179,189)	tipo=shingle
+  york	pos=38	offset=[185,189)	tipo=<ALPHANUM>
+  york en	pos=38	offset=[185,192)	tipo=shingle
+  en	pos=39	offset=[190,192)	tipo=<ALPHANUM>
+  en 2027	pos=39	offset=[190,197)	tipo=shingle
+  2027	pos=40	offset=[193,197)	tipo=<NUM>
+  2027 con	pos=40	offset=[193,201)	tipo=shingle
+  con	pos=41	offset=[198,201)	tipo=<ALPHANUM>
+  con una	pos=41	offset=[198,205)	tipo=shingle
+  una	pos=42	offset=[202,205)	tipo=<ALPHANUM>
+  una beca	pos=42	offset=[202,210)	tipo=shingle
+  beca	pos=43	offset=[206,210)	tipo=<ALPHANUM>
+  beca de	pos=43	offset=[206,213)	tipo=shingle
+  de	pos=44	offset=[211,213)	tipo=<ALPHANUM>
+  de 1.500	pos=44	offset=[211,219)	tipo=shingle
+  1.500	pos=45	offset=[214,219)	tipo=<NUM>
+  1.500 euros	pos=45	offset=[214,225)	tipo=shingle
+  euros	pos=46	offset=[220,225)	tipo=<ALPHANUM>
+  euros al	pos=46	offset=[220,228)	tipo=shingle
+  al	pos=47	offset=[226,228)	tipo=<ALPHANUM>
+  al mes	pos=47	offset=[226,232)	tipo=shingle
+  mes	pos=48	offset=[229,232)	tipo=<ALPHANUM>
+  mes qué	pos=48	offset=[229,238)	tipo=shingle
+  qué	pos=49	offset=[235,238)	tipo=<ALPHANUM>
+  qué envidia	pos=49	offset=[235,246)	tipo=shingle
+  envidia	pos=50	offset=[239,246)	tipo=<ALPHANUM>
+  envidia lucía	pos=50	offset=[239,253)	tipo=shingle
+  lucía	pos=51	offset=[248,253)	tipo=<ALPHANUM>
+  lucía en	pos=51	offset=[248,257)	tipo=shingle
+  en	pos=52	offset=[255,257)	tipo=<ALPHANUM>
+  en cambio	pos=52	offset=[255,264)	tipo=shingle
+  cambio	pos=53	offset=[258,264)	tipo=<ALPHANUM>
+  cambio está	pos=53	offset=[258,270)	tipo=shingle
+  está	pos=54	offset=[266,270)	tipo=<ALPHANUM>
+  está harta	pos=54	offset=[266,276)	tipo=shingle
+  harta	pos=55	offset=[271,276)	tipo=<ALPHANUM>
+  harta de	pos=55	offset=[271,279)	tipo=shingle
+  de	pos=56	offset=[277,279)	tipo=<ALPHANUM>
+  de su	pos=56	offset=[277,282)	tipo=shingle
+  su	pos=57	offset=[280,282)	tipo=<ALPHANUM>
+  su jefe	pos=57	offset=[280,287)	tipo=shingle
+  jefe	pos=58	offset=[283,287)	tipo=<ALPHANUM>
+  jefe me	pos=58	offset=[283,292)	tipo=shingle
+  me	pos=59	offset=[290,292)	tipo=<ALPHANUM>
+  me escribe	pos=59	offset=[290,300)	tipo=shingle
+  escribe	pos=60	offset=[293,300)	tipo=<ALPHANUM>
+  escribe a	pos=60	offset=[293,302)	tipo=shingle
+  a	pos=61	offset=[301,302)	tipo=<ALPHANUM>
+  a las	pos=61	offset=[301,306)	tipo=shingle
+  las	pos=62	offset=[303,306)	tipo=<ALPHANUM>
+  las 23	pos=62	offset=[303,309)	tipo=shingle
+  23	pos=63	offset=[307,309)	tipo=<NUM>
+  23 00	pos=63	offset=[307,312)	tipo=shingle
+  00	pos=64	offset=[310,312)	tipo=<NUM>
+  00 y	pos=64	offset=[310,314)	tipo=shingle
+  y	pos=65	offset=[313,314)	tipo=<ALPHANUM>
+  y quiere	pos=65	offset=[313,321)	tipo=shingle
+  quiere	pos=66	offset=[315,321)	tipo=<ALPHANUM>
+  quiere respuesta	pos=66	offset=[315,331)	tipo=shingle
+  respuesta	pos=67	offset=[322,331)	tipo=<ALPHANUM>
+  respuesta ya	pos=67	offset=[322,334)	tipo=shingle
+  ya	pos=68	offset=[332,334)	tipo=<ALPHANUM>
+  ya decía	pos=68	offset=[332,342)	tipo=shingle
+  decía	pos=69	offset=[337,342)	tipo=<ALPHANUM>
+  decía luego	pos=69	offset=[337,349)	tipo=shingle
+  luego	pos=70	offset=[344,349)	tipo=<ALPHANUM>
+  luego pusimos	pos=70	offset=[344,357)	tipo=shingle
+  pusimos	pos=71	offset=[350,357)	tipo=<ALPHANUM>
+  pusimos música	pos=71	offset=[350,364)	tipo=shingle
+  música	pos=72	offset=[358,364)	tipo=<ALPHANUM>
+  música en	pos=72	offset=[358,367)	tipo=shingle
+  en	pos=73	offset=[365,367)	tipo=<ALPHANUM>
+  en el	pos=73	offset=[365,370)	tipo=shingle
+  el	pos=74	offset=[368,370)	tipo=<ALPHANUM>
+  el móvil	pos=74	offset=[368,376)	tipo=shingle
+  móvil	pos=75	offset=[371,376)	tipo=<ALPHANUM>
+  móvil y	pos=75	offset=[371,378)	tipo=shingle
+  y	pos=76	offset=[377,378)	tipo=<ALPHANUM>
+  y empezamos	pos=76	offset=[377,388)	tipo=shingle
+  empezamos	pos=77	offset=[379,388)	tipo=<ALPHANUM>
+  empezamos a	pos=77	offset=[379,390)	tipo=shingle
+  a	pos=78	offset=[389,390)	tipo=<ALPHANUM>
+  a discutir	pos=78	offset=[389,399)	tipo=shingle
+  discutir	pos=79	offset=[391,399)	tipo=<ALPHANUM>
+  discutir si	pos=79	offset=[391,402)	tipo=shingle
+  si	pos=80	offset=[400,402)	tipo=<ALPHANUM>
+  si la	pos=80	offset=[400,405)	tipo=shingle
+  la	pos=81	offset=[403,405)	tipo=<ALPHANUM>
+  la canción	pos=81	offset=[403,413)	tipo=shingle
+  canción	pos=82	offset=[406,413)	tipo=<ALPHANUM>
+  canción del	pos=82	offset=[406,417)	tipo=shingle
+  del	pos=83	offset=[414,417)	tipo=<ALPHANUM>
+  del verano	pos=83	offset=[414,424)	tipo=shingle
+  verano	pos=84	offset=[418,424)	tipo=<ALPHANUM>
+  verano era	pos=84	offset=[418,428)	tipo=shingle
+  era	pos=85	offset=[425,428)	tipo=<ALPHANUM>
+  era buena	pos=85	offset=[425,434)	tipo=shingle
+  buena	pos=86	offset=[429,434)	tipo=<ALPHANUM>
+  buena yo	pos=86	offset=[429,438)	tipo=shingle
+  yo	pos=87	offset=[436,438)	tipo=<ALPHANUM>
+  yo defendía	pos=87	offset=[436,447)	tipo=shingle
+  defendía	pos=88	offset=[439,447)	tipo=<ALPHANUM>
+  defendía que	pos=88	offset=[439,451)	tipo=shingle
+  que	pos=89	offset=[448,451)	tipo=<ALPHANUM>
+  que da	pos=89	offset=[448,454)	tipo=shingle
+  da	pos=90	offset=[452,454)	tipo=<ALPHANUM>
+  da igual	pos=90	offset=[452,460)	tipo=shingle
+  igual	pos=91	offset=[455,460)	tipo=<ALPHANUM>
+  igual escribir	pos=91	offset=[455,469)	tipo=shingle
+  escribir	pos=92	offset=[461,469)	tipo=<ALPHANUM>
+  escribir canción	pos=92	offset=[461,477)	tipo=shingle
+  canción	pos=93	offset=[470,477)	tipo=<ALPHANUM>
+  canción o	pos=93	offset=[470,479)	tipo=shingle
+  o	pos=94	offset=[478,479)	tipo=<ALPHANUM>
+  o cancion	pos=94	offset=[478,487)	tipo=shingle
+  cancion	pos=95	offset=[480,487)	tipo=<ALPHANUM>
+  cancion que	pos=95	offset=[480,492)	tipo=shingle
+  que	pos=96	offset=[489,492)	tipo=<ALPHANUM>
+  que el	pos=96	offset=[489,495)	tipo=shingle
+  el	pos=97	offset=[493,495)	tipo=<ALPHANUM>
+  el buscador	pos=97	offset=[493,504)	tipo=shingle
+  buscador	pos=98	offset=[496,504)	tipo=<ALPHANUM>
+  buscador ya	pos=98	offset=[496,507)	tipo=shingle
+  ya	pos=99	offset=[505,507)	tipo=<ALPHANUM>
+  ya lo	pos=99	offset=[505,510)	tipo=shingle
+  lo	pos=100	offset=[508,510)	tipo=<ALPHANUM>
+  lo entenderá	pos=100	offset=[508,520)	tipo=shingle
+  entenderá	pos=101	offset=[511,520)	tipo=<ALPHANUM>
+  entenderá al	pos=101	offset=[511,524)	tipo=shingle
+  al	pos=102	offset=[522,524)	tipo=<ALPHANUM>
+  al final	pos=102	offset=[522,530)	tipo=shingle
+  final	pos=103	offset=[525,530)	tipo=<ALPHANUM>
+  final pagamos	pos=103	offset=[525,538)	tipo=shingle
+  pagamos	pos=104	offset=[531,538)	tipo=<ALPHANUM>
+  pagamos entre	pos=104	offset=[531,544)	tipo=shingle
+  entre	pos=105	offset=[539,544)	tipo=<ALPHANUM>
+  entre los	pos=105	offset=[539,548)	tipo=shingle
+  los	pos=106	offset=[545,548)	tipo=<ALPHANUM>
+  los tres	pos=106	offset=[545,553)	tipo=shingle
+  tres	pos=107	offset=[549,553)	tipo=<ALPHANUM>
+  tres unos	pos=107	offset=[549,559)	tipo=shingle
+  unos	pos=108	offset=[555,559)	tipo=<ALPHANUM>
+  unos 45,50	pos=108	offset=[555,565)	tipo=shingle
+  45,50	pos=109	offset=[560,565)	tipo=<NUM>
+  45,50 cada	pos=109	offset=[560,572)	tipo=shingle
+  cada	pos=110	offset=[568,572)	tipo=<ALPHANUM>
+  cada uno	pos=110	offset=[568,576)	tipo=shingle
+  uno	pos=111	offset=[573,576)	tipo=<ALPHANUM>
+  uno y	pos=111	offset=[573,579)	tipo=shingle
+  y	pos=112	offset=[578,579)	tipo=<ALPHANUM>
+  y volvimos	pos=112	offset=[578,588)	tipo=shingle
+  volvimos	pos=113	offset=[580,588)	tipo=<ALPHANUM>
+  volvimos en	pos=113	offset=[580,591)	tipo=shingle
+  en	pos=114	offset=[589,591)	tipo=<ALPHANUM>
+  en el	pos=114	offset=[589,594)	tipo=shingle
+  el	pos=115	offset=[592,594)	tipo=<ALPHANUM>
+  el metro	pos=115	offset=[592,600)	tipo=shingle
+  metro	pos=116	offset=[595,600)	tipo=<ALPHANUM>
+  metro hablando	pos=116	offset=[595,609)	tipo=shingle
+  hablando	pos=117	offset=[601,609)	tipo=<ALPHANUM>
+  hablando del	pos=117	offset=[601,613)	tipo=shingle
+  del	pos=118	offset=[610,613)	tipo=<ALPHANUM>
+  del viaje	pos=118	offset=[610,619)	tipo=shingle
+  viaje	pos=119	offset=[614,619)	tipo=<ALPHANUM>
+  viaje del	pos=119	offset=[614,624)	tipo=shingle
+  del	pos=120	offset=[621,624)	tipo=<ALPHANUM>
+  del iphone	pos=120	offset=[621,631)	tipo=shingle
+  iphone	pos=121	offset=[625,631)	tipo=<ALPHANUM>
+  iphone 15	pos=121	offset=[625,634)	tipo=shingle
+  15	pos=122	offset=[632,634)	tipo=<NUM>
+  15 de	pos=122	offset=[632,637)	tipo=shingle
+  de	pos=123	offset=[635,637)	tipo=<ALPHANUM>
+  de pablo	pos=123	offset=[635,643)	tipo=shingle
+  pablo	pos=124	offset=[638,643)	tipo=<ALPHANUM>
+  pablo y	pos=124	offset=[638,645)	tipo=shingle
+  y	pos=125	offset=[644,645)	tipo=<ALPHANUM>
+  y del	pos=125	offset=[644,649)	tipo=shingle
+  del	pos=126	offset=[646,649)	tipo=<ALPHANUM>
+  del partido	pos=126	offset=[646,657)	tipo=shingle
+  partido	pos=127	offset=[650,657)	tipo=<ALPHANUM>
+  partido del	pos=127	offset=[650,661)	tipo=shingle
+  del	pos=128	offset=[658,661)	tipo=<ALPHANUM>
+  del atlético	pos=128	offset=[658,670)	tipo=shingle
+  atlético	pos=129	offset=[662,670)	tipo=<ALPHANUM>
+  atlético real	pos=129	offset=[662,675)	tipo=shingle
+  real	pos=130	offset=[671,675)	tipo=<ALPHANUM>
+  real madrid	pos=130	offset=[671,682)	tipo=shingle
+  madrid	pos=131	offset=[676,682)	tipo=<ALPHANUM>
+  madrid del	pos=131	offset=[676,686)	tipo=shingle
+  del	pos=132	offset=[683,686)	tipo=<ALPHANUM>
+  del domingo	pos=132	offset=[683,694)	tipo=shingle
+  domingo	pos=133	offset=[687,694)	tipo=<ALPHANUM>
+  domingo escríbeme	pos=133	offset=[687,705)	tipo=shingle
+  escríbeme	pos=134	offset=[696,705)	tipo=<ALPHANUM>
+  escríbeme por	pos=134	offset=[696,709)	tipo=shingle
+  por	pos=135	offset=[706,709)	tipo=<ALPHANUM>
+  por whatsapp	pos=135	offset=[706,718)	tipo=shingle
+  whatsapp	pos=136	offset=[710,718)	tipo=<ALPHANUM>
+  whatsapp o	pos=136	offset=[710,720)	tipo=shingle
+  o	pos=137	offset=[719,720)	tipo=<ALPHANUM>
+  o a	pos=137	offset=[719,722)	tipo=shingle
+  a	pos=138	offset=[721,722)	tipo=<ALPHANUM>
+  a juan	pos=138	offset=[721,727)	tipo=shingle
+  juan	pos=139	offset=[723,727)	tipo=<ALPHANUM>
+  juan ejemplo.es	pos=139	offset=[723,738)	tipo=shingle
+  ejemplo.es	pos=140	offset=[728,738)	tipo=<ALPHANUM>
+  ejemplo.es cuando	pos=140	offset=[728,745)	tipo=shingle
+  cuando	pos=141	offset=[739,745)	tipo=<ALPHANUM>
+  cuando llegues	pos=141	offset=[739,753)	tipo=shingle
+  llegues	pos=142	offset=[746,753)	tipo=<ALPHANUM>
+Whitespace           tokens=140 distintos=104
+Standard             tokens=143 distintos=104
+Spanish              tokens=77 distintos=70
+Standard+acentos     tokens=143 distintos=102
+Standard+shingles    tokens=285 distintos=243
