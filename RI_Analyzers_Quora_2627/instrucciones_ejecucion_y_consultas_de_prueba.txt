@@ -1,0 +1,67 @@
+Instrucciones de ejecución y consultas tomadas en cuenta en la experimentación
+
+Primero de todo, en la carpeta del proyecto, ejecutamos: mvn clean compile
+
+Para cada ejecución, lanzamos desde la carpeta del proyecto: mvn exec:java -Dexec.mainClass=es.ugr.ri.Suggestion -Dexec.args="quora_queries_50000.tsv analyzer pesos suggester"
+- Analyzer: `standard`, `english`, `whitespace`.
+- Pesos: `uniform`, `frequency`.
+- Suggester (opcional): `prefix`, `fuzzy`, `infix`, `next`.
+- Si se omite la estrategia, aparece un menú interactivo.
+- Escribir `FIN` para salir de una serie de consultas.
+
+Instrucciones y consultas lanzadas en cada apartado de la experimentación (actividad 3)
+
+Apartado 3.3.1. Contraste de hipótesis
+Para cada una de estas consultas: 
+- how do i learn
+- waht is
+- python
+- why should i
+Ejecutamos y comprobamos el resultado con estas instrucciones de ejecución: 
+prefix: mvn exec:java -Dexec.mainClass=es.ugr.ri.Suggestion -Dexec.args="quora_queries_50000.tsv question frequency prefix"
+fuzzy: mvn exec:java -Dexec.mainClass=es.ugr.ri.Suggestion -Dexec.args="quora_queries_50000.tsv question frequency fuzzy"
+infix: mvn exec:java -Dexec.mainClass=es.ugr.ri.Suggestion -Dexec.args="quora_queries_50000.tsv question frequency infix"
+next: mvn exec:java -Dexec.mainClass=es.ugr.ri.Suggestion -Dexec.args="quora_queries_50000.tsv question frequency next"
+
+Apartado 3.3.2. Resultados cambiando la estrategia de ponderación
+Para cada una de estas consultas ejecutamos las instrucciones indicadas: 
+- how do i learn
+  mvn exec:java -Dexec.mainClass=es.ugr.ri.Suggestion -Dexec.args="quora_queries_50000.tsv question frequency prefix"
+  mvn exec:java -Dexec.mainClass=es.ugr.ri.Suggestion -Dexec.args="quora_queries_50000.tsv question uniform prefix"
+- waht is
+  mvn exec:java -Dexec.mainClass=es.ugr.ri.Suggestion -Dexec.args="quora_queries_50000.tsv question frequency fuzzy"
+  mvn exec:java -Dexec.mainClass=es.ugr.ri.Suggestion -Dexec.args="quora_queries_50000.tsv question uniform fuzzy"
+- python
+  mvn exec:java -Dexec.mainClass=es.ugr.ri.Suggestion -Dexec.args="quora_queries_50000.tsv question frequency infix"
+  mvn exec:java -Dexec.mainClass=es.ugr.ri.Suggestion -Dexec.args="quora_queries_50000.tsv question uniform infix"
+
+Apartado 3.3.3. Resultados cambiando el analyzer
+Para cada una de estas consultas ejecutamos las instrucciones indicadas:
+- how do i learn
+  mvn exec:java -Dexec.mainClass=es.ugr.ri.Suggestion -Dexec.args="quora_queries_50000.tsv standard frequency prefix"
+  mvn exec:java -Dexec.mainClass=es.ugr.ri.Suggestion -Dexec.args="quora_queries_50000.tsv english frequency prefix"
+  mvn exec:java -Dexec.mainClass=es.ugr.ri.Suggestion -Dexec.args="quora_queries_50000.tsv whitespace frequency prefix"
+  mvn exec:java -Dexec.mainClass=es.ugr.ri.Suggestion -Dexec.args="quora_queries_50000.tsv question frequency prefix"
+- waht is
+  mvn exec:java -Dexec.mainClass=es.ugr.ri.Suggestion -Dexec.args="quora_queries_50000.tsv standard frequency fuzzy"
+  mvn exec:java -Dexec.mainClass=es.ugr.ri.Suggestion -Dexec.args="quora_queries_50000.tsv english frequency fuzzy"
+  mvn exec:java -Dexec.mainClass=es.ugr.ri.Suggestion -Dexec.args="quora_queries_50000.tsv whitespace frequency fuzzy"
+  mvn exec:java -Dexec.mainClass=es.ugr.ri.Suggestion -Dexec.args="quora_queries_50000.tsv question frequency fuzzy"
+- python
+  mvn exec:java -Dexec.mainClass=es.ugr.ri.Suggestion -Dexec.args="quora_queries_50000.tsv standard frequency infix"
+  mvn exec:java -Dexec.mainClass=es.ugr.ri.Suggestion -Dexec.args="quora_queries_50000.tsv english frequency infix"
+  mvn exec:java -Dexec.mainClass=es.ugr.ri.Suggestion -Dexec.args="quora_queries_50000.tsv whitespace frequency infix"
+  mvn exec:java -Dexec.mainClass=es.ugr.ri.Suggestion -Dexec.args="quora_queries_50000.tsv question frequency infix"
+- why should i
+  mvn exec:java -Dexec.mainClass=es.ugr.ri.Suggestion -Dexec.args="quora_queries_50000.tsv standard frequency next"
+  mvn exec:java -Dexec.mainClass=es.ugr.ri.Suggestion -Dexec.args="quora_queries_50000.tsv english frequency next"
+  mvn exec:java -Dexec.mainClass=es.ugr.ri.Suggestion -Dexec.args="quora_queries_50000.tsv whitespace frequency next"
+  mvn exec:java -Dexec.mainClass=es.ugr.ri.Suggestion -Dexec.args="quora_queries_50000.tsv question frequency next"
+
+Comprobación experimental del apartado 3.4.6.c
+Para esta consulta ejecutamos las instrucciones indicadas:
+- why should i
+  mvn exec:java -Dexec.mainClass=es.ugr.ri.Suggestion -Dexec.args="quora_queries_50000.tsv question frequency next"
+  mvn exec:java -Dexec.mainClass=es.ugr.ri.Suggestion -Dexec.args="quora_queries_50000.tsv question uniform next"
+
+
