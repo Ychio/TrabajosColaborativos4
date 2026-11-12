@@ -1,5 +1,6 @@
-/mnt/d/UGR/4/RI/Colaborativo/TrabajosColaborativos4/practica1-lucene/src/main/java/es/ugr/ri/comun/Analizadores.java
-/mnt/d/UGR/4/RI/Colaborativo/TrabajosColaborativos4/practica1-lucene/src/main/java/es/ugr/ri/comun/Campos.java
-/mnt/d/UGR/4/RI/Colaborativo/TrabajosColaborativos4/practica1-lucene/src/main/java/es/ugr/ri/comun/LectorPeliculas.java
-/mnt/d/UGR/4/RI/Colaborativo/TrabajosColaborativos4/practica1-lucene/src/main/java/es/ugr/ri/comun/Pelicula.java
-/mnt/d/UGR/4/RI/Colaborativo/TrabajosColaborativos4/practica1-lucene/src/main/java/es/ugr/ri/indexacion/IndexarPeliculas.java
+H:\Uni\RI\practica1-lucene\src\main\java\es\ugr\ri\busqueda\BuscarPeliculas.java
+H:\Uni\RI\practica1-lucene\src\main\java\es\ugr\ri\comun\Analizadores.java
+H:\Uni\RI\practica1-lucene\src\main\java\es\ugr\ri\comun\Campos.java
+H:\Uni\RI\practica1-lucene\src\main\java\es\ugr\ri\comun\LectorPeliculas.java
+H:\Uni\RI\practica1-lucene\src\main\java\es\ugr\ri\comun\Pelicula.java
+H:\Uni\RI\practica1-lucene\src\main\java\es\ugr\ri\indexacion\IndexarPeliculas.java
