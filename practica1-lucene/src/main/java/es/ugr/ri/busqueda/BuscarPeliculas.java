@@ -82,7 +82,7 @@ public class BuscarPeliculas {
             System.out.println("5. Consulta numérica por rango (Años y Valoración IMDb)");
             System.out.println("6. Consulta booleana mixta (MUST, SHOULD, MUST_NOT, FILTER)");
             System.out.println("7. Ranking BM25 y desglose de puntuación (Explain)");
-            System.out.println("8. Ordenación por campo (Año o Valoración) usando DocValues");
+            System.out.println("8. Ordenación por campo (Año y Valoración) usando DocValues");
             System.out.println("9. Consulta compuesta del guion (detective + Mystery + rango)");
             System.out.println("10. Experimento BM25 (Variación de k1 y b)");
             System.out.println("0. Salir");
@@ -317,12 +317,10 @@ public class BuscarPeliculas {
             sort = new Sort(sfAnio);
             System.out.println("\nCriterio: Año de estreno descendente.");
         } else {
-            // Criterio combinado: Año + Valoración para empates
             sort = new Sort(sfAnio, sfNota);
             System.out.println("\nCriterio: Año descendente con desempate por Valoración descendente.");
         }
 
-        // Búsqueda de todas las películas ordenadas por DocValues
         TopDocs results = searcher.search(new MatchAllDocsQuery(), MAX_HITS, sort);
 
         System.out.println("Resultados obtenidos:");
@@ -337,7 +335,7 @@ public class BuscarPeliculas {
     }
 
 
-    // Consulta compuesta del enunciado de la práctica (Sección 5 y 5.1)
+    // Consulta compuesta (5.1)
     private static void ejercicioCompuestoGuion(IndexSearcher searcher, Analyzer analyzer) throws Exception {
         System.out.println("\n--- Consulta Compuesta del Enunciado ---");
         System.out.println("Filtros: Sinopsis contiene 'detective', Género 'Mystery', Año [1990-2020], IMDb [7.5-9.0]");
@@ -358,7 +356,7 @@ public class BuscarPeliculas {
         mostrarResultados(searcher, consultaTotal, MAX_HITS);
     }
 
-    // 5.2 Experimento BM25: variación de k1 y b
+    // Experimento BM25: variación de k1 y b (5.2)
     private static void experimentoBM25(IndexReader reader, Analyzer analyzer, Scanner sc) throws Exception {
         System.out.println("\n--- 10. Experimento BM25 (Modificación de k1 y b) ---");
         System.out.print("Consulta textual para el experimento [defecto: space battle]: ");
