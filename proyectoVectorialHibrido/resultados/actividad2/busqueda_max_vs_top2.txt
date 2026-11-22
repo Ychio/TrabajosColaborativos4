@@ -1,0 +1,60 @@
+
+BM25
+ 1 Replicant              score=15.2354 id=3229585 chunk=-1
+ 2 Impostor               score=6.4762 id=3606413 chunk=-1
+ 3 Blade Runner           score=5.7510 id=3746 chunk=-1
+ 4 Shaolin Handlock       score=4.9804 id=10988261 chunk=-1
+ 5 Murder Party           score=4.8437 id=20638510 chunk=-1
+ 6 Machete Kills          score=4.7919 id=35818946 chunk=-1
+ 7 Curiosity Kills the Cat score=4.7908 id=20622475 chunk=-1
+ 8 I.K.U.                 score=4.5091 id=5103449 chunk=-1
+ 9 The Breed              score=4.4192 id=5649185 chunk=-1
+10 Tennessee Tuxedo and His Tales score=4.4103 id=30865251 chunk=-1
+
+VECTOR
+ 1 Replicant              score=0.7709 id=3229585 chunk=5
+ 2 9                      score=0.7514 id=12940547 chunk=0
+ 3 Mirrors                score=0.7489 id=19958360 chunk=9
+ 4 Taxidermia             score=0.7485 id=7537205 chunk=3
+ 5 The Creation of the Humanoids score=0.7442 id=4162883 chunk=4
+ 6 Frankenstein           score=0.7419 id=1709616 chunk=0
+ 7 P.U.N.K.S.             score=0.7414 id=18892608 chunk=0
+ 8 Nidhanaya              score=0.7396 id=11679162 chunk=2
+ 9 The Mechanical Man     score=0.7395 id=16093619 chunk=0
+10 Spider-Man 2           score=0.7382 id=612052 chunk=1
+
+VECTOR (top2)
+ 1 Replicant              score=0.7563 id=3229585 chunk=5
+ 2 9                      score=0.7445 id=12940547 chunk=0
+ 3 Shadow Fury            score=0.7375 id=23719971 chunk=0
+ 4 The Creation of the Humanoids score=0.7323 id=4162883 chunk=4
+ 5 Mirrors                score=0.7255 id=19958360 chunk=9
+ 6 Taxidermia             score=0.7253 id=7537205 chunk=3
+ 7 Mary Shelley's Frankenstein score=0.7226 id=1246394 chunk=10
+ 8 Frankenstein           score=0.7220 id=1709616 chunk=0
+ 9 P.U.N.K.S.             score=0.7218 id=18892608 chunk=0
+10 Nidhanaya              score=0.7208 id=11679162 chunk=2
+
+GLOBAL
+ 1 The Creation of the Humanoids score=0.7645 id=4162883 chunk=-1
+ 2 Shadow Fury            score=0.7643 id=23719971 chunk=-1
+ 3 9                      score=0.7515 id=12940547 chunk=-1
+ 4 Cronos                 score=0.7463 id=3080704 chunk=-1
+ 5 Mindripper             score=0.7418 id=4714494 chunk=-1
+ 6 The Mechanical Man     score=0.7404 id=16093619 chunk=-1
+ 7 Nidhanaya              score=0.7365 id=11679162 chunk=-1
+ 8 Creepshow              score=0.7353 id=536521 chunk=-1
+ 9 Night of Terror        score=0.7353 id=33149657 chunk=-1
+10 Anthropophagous        score=0.7316 id=1522227 chunk=-1
+
+RRF
+ 1 Replicant              score=0.0328 id=3229585 chunk=-1
+ 2 Frankenstein           score=0.0280 id=1709616 chunk=-1
+ 3 9                      score=0.0161 id=12940547 chunk=-1
+ 4 Impostor               score=0.0161 id=3606413 chunk=-1
+ 5 Mirrors                score=0.0159 id=19958360 chunk=-1
+ 6 Blade Runner           score=0.0159 id=3746 chunk=-1
+ 7 Shaolin Handlock       score=0.0156 id=10988261 chunk=-1
+ 8 Taxidermia             score=0.0156 id=7537205 chunk=-1
+ 9 Murder Party           score=0.0154 id=20638510 chunk=-1
+10 The Creation of the Humanoids score=0.0154 id=4162883 chunk=-1

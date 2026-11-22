@@ -1,0 +1,8 @@
+Modo=DISCO | películas indexadas=29796 | consultas=src/main/resources/evaluation/queries.tsv | qrels=src/main/resources/evaluation/qrels.txt | k=10
+Parámetros: chunk.words=120 chunk.overlap=20 k=10 candidates=100
+SISTEMA        N      P@k      R@k     F1@k    MAP@k   NDCG@k
+BM25          50    0.204    0.750    0.276    0.554    0.637
+VECTOR        50    0.130    0.589    0.176    0.355    0.452
+VECTOR_TOP2    50    0.142    0.597    0.191    0.387    0.482
+GLOBAL        50    0.110    0.493    0.142    0.315    0.398
+RRF           50    0.196    0.786    0.269    0.551    0.656

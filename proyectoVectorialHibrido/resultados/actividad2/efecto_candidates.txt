@@ -1,0 +1,27 @@
+=========== candidates=20 ===========
+Consulta: "a replicant kills his creator" | candidates=20 | fragmentos en el índice=132440
+
+
+Los 10 primeros fragmentos -> 8 películas distintas
+Los 20 fragmentos -> 16 películas distintas
+Pedidos=20, devueltos=20, tiempo (mediana de 5)=7.8 ms
+MAX: [Replicant, 9, Mirrors, Taxidermia, The Creation of the Humanoids, Frankenstein, P.U.N.K.S., Nidhanaya, The Mechanical Man, Spider-Man 2]
+TOP2: [Replicant, 9, Mirrors, Taxidermia, The Creation of the Humanoids, Shadow Fury, Frankenstein, P.U.N.K.S., Nidhanaya, The Mechanical Man]
+=========== candidates=100 ===========
+Consulta: "a replicant kills his creator" | candidates=100 | fragmentos en el índice=132440
+
+
+Los 10 primeros fragmentos -> 8 películas distintas
+Los 100 fragmentos -> 88 películas distintas
+Pedidos=100, devueltos=100, tiempo (mediana de 5)=12.7 ms
+MAX: [Replicant, 9, Mirrors, Taxidermia, The Creation of the Humanoids, Frankenstein, P.U.N.K.S., Nidhanaya, The Mechanical Man, Spider-Man 2]
+TOP2: [Replicant, 9, Shadow Fury, The Creation of the Humanoids, Mirrors, Taxidermia, Mary Shelley's Frankenstein, Frankenstein, P.U.N.K.S., Nidhanaya]
+=========== candidates=300 ===========
+Consulta: "a replicant kills his creator" | candidates=300 | fragmentos en el índice=132440
+
+
+Los 10 primeros fragmentos -> 8 películas distintas
+Los 300 fragmentos -> 260 películas distintas
+Pedidos=300, devueltos=300, tiempo (mediana de 5)=18.6 ms
+MAX: [Replicant, 9, Mirrors, Taxidermia, The Creation of the Humanoids, Frankenstein, P.U.N.K.S., Nidhanaya, The Mechanical Man, Spider-Man 2]
+TOP2: [Replicant, 9, Shadow Fury, The Creation of the Humanoids, Mary Shelley's Frankenstein, Frankenstein, Mirrors, Taxidermia, Jaane Hoga Kya, The Mechanical Man]

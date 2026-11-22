@@ -15,6 +15,7 @@ public final class MovieSearcherMain {
             try (MovieSearcher searcher = new MovieSearcher(indexes, new EmbeddingService())) {
                 show("BM25", searcher.bm25(query, config.k()));
                 show("VECTOR", searcher.vectorChunks(query, config.candidateChunks(), config.k()));
+                show("VECTOR (top2)", searcher.vectorChunks(query, config.candidateChunks(), config.k(), ChunkAggregator.Aggregation.TOP2));
                 show("GLOBAL", searcher.vectorGlobal(query, config.k()));
                 show("RRF", searcher.hybridRrf(query, config.candidateChunks(), config.k()));
             }

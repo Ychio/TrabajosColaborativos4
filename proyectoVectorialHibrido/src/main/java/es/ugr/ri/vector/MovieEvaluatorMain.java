@@ -42,10 +42,12 @@ public final class MovieEvaluatorMain {
             if (missing > 0) System.err.printf("AVISO: %d juicios positivos hacen referencia a películas ausentes del índice%n", missing);
             System.out.printf("Modo=%s | películas indexadas=%d | consultas=%s | qrels=%s | k=%d%n",
                     sample ? "RAM" : "DISCO", ids.size(), queries, qrels, config.k());
+            System.out.println("Parámetros: " + config.describe());
             try (MovieSearcher searcher = new MovieSearcher(indexes, new EmbeddingService())) {
                 List<MovieEvaluator.Summary> results = List.of(
                     MovieEvaluator.evaluate("BM25", q -> searcher.bm25(q,config.k()),restricted,config.k()),
                     MovieEvaluator.evaluate("VECTOR", q -> searcher.vectorChunks(q,config.candidateChunks(),config.k()),restricted,config.k()),
+                    MovieEvaluator.evaluate("VECTOR_TOP2", q -> searcher.vectorChunks(q,config.candidateChunks(),config.k(),ChunkAggregator.Aggregation.TOP2),restricted,config.k()),
                     MovieEvaluator.evaluate("GLOBAL", q -> searcher.vectorGlobal(q,config.k()),restricted,config.k()),
                     MovieEvaluator.evaluate("RRF", q -> searcher.hybridRrf(q,config.candidateChunks(),config.k()),restricted,config.k())
                 );

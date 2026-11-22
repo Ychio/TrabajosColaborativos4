@@ -1,0 +1,8 @@
+Consulta: "a replicant kills his creator" | candidates=5000 | fragmentos en el índice=1972
+
+
+Los 10 primeros fragmentos -> 10 películas distintas
+Los 1972 fragmentos -> 500 películas distintas
+Pedidos=5000, devueltos=1972, tiempo (mediana de 5)=49.1 ms
+MAX: [Mosquito Man, Ghost in the Machine, Plug & Pray, Doom, King of the Ants, The Living Dead, Oil for the Lamps of China, Mort & Phil. Mission: Save Earth, Newtonin 3-m Vidhi, Bicentennial Man]
+TOP2: [Mosquito Man, Ghost in the Machine, Doom, Newtonin 3-m Vidhi, Feast, Fantastic Planet, Mort & Phil. Mission: Save Earth, Ninja Resurrection, King of the Ants, The Mechanical Monsters]
