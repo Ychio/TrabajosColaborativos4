@@ -1,0 +1,29 @@
+Consulta: "a replicant kills his creator" | candidates=1000 | fragmentos en el índice=132440
+
+  1 Replicant                      chunk=5   score=0.7709
+  2 9                              chunk=0   score=0.7514
+  3 Mirrors                        chunk=9   score=0.7489
+  4 Taxidermia                     chunk=3   score=0.7485
+  5 The Creation of the Humanoids  chunk=4   score=0.7442
+  6 Frankenstein                   chunk=0   score=0.7419
+  7 Replicant                      chunk=1   score=0.7417
+  8 Replicant                      chunk=3   score=0.7414
+  9 P.U.N.K.S.                     chunk=0   score=0.7414
+ 10 Nidhanaya                      chunk=2   score=0.7396
+ 11 The Mechanical Man             chunk=0   score=0.7395
+ 12 Spider-Man 2                   chunk=1   score=0.7382
+ 13 Shadow Fury                    chunk=0   score=0.7378
+ 14 9                              chunk=4   score=0.7376
+ 15 Mary Shelley's Frankenstein    chunk=10  score=0.7374
+ 16 The Phantom from 10,000 Leagues chunk=1   score=0.7372
+ 17 Shadow Fury                    chunk=1   score=0.7371
+ 18 House of the Dead 2            chunk=0   score=0.7366
+ 19 Max Steel: Bio Crisis          chunk=2   score=0.7354
+ 20 Solaris                        chunk=3   score=0.7326
+
+Los 10 primeros fragmentos -> 8 películas distintas
+Los 1000 fragmentos -> 817 películas distintas
+Pedidos=1000, devueltos=1000, tiempo (mediana de 5)=45.6 ms
+MAX: [Replicant, 9, Mirrors, Taxidermia, The Creation of the Humanoids, Frankenstein, P.U.N.K.S., Nidhanaya, The Mechanical Man, Spider-Man 2]
+TOP2: [Replicant, 9, Shadow Fury, The Creation of the Humanoids, Mary Shelley's Frankenstein, Frankenstein, Jaane Hoga Kya, The Mechanical Man, Solaris, Parts: The Clonus Horror]
+  Blade Runner: posición 709, chunk=0, score=0.6763

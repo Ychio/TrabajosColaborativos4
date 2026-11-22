@@ -88,3 +88,32 @@ done
 ```
 
 Las salidas de estos experimentos están en `resultados/actividad1/`.
+
+### Actividad 2. De fragmentos a películas
+
+La búsqueda vectorial se separa en dos pasos: buscar los fragmentos (`chunkHits`) y agruparlos por película (`ChunkAggregator`). Hay dos agregaciones: **MAX** (nota del mejor fragmento, la original) y **TOP2** (media de los dos mejores; si solo hay uno entre los candidatos, el segundo valor es la nota mínima de los candidatos). El evaluador incluye la fila `VECTOR_TOP2`.
+
+**Clases y métodos modificados:**
+- `MovieSearcher`: nuevos métodos `chunkHits(String, int)` y `numChunks()`; `vectorChunks(String, int, int)` reimplementado con `ChunkAggregator` (sigue usando MAX); nueva sobrecarga `vectorChunks(String, int, int, Aggregation)`, que avisa si los candidatos no dan *k* películas.
+- `MovieSearcherMain.main`: muestra también el bloque `VECTOR (top2)`.
+- `MovieEvaluatorMain.main`: evalúa también `VECTOR_TOP2` e imprime los parámetros usados.
+- Nuevas clases: `ChunkHit` (fragmento sin agrupar), `ChunkAggregator` (agregaciones MAX y TOP2), `ChunkHitsMain` (fragmentos en bruto, películas distintas, tiempo y top-k por agregación) y `ChunkAggregatorTest` (7 pruebas).
+
+**Comandos:**
+```bash
+mvn test                                                         # 16 pruebas (segmentación + agregación)
+
+# Fragmentos sin agrupar y posición de una película concreta (3746 = Blade Runner)
+mvn -q exec:java -Dexec.mainClass=es.ugr.ri.vector.ChunkHitsMain \
+    -Dexec.args="indices/peliculas a replicant kills his creator" -Dcandidates=1000 -Dtrack=3746
+
+# Efecto del número de candidatos
+for c in 20 100 300; do
+  echo "=========== candidates=$c ==========="
+  mvn -q exec:java -Dexec.mainClass=es.ugr.ri.vector.ChunkHitsMain \
+      -Dexec.args="indices/peliculas a replicant kills his creator" -Dcandidates=$c -Dshow=0 2>/dev/null
+done
+```
+Parámetros de `ChunkHitsMain`: `-Dcandidates`, `-Dk`, `-Dshow` (trozos a imprimir, 20), `-Dtrack` (movie_id a localizar), `-Dreps` (repeticiones para medir el tiempo, 5).
+
+Las salidas están en `resultados/actividad2/` y la evaluación con las 50 consultas en `resultados/corpus/`.
