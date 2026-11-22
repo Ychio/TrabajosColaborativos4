@@ -1,0 +1,65 @@
+Configuración: chunk.words=120 chunk.overlap=20 k=10 candidates=100
+
+The Matrix (30007): 700 palabras -> 7 fragmentos
+  #0 120 pal | Computer programmer Thomas Anderson is secretly a hacker ... tells Neo that humans are fighting
+  #1 120 pal | is rescued by Morpheus and brought aboard a ... themselves to the Matrix and enter
+  #2 120 pal | and recruit them to their rebellion against the ... emergence of the One. The Oracle
+  #3 120 pal | war. The group enters the Matrix to visit ... deal with the Agents for a
+  #4 120 pal | Cypher has betrayed them. Disillusioned with the real ... and is ultimately able to dodge
+  #5 120 pal | in the process, Neo becomes more confident in ... the One. She kisses Neo and
+  #6 100 pal | real world, whispers that the Oracle told her ... phone and flies into the sky.
+  Final de la sinopsis:        ... He hangs up the phone and flies into the sky.
+  Final del último fragmento:  ... He hangs up the phone and flies into the sky.
+  ¿Se conserva el final? SÍ
+
+The Hunger Games (31186339): 778 palabras -> 8 fragmentos
+  #0 120 pal | The nation of Panem consists of a wealthy ... drunk mentor, past victor Haymitch Abernathy.
+  #1 120 pal | 12 tribute. Katniss and Peeta are taken to ... and weapons strewn in front of
+  #2 120 pal | survives ignoring Haymitch's advice to run away from ... the supplies into a pile. Katniss
+  #3 120 pal | for a couple of days until she recovers. ... body. When this is televised, it
+  #4 120 pal | the dying Rue with a song. Afterward, she ... with him and gains a sponsor's
+  #5 120 pal | an infected sword wound in the leg. She ... from Peeta; neither knew they are
+  #6 120 pal | mobile. Foxface, the girl from District 5, dies ... she gives him half of the
+  #7  78 pal | change allowing two winners is suddenly revoked. Peeta ... and President Snow considers the situation.
+  Final de la sinopsis:        ... bowl of nightlock berries, and President Snow considers the situation.
+  Final del último fragmento:  ... bowl of nightlock berries, and President Snow considers the situation.
+  ¿Se conserva el final? SÍ
+
+Titanic (52371): 891 palabras -> 9 fragmentos
+  #0 120 pal | In 1996, treasure hunter Brock Lovett and his ... Titanic, revealing that she is Rose
+  #1 120 pal | if she knows the whereabouts of the necklace, ... ship's edge in curiosity and that
+  #2 120 pal | with Jack on the stern, Rose tells Cal ... and Ruth forbid her to see
+  #3 120 pal | Rose secretly joins Jack at a party in ... collision with an iceberg and overhear
+  #4 120 pal | cargo hold. Going afterwards to the ship's forward ... attract any nearby ships. Once Jack
+  #5 120 pal | mother and releases Jack. The ship then starts ... to Rose. With the situation now
+  #6 120 pal | ammunition, Cal realizes to his chagrin that he ... will die an old woman, warm
+  #7 120 pal | able to support one person's weight. Holding the ... of Lovett's ship. There she takes
+  #8  91 pal | Wall Street Crash of 1929. Her story complete, ... those who perished on the ship.
+  Final de la sinopsis:        ... applauded and congratulated by those who perished on the ship.
+  Final del último fragmento:  ... applauded and congratulated by those who perished on the ship.
+  ¿Se conserva el final? SÍ
+
+Jurassic Park (68485): 817 palabras -> 8 fragmentos
+  #0 120 pal | Billionaire John Hammond, CEO of InGen, has created ... only one to express optimism. The
+  #1 120 pal | dinosaur species. They debate the ethics of cloning ... to the embryo storage. Electric fences
+  #2 120 pal | dinosaur embryos. During his theft, Nedry deactivates the ... the stolen embryos and gets into
+  #3 120 pal | returns to the Jeep, the creature spits venom ... the three fall asleep. In the
+  #4 120 pal | which point Dr Grant attempts to emmulate their ... take the drastic measure of rebooting
+  #5 120 pal | decipher Dennis's code to reactivate the security fences, ... attention while Sattler continues to the
+  #6 120 pal | Muldoon notices that they are being hunted by ... before reuniting with Grant and Sattler.
+  #7 117 pal | while he reunites with Sattler and the others. ... over the sea as they depart.
+  Final de la sinopsis:        ... flock of pelicans fly over the sea as they depart.
+  Final del último fragmento:  ... flock of pelicans fly over the sea as they depart.
+  ¿Se conserva el final? SÍ
+
+Blade Runner (3746): 668 palabras -> 7 fragmentos
+  #0 120 pal | In Los Angeles, November 2019, retired police officer ... shoots Holden. Bryant wants Deckard to
+  #1 120 pal | based on their empathic response to questions. The ... with Tyrell, Roy and Leon go
+  #2 120 pal | to determine if she is a replicant. Trying ... of Zhora, and a synthetic snake
+  #3 120 pal | where he lives with manufactured companions. While searching ... Roy tells Pris the others are
+  #4 120 pal | moment; Rachael then tries to leave, but Deckard ... followed by Roy, who rides the
+  #5 120 pal | into heaven for", Roy kisses Tyrell, then kills ... returns to his apartment to find
+  #6  68 pal | to Deckard "It's too bad she won't live, ... drive through an idyllic pastoral landscape.
+  Final de la sinopsis:        ... an uncertain future, or drive through an idyllic pastoral landscape.
+  Final del último fragmento:  ... an uncertain future, or drive through an idyllic pastoral landscape.
+  ¿Se conserva el final? SÍ

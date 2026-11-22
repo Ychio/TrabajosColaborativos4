@@ -1,0 +1,7 @@
+Modo RAM: 5 películas, 39 fragmentos
+Modo=RAM | películas indexadas=5 | consultas=src/main/resources/evaluation/sample_queries.tsv | qrels=src/main/resources/evaluation/sample_qrels.txt | k=5
+SISTEMA        N      P@k      R@k     F1@k    MAP@k   NDCG@k
+BM25           3    0.200    1.000    0.333    0.833    0.877
+VECTOR         3    0.200    1.000    0.333    0.833    0.877
+GLOBAL         3    0.200    1.000    0.333    0.778    0.833
+RRF            3    0.200    1.000    0.333    0.833    0.877

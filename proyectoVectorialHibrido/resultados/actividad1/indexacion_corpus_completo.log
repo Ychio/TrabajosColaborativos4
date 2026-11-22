@@ -1,0 +1,13 @@
+nohup: ignoring input
+WARNING: A restricted method in java.lang.foreign.Linker has been called
+WARNING: java.lang.foreign.Linker::downcallHandle has been called by the unnamed module
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for this module
+
+[0;93m2026-11-22 12:35:35.336147354 [W:onnxruntime:ort-java, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+Nov 22, 2026 12:35:40 PM org.apache.lucene.internal.vectorization.VectorizationProvider lookup
+WARNING: Java vector incubator module is not readable. For optimal vector performance, pass '--add-modules jdk.incubator.vector' to enable Vector API.
+Índices persistentes en indices/peliculas: 29796 películas y 132440 fragmentos (4.44 por película)
+Tiempo de indexación: 1539.35 s | chunk.words=120 chunk.overlap=20 k=10 candidates=100

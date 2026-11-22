@@ -1,0 +1,4 @@
+target/
+indices/
+peliculas*.jsonl
+indexacion.log

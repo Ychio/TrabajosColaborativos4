@@ -1,0 +1,172 @@
+query_id,movie_id,title,year,relevance,basis
+Q001,29784104,Adventures of Tarzan,1985,1,catalog_title_candidate
+Q001,1367451,"Greystoke - The Legend of Tarzan, Lord of the Apes",1984,1,catalog_title_candidate
+Q001,1749093,Tarzan,1999,1,catalog_title_candidate
+Q001,4118310,Tarzan & Jane,2002,1,catalog_title_candidate
+Q001,3680204,Tarzan and His Mate,1934,1,catalog_title_candidate
+Q001,17840309,Tarzan and the Amazons,1945,1,catalog_title_candidate
+Q001,17853154,Tarzan and the Huntress,1947,1,catalog_title_candidate
+Q001,850497,Tarzan and the Leopard Woman,1946,1,catalog_title_candidate
+Q001,17751093,Tarzan and the Lost Safari,1957,1,catalog_title_candidate
+Q001,14620261,Tarzan and the Slave Girl,1950,1,catalog_title_candidate
+Q001,17775028,Tarzan and the Trappers,1958,1,catalog_title_candidate
+Q001,17529919,Tarzan and the Valley of Gold,1966,1,catalog_title_candidate
+Q001,3680519,Tarzan Escapes,1936,1,catalog_title_candidate
+Q001,4118336,Tarzan II,2005,1,catalog_title_candidate
+Q001,6967547,Tarzan in Manhattan,1989,1,catalog_title_candidate
+Q001,17858693,Tarzan of the Apes,1999,1,catalog_title_candidate
+Q001,4791224,Tarzan of the Apes,1918,1,catalog_title_candidate
+Q001,2259030,Tarzan the Ape Man,1932,1,catalog_title_candidate
+Q001,17806123,Tarzan the Fearless,1933,1,catalog_title_candidate
+Q001,4534748,Tarzan the Magnificent,1960,1,catalog_title_candidate
+Q001,17120190,Tarzan Triumphs,1943,1,catalog_title_candidate
+Q001,17836327,Tarzan's Fight for Life,1958,1,catalog_title_candidate
+Q001,4391098,Tarzan's Greatest Adventure,1959,1,catalog_title_candidate
+Q001,14621521,Tarzan's Hidden Jungle,1955,1,catalog_title_candidate
+Q001,2990106,Tarzan's New York Adventure,1942,1,catalog_title_candidate
+Q001,17806585,Tarzan's Revenge,1938,1,catalog_title_candidate
+Q001,11089663,Tarzan's Three Challenges,1963,1,catalog_title_candidate
+Q001,1974729,"Tarzan, the Ape Man",1981,1,catalog_title_candidate
+Q001,17516197,The Adventures of Tarzan,,1,catalog_title_candidate
+Q001,2195077,The New Adventures of Tarzan,1935,1,catalog_title_candidate
+Q001,14034915,The Romance of Tarzan,1918,1,catalog_title_candidate
+Q001,17484649,The Son of Tarzan,1920,1,catalog_title_candidate
+Q002,146947,Spider-Man,2002,1,catalog_title_candidate
+Q002,612052,Spider-Man 2,2004,1,catalog_title_candidate
+Q002,702117,Spider-Man 3,2007,1,catalog_title_candidate
+Q002,25862453,The Amazing Spider-Man,2012,1,catalog_title_candidate
+Q003,583932,A View to a Kill,1985,1,catalog_title_candidate
+Q003,2461592,Casino Royale,1967,1,catalog_title_candidate
+Q003,9019882,Casino Royale,1954,1,catalog_title_candidate
+Q003,930379,Casino Royale,2006,1,catalog_title_candidate
+Q003,157481,Diamonds Are Forever,1971,1,catalog_title_candidate
+Q003,156644,Die Another Day,2002,1,catalog_title_candidate
+Q003,6446053,Dr. No,1962,1,catalog_title_candidate
+Q003,6446044,For Your Eyes Only,1981,1,catalog_title_candidate
+Q003,6446071,From Russia with Love,1963,1,catalog_title_candidate
+Q003,268833,GoldenEye,1995,1,catalog_title_candidate
+Q003,6322029,Goldfinger,1964,1,catalog_title_candidate
+Q003,449547,Licence to Kill,1989,1,catalog_title_candidate
+Q003,6446061,Live and Let Die,1973,1,catalog_title_candidate
+Q003,6446062,Moonraker,1979,1,catalog_title_candidate
+Q003,541642,Octopussy,1983,1,catalog_title_candidate
+Q003,6268880,On Her Majesty's Secret Service,1969,1,catalog_title_candidate
+Q003,2969247,Quantum of Solace,2008,1,catalog_title_candidate
+Q003,3015828,Spectre,1977,1,catalog_title_candidate
+Q003,566713,The Living Daylights,1987,1,catalog_title_candidate
+Q003,6223567,The Man with the Golden Gun,1974,1,catalog_title_candidate
+Q003,6446036,The Spy Who Loved Me,1977,1,catalog_title_candidate
+Q003,166121,The World Is Not Enough,1999,1,catalog_title_candidate
+Q003,6152265,Thunderball,1965,1,catalog_title_candidate
+Q003,317647,Tomorrow Never Dies,1997,1,catalog_title_candidate
+Q003,5078515,You Only Live Twice,1967,1,catalog_title_candidate
+Q004,50793,Star Wars Episode I: The Phantom Menace,1999,1,catalog_title_candidate
+Q004,50957,Star Wars Episode II: Attack of the Clones,2002,1,catalog_title_candidate
+Q004,55447,Star Wars Episode III: Revenge of the Sith,2005,1,catalog_title_candidate
+Q004,52549,Star Wars Episode IV: A New Hope,1977,1,catalog_title_candidate
+Q004,53964,Star Wars Episode V: The Empire Strikes Back,1980,1,catalog_title_candidate
+Q004,50744,Star Wars Episode VI: Return of the Jedi,1983,1,catalog_title_candidate
+Q004,15726696,Star Wars: The Clone Wars,2008,1,catalog_title_candidate
+Q005,8619888,Next Avengers: Heroes of Tomorrow,2008,1,catalog_title_candidate
+Q005,22114132,The Avengers,2012,1,catalog_title_candidate
+Q005,633411,The Avengers,1998,1,catalog_title_candidate
+Q005,2952825,Ultimate Avengers,2006,1,catalog_title_candidate
+Q005,4644216,Ultimate Avengers 2,2006,1,catalog_title_candidate
+Q006,667368,Harry Potter and the Chamber of Secrets,2002,1,catalog_title_candidate
+Q006,31941988,Harry Potter and the Deathly Hallows – Part 2,2011,1,catalog_title_candidate
+Q006,9834441,Harry Potter and the Deathly Hallows: Part I,2010,1,catalog_title_candidate
+Q006,667372,Harry Potter and the Goblet of Fire,2005,1,catalog_title_candidate
+Q006,858575,Harry Potter and the Half-Blood Prince,2009,1,catalog_title_candidate
+Q006,670407,Harry Potter and the Order of the Phoenix,2007,1,catalog_title_candidate
+Q006,667361,Harry Potter and the Philosopher's Stone,2001,1,catalog_title_candidate
+Q006,667371,Harry Potter and the Prisoner of Azkaban,2004,1,catalog_title_candidate
+Q007,396607,The Lord of the Rings,1978,1,catalog_title_candidate
+Q007,173941,The Lord of the Rings: The Fellowship of the Ring,2001,1,catalog_title_candidate
+Q007,174251,The Lord of the Rings: The Return of the King,2003,1,catalog_title_candidate
+Q007,173944,The Lord of the Rings: The Two Towers,2002,1,catalog_title_candidate
+Q008,1252914,Indiana Jones and the Kingdom of the Crystal Skull,2008,1,catalog_title_candidate
+Q008,51888,Indiana Jones and the Last Crusade,1989,1,catalog_title_candidate
+Q008,54166,Indiana Jones and the Raiders of the Lost Ark,1981,1,catalog_title_candidate
+Q008,81503,Indiana Jones and the Temple of Doom,1984,1,catalog_title_candidate
+Q009,1689394,Pirates of the Caribbean: At World's End,2007,1,catalog_title_candidate
+Q009,999394,Pirates of the Caribbean: Dead Man's Chest,2006,1,catalog_title_candidate
+Q009,24314116,Pirates of the Caribbean: On Stranger Tides,2011,1,catalog_title_candidate
+Q009,321496,Pirates of the Caribbean: The Curse of the Black Pearl,2003,1,catalog_title_candidate
+Q010,724258,Mission: Impossible,1996,1,catalog_title_candidate
+Q010,451866,Mission: Impossible II,2000,1,catalog_title_candidate
+Q010,2021700,Mission: Impossible III,2006,1,catalog_title_candidate
+Q010,17298593,Mission: Impossible – Ghost Protocol,2011,1,catalog_title_candidate
+Q011,53085,Toy Story,1995,1,catalog_title_candidate
+Q011,335298,Toy Story 2,1999,1,catalog_title_candidate
+Q011,1213838,Toy Story 3,2010,1,catalog_title_candidate
+Q012,18717177,Shrek,2001,1,catalog_title_candidate
+Q012,525314,Shrek 2,2004,1,catalog_title_candidate
+Q012,27193568,Shrek Forever After,2010,1,catalog_title_candidate
+Q012,903383,Shrek the Third,2007,1,catalog_title_candidate
+Q013,10645970,Rocky,1981,1,catalog_title_candidate
+Q013,45772,Rocky,1976,1,catalog_title_candidate
+Q013,2887437,Rocky Balboa,2006,1,catalog_title_candidate
+Q013,149433,Rocky II,1979,1,catalog_title_candidate
+Q013,152328,Rocky III,1982,1,catalog_title_candidate
+Q013,104984,Rocky IV,1985,1,catalog_title_candidate
+Q013,153435,Rocky V,1990,1,catalog_title_candidate
+Q014,872441,First Blood,1982,1,catalog_title_candidate
+Q014,18850952,Rambo,2008,1,catalog_title_candidate
+Q014,35612482,Rambo,2012,1,catalog_title_candidate
+Q014,1160412,Rambo III,1988,1,catalog_title_candidate
+Q014,583012,Rambo: First Blood Part II,1985,1,catalog_title_candidate
+Q015,2236472,Transformers,2007,1,catalog_title_candidate
+Q015,25001260,Transformers: Dark of the Moon,2011,1,catalog_title_candidate
+Q015,12319832,Transformers: Revenge of the Fallen,2009,1,catalog_title_candidate
+Q016,19479460,X-Men,2000,1,catalog_title_candidate
+Q016,2982688,X-Men Origins: Wolverine,2009,1,catalog_title_candidate
+Q016,28648635,X-Men: First Class,2011,1,catalog_title_candidate
+Q016,2029825,X-Men: The Last Stand,2006,1,catalog_title_candidate
+Q017,30007,The Matrix,1999,1,catalog_title_candidate
+Q017,123417,The Matrix Reloaded,2003,1,catalog_title_candidate
+Q017,210998,The Matrix Revolutions,2003,1,catalog_title_candidate
+Q018,68485,Jurassic Park,1993,1,catalog_title_candidate
+Q018,473273,Jurassic Park III,2001,1,catalog_title_candidate
+Q018,666923,The Lost World: Jurassic Park,1997,1,catalog_title_candidate
+Q019,963986,The Bourne Identity,2002,1,catalog_title_candidate
+Q019,29270563,The Bourne Legacy,2012,1,catalog_title_candidate
+Q019,870946,The Bourne Supremacy,2004,1,catalog_title_candidate
+Q019,1854000,The Bourne Ultimatum,2007,1,catalog_title_candidate
+Q020,4726,Batman,1989,1,catalog_title_candidate
+Q020,4727,Batman,1966,1,catalog_title_candidate
+Q020,4729,Batman & Robin,1997,1,catalog_title_candidate
+Q020,481605,Batman Begins,2005,1,catalog_title_candidate
+Q020,4730,Batman Forever,1995,1,catalog_title_candidate
+Q020,4728,Batman Returns,1992,1,catalog_title_candidate
+Q020,4276475,The Dark Knight,2008,1,catalog_title_candidate
+Q020,29075630,The Dark Knight Rises,2012,1,catalog_title_candidate
+Q021,612052,Spider-Man 2,2004,1,catalog_title_candidate
+Q022,25862453,The Amazing Spider-Man,2012,1,catalog_title_candidate
+Q023,52549,Star Wars Episode IV: A New Hope,1977,1,catalog_title_candidate
+Q024,53964,Star Wars Episode V: The Empire Strikes Back,1980,1,catalog_title_candidate
+Q025,55447,Star Wars Episode III: Revenge of the Sith,2005,1,catalog_title_candidate
+Q026,667361,Harry Potter and the Philosopher's Stone,2001,1,catalog_title_candidate
+Q027,667371,Harry Potter and the Prisoner of Azkaban,2004,1,catalog_title_candidate
+Q028,667372,Harry Potter and the Goblet of Fire,2005,1,catalog_title_candidate
+Q029,173941,The Lord of the Rings: The Fellowship of the Ring,2001,1,catalog_title_candidate
+Q030,174251,The Lord of the Rings: The Return of the King,2003,1,catalog_title_candidate
+Q031,81503,Indiana Jones and the Temple of Doom,1984,1,catalog_title_candidate
+Q032,321496,Pirates of the Caribbean: The Curse of the Black Pearl,2003,1,catalog_title_candidate
+Q033,17298593,Mission: Impossible – Ghost Protocol,2011,1,catalog_title_candidate
+Q034,1213838,Toy Story 3,2010,1,catalog_title_candidate
+Q035,525314,Shrek 2,2004,1,catalog_title_candidate
+Q036,104984,Rocky IV,1985,1,catalog_title_candidate
+Q037,123417,The Matrix Reloaded,2003,1,catalog_title_candidate
+Q038,473273,Jurassic Park III,2001,1,catalog_title_candidate
+Q039,963986,The Bourne Identity,2002,1,catalog_title_candidate
+Q040,930379,Casino Royale,2006,1,catalog_title_candidate
+Q041,3746,Blade Runner,1982,1,plot_provided_in_conversation
+Q042,30007,The Matrix,1999,1,plot_provided_in_conversation
+Q043,31186339,The Hunger Games,2012,1,plot_provided_in_conversation
+Q044,52371,Titanic,1997,1,plot_provided_in_conversation
+Q045,68485,Jurassic Park,1993,1,plot_provided_in_conversation
+Q046,3746,Blade Runner,1982,1,plot_provided_in_conversation
+Q047,68485,Jurassic Park,1993,1,plot_provided_in_conversation
+Q048,5272176,End Game,2006,1,plot_provided_in_conversation
+Q049,30007,The Matrix,1999,1,plot_provided_in_conversation
+Q050,31186339,The Hunger Games,2012,1,plot_provided_in_conversation

@@ -1,0 +1,4 @@
+# Juicios binarios docentes, deliberadamente simplificados
+S001 0 3746 1
+S002 0 30007 1
+S003 0 68485 1
