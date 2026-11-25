@@ -1,0 +1,91 @@
+Consulta: "Scientists revive extinct dinosaurs using genetic engineering"
+Par metros: chunk.words=120 chunk.overlap=20 k=10 candidates=100 rrf.c=60 fusion.depth=20 fusion.alpha=0.60
+SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+nov 25, 2026 5:25:23 A.ÿM. org.apache.lucene.internal.vectorization.VectorizationProvider lookup
+WARNING: Java vector incubator module is not readable. For optimal vector performance, pass '--add-modules jdk.incubator.vector' to enable Vector API.
+
+BM25
+ 1 Ice Age: Dawn of the Dinosaurs score=9.5213 id=12260598 chunk=-1
+ 2 Lost Continent                 score=8.8058 id=11224264 chunk=-1
+ 3 The Crystal Cube               score=8.7993 id=14658543 chunk=-1
+ 4 Tail Sting                     score=8.6465 id=6628336 chunk=-1
+ 5 When Dinosaurs Roamed America  score=8.2049 id=5728728 chunk=-1
+ 6 Carnosaur 2                    score=8.1384 id=6980481 chunk=-1
+ 7 The Lost World                 score=7.1599 id=5777111 chunk=-1
+ 8 Carnosaur 3: Primal Species    score=6.9012 id=10093456 chunk=-1
+ 9 Spiderbabe                     score=6.8664 id=2319006 chunk=-1
+10 The World According to Monsanto score=6.8478 id=30177211 chunk=-1
+
+VECTOR
+ 1 Carnosaur 2                    score=0.7694 id=6980481 chunk=4
+ 2 Journey to the Center of the Earth score=0.7595 id=20963952 chunk=1
+ 3 Jurassic Park                  score=0.7553 id=68485 chunk=1
+ 4 The Land Before Time III: The Time of the Great Giving score=0.7456 id=2524925 chunk=6
+ 5 Splice                         score=0.7378 id=14899108 chunk=0
+ 6 Planet of Dinosaurs            score=0.7257 id=8621468 chunk=4
+ 7 Journey to the Center of Time  score=0.7235 id=10546396 chunk=2
+ 8 Jurassic Park III              score=0.7227 id=473273 chunk=3
+ 9 Dinosaurs! - A Fun-Filled Trip Back in Time! score=0.7188 id=8702038 chunk=1
+10 When Dinosaurs Roamed America  score=0.7178 id=5728728 chunk=4
+
+VECTOR (top2)
+ 1 Jurassic Park                  score=0.7378 id=68485 chunk=1
+ 2 Carnosaur 2                    score=0.7361 id=6980481 chunk=4
+ 3 Planet of Dinosaurs            score=0.7222 id=8621468 chunk=4
+ 4 Journey to the Center of the Earth score=0.7178 id=20963952 chunk=1
+ 5 The Land Before Time III: The Time of the Great Giving score=0.7127 id=2524925 chunk=6
+ 6 When Dinosaurs Roamed America  score=0.7114 id=5728728 chunk=4
+ 7 The Last Dragon                score=0.7085 id=7000543 chunk=10
+ 8 Splice                         score=0.7070 id=14899108 chunk=0
+ 9 We're Back! A Dinosaur's Story score=0.7045 id=5002289 chunk=8
+10 The Lost World: Jurassic Park  score=0.7044 id=666923 chunk=10
+
+GLOBAL
+ 1 When Dinosaurs Roamed America  score=0.7605 id=5728728 chunk=-1
+ 2 We're Back! A Dinosaur's Story score=0.7406 id=5002289 chunk=-1
+ 3 Jurassic Park                  score=0.7285 id=68485 chunk=-1
+ 4 Dinosaurs! - A Fun-Filled Trip Back in Time! score=0.7147 id=8702038 chunk=-1
+ 5 Prehysteria!                   score=0.7118 id=15943379 chunk=-1
+ 6 Planet of Dinosaurs            score=0.7095 id=8621468 chunk=-1
+ 7 Carnosaur                      score=0.7077 id=4894893 chunk=-1
+ 8 Cybermutt                      score=0.7063 id=4271752 chunk=-1
+ 9 Dinosaurus!                    score=0.7062 id=3239974 chunk=-1
+10 Adventures in Dinosaur City    score=0.7060 id=8528525 chunk=-1
+
+RRF (c=60)
+ 1 Carnosaur 2                    score=0.0315 id=6980481   [bm25=#6  vec=#1 ]
+ 2 When Dinosaurs Roamed America  score=0.0297 id=5728728   [bm25=#5  vec=#10]
+ 3 Journey to the Center of Time  score=0.0277 id=10546396  [bm25=#18 vec=#7 ]
+ 4 Carnosaur 3: Primal Species    score=0.0272 id=10093456  [bm25=#8  vec=#20]
+ 5 Ice Age: Dawn of the Dinosaurs score=0.0164 id=12260598  [bm25=#1  vec=-  ]
+ 6 Lost Continent                 score=0.0161 id=11224264  [bm25=#2  vec=-  ]
+ 7 Journey to the Center of the Earth score=0.0161 id=20963952  [bm25=-   vec=#2 ]
+ 8 The Crystal Cube               score=0.0159 id=14658543  [bm25=#3  vec=-  ]
+ 9 Jurassic Park                  score=0.0159 id=68485     [bm25=-   vec=#3 ]
+10 The Land Before Time III: The Time of the Great Giving score=0.0156 id=2524925   [bm25=-   vec=#4 ]
+
+RRF_WEIGHTED (alpha=0.60, c=60)
+ 1 Carnosaur 2                    score=0.0156 id=6980481   [bm25=#6  vec=#1 ]
+ 2 When Dinosaurs Roamed America  score=0.0149 id=5728728   [bm25=#5  vec=#10]
+ 3 Carnosaur 3: Primal Species    score=0.0138 id=10093456  [bm25=#8  vec=#20]
+ 4 Journey to the Center of Time  score=0.0137 id=10546396  [bm25=#18 vec=#7 ]
+ 5 Ice Age: Dawn of the Dinosaurs score=0.0098 id=12260598  [bm25=#1  vec=-  ]
+ 6 Lost Continent                 score=0.0097 id=11224264  [bm25=#2  vec=-  ]
+ 7 The Crystal Cube               score=0.0095 id=14658543  [bm25=#3  vec=-  ]
+ 8 Tail Sting                     score=0.0094 id=6628336   [bm25=#4  vec=-  ]
+ 9 The Lost World                 score=0.0090 id=5777111   [bm25=#7  vec=-  ]
+10 Spiderbabe                     score=0.0087 id=2319006   [bm25=#9  vec=-  ]
+
+FUSION_LINEAL (alpha=0.60)
+ 1 Carnosaur 2                    score=0.7628 id=6980481   [bm25=#6  vec=#1 ]
+ 2 Ice Age: Dawn of the Dinosaurs score=0.6000 id=12260598  [bm25=#1  vec=-  ]
+ 3 Lost Continent                 score=0.4772 id=11224264  [bm25=#2  vec=-  ]
+ 4 The Crystal Cube               score=0.4761 id=14658543  [bm25=#3  vec=-  ]
+ 5 Tail Sting                     score=0.4499 id=6628336   [bm25=#4  vec=-  ]
+ 6 When Dinosaurs Roamed America  score=0.4438 id=5728728   [bm25=#5  vec=#10]
+ 7 Journey to the Center of the Earth score=0.3365 id=20963952  [bm25=-   vec=#2 ]
+ 8 Jurassic Park                  score=0.3094 id=68485     [bm25=-   vec=#3 ]
+ 9 The Land Before Time III: The Time of the Great Giving score=0.2475 id=2524925   [bm25=-   vec=#4 ]
+10 Splice                         score=0.1977 id=14899108  [bm25=-   vec=#5 ]

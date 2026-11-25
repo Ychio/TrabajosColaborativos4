@@ -1,0 +1,91 @@
+Consulta: "The third Jurassic Park film featuring a return to an island populated by dinosaurs"
+Par metros: chunk.words=120 chunk.overlap=20 k=10 candidates=100 rrf.c=60 fusion.depth=20 fusion.alpha=0.60
+SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+nov 25, 2026 5:25:13 A.ÿM. org.apache.lucene.internal.vectorization.VectorizationProvider lookup
+WARNING: Java vector incubator module is not readable. For optimal vector performance, pass '--add-modules jdk.incubator.vector' to enable Vector API.
+
+BM25
+ 1 Jurassic Park                  score=22.5697 id=68485 chunk=-1
+ 2 The Lost World: Jurassic Park  score=20.1834 id=666923 chunk=-1
+ 3 When Dinosaurs Roamed America  score=12.3590 id=5728728 chunk=-1
+ 4 Ice Age: Dawn of the Dinosaurs score=12.2250 id=12260598 chunk=-1
+ 5 Jurassic Park III              score=11.6004 id=473273 chunk=-1
+ 6 Dinosaur Island                score=10.9310 id=12126070 chunk=-1
+ 7 Raptor Island                  score=10.7271 id=3652477 chunk=-1
+ 8 We're Back! A Dinosaur's Story score=9.3042 id=5002289 chunk=-1
+ 9 Coney Island                   score=9.0168 id=31677943 chunk=-1
+10 Lost Continent                 score=8.8421 id=11224264 chunk=-1
+
+VECTOR
+ 1 Dinosaurus!                    score=0.8167 id=3239974 chunk=0
+ 2 The Wizard                     score=0.7756 id=936196 chunk=5
+ 3 Dinosaur                       score=0.7662 id=919477 chunk=0
+ 4 Jurassic Park III              score=0.7607 id=473273 chunk=3
+ 5 We're Back! A Dinosaur's Story score=0.7584 id=5002289 chunk=0
+ 6 The Lost World: Jurassic Park  score=0.7571 id=666923 chunk=1
+ 7 Lost Continent                 score=0.7548 id=11224264 chunk=1
+ 8 The Land That Time Forgot      score=0.7538 id=22375764 chunk=0
+ 9 Raptor Island                  score=0.7528 id=3652477 chunk=1
+10 Adventures in Dinosaur City    score=0.7513 id=8528525 chunk=0
+
+VECTOR (top2)
+ 1 Dinosaurus!                    score=0.7756 id=3239974 chunk=0
+ 2 The Lost World: Jurassic Park  score=0.7557 id=666923 chunk=1
+ 3 Jurassic Park                  score=0.7427 id=68485 chunk=1
+ 4 We're Back! A Dinosaur's Story score=0.7414 id=5002289 chunk=0
+ 5 Journey to the Center of the Earth score=0.7400 id=9617369 chunk=9
+ 6 When Dinosaurs Roamed America  score=0.7378 id=5728728 chunk=2
+ 7 The Wizard                     score=0.7377 id=936196 chunk=5
+ 8 Jurassic Park III              score=0.7350 id=473273 chunk=3
+ 9 Adventures in Dinosaur City    score=0.7345 id=8528525 chunk=0
+10 Dinosaur                       score=0.7330 id=919477 chunk=0
+
+GLOBAL
+ 1 Dinosaurus!                    score=0.8050 id=3239974 chunk=-1
+ 2 When Dinosaurs Roamed America  score=0.7861 id=5728728 chunk=-1
+ 3 We're Back! A Dinosaur's Story score=0.7723 id=5002289 chunk=-1
+ 4 Adventures in Dinosaur City    score=0.7713 id=8528525 chunk=-1
+ 5 Jurassic Park                  score=0.7669 id=68485 chunk=-1
+ 6 The Lost World: Jurassic Park  score=0.7627 id=666923 chunk=-1
+ 7 Prehysteria!                   score=0.7412 id=15943379 chunk=-1
+ 8 Lost Continent                 score=0.7403 id=11224264 chunk=-1
+ 9 Mysterious Island              score=0.7401 id=5055826 chunk=-1
+10 Jurassic Park III              score=0.7392 id=473273 chunk=-1
+
+RRF (c=60)
+ 1 The Lost World: Jurassic Park  score=0.0313 id=666923    [bm25=#2  vec=#6 ]
+ 2 Jurassic Park III              score=0.0310 id=473273    [bm25=#5  vec=#4 ]
+ 3 Jurassic Park                  score=0.0303 id=68485     [bm25=#1  vec=#12]
+ 4 We're Back! A Dinosaur's Story score=0.0301 id=5002289   [bm25=#8  vec=#5 ]
+ 5 Dinosaurus!                    score=0.0297 id=3239974   [bm25=#15 vec=#1 ]
+ 6 When Dinosaurs Roamed America  score=0.0296 id=5728728   [bm25=#3  vec=#13]
+ 7 Raptor Island                  score=0.0294 id=3652477   [bm25=#7  vec=#9 ]
+ 8 Lost Continent                 score=0.0292 id=11224264  [bm25=#10 vec=#7 ]
+ 9 Ice Age: Dawn of the Dinosaurs score=0.0284 id=12260598  [bm25=#4  vec=#18]
+10 The Wizard                     score=0.0161 id=936196    [bm25=-   vec=#2 ]
+
+RRF_WEIGHTED (alpha=0.60, c=60)
+ 1 The Lost World: Jurassic Park  score=0.0157 id=666923    [bm25=#2  vec=#6 ]
+ 2 Jurassic Park III              score=0.0155 id=473273    [bm25=#5  vec=#4 ]
+ 3 Jurassic Park                  score=0.0154 id=68485     [bm25=#1  vec=#12]
+ 4 When Dinosaurs Roamed America  score=0.0150 id=5728728   [bm25=#3  vec=#13]
+ 5 We're Back! A Dinosaur's Story score=0.0150 id=5002289   [bm25=#8  vec=#5 ]
+ 6 Raptor Island                  score=0.0148 id=3652477   [bm25=#7  vec=#9 ]
+ 7 Dinosaurus!                    score=0.0146 id=3239974   [bm25=#15 vec=#1 ]
+ 8 Lost Continent                 score=0.0145 id=11224264  [bm25=#10 vec=#7 ]
+ 9 Ice Age: Dawn of the Dinosaurs score=0.0145 id=12260598  [bm25=#4  vec=#18]
+10 Dinosaur Island                score=0.0091 id=12126070  [bm25=#6  vec=-  ]
+
+FUSION_LINEAL (alpha=0.60)
+ 1 Jurassic Park                  score=0.6662 id=68485     [bm25=#1  vec=#12]
+ 2 The Lost World: Jurassic Park  score=0.6200 id=666923    [bm25=#2  vec=#6 ]
+ 3 Dinosaurus!                    score=0.4297 id=3239974   [bm25=#15 vec=#1 ]
+ 4 Jurassic Park III              score=0.2978 id=473273    [bm25=#5  vec=#4 ]
+ 5 When Dinosaurs Roamed America  score=0.2519 id=5728728   [bm25=#3  vec=#13]
+ 6 Raptor Island                  score=0.2256 id=3652477   [bm25=#7  vec=#9 ]
+ 7 The Wizard                     score=0.2030 id=936196    [bm25=-   vec=#2 ]
+ 8 Ice Age: Dawn of the Dinosaurs score=0.1989 id=12260598  [bm25=#4  vec=#18]
+ 9 We're Back! A Dinosaur's Story score=0.1960 id=5002289   [bm25=#8  vec=#5 ]
+10 Lost Continent                 score=0.1606 id=11224264  [bm25=#10 vec=#7 ]

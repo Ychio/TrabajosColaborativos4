@@ -1,0 +1,91 @@
+Consulta: "The James Bond film featuring a high-stakes poker game against Le Chiffre"
+Par metros: chunk.words=120 chunk.overlap=20 k=10 candidates=100 rrf.c=60 fusion.depth=20 fusion.alpha=0.60
+SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+nov 24, 2026 6:02:02 A.ÿM. org.apache.lucene.internal.vectorization.VectorizationProvider lookup
+WARNING: Java vector incubator module is not readable. For optimal vector performance, pass '--add-modules jdk.incubator.vector' to enable Vector API.
+
+BM25
+ 1 Casino Royale                  score=24.8017 id=930379 chunk=-1
+ 2 Casino Royale                  score=19.5195 id=9019882 chunk=-1
+ 3 A Big Hand for the Little Lady score=11.0726 id=6788669 chunk=-1
+ 4 Poker King                     score=11.0603 id=24971148 chunk=-1
+ 5 More Than a Game               score=10.7478 id=22291276 chunk=-1
+ 6 Freeze out                     score=10.5155 id=4424287 chunk=-1
+ 7 Never Say Never Mind: The Swedish Bikini Team score=10.5045 id=22834804 chunk=-1
+ 8 Tag: The Assassination Game    score=10.0581 id=24160684 chunk=-1
+ 9 James and the Giant Peach      score=9.8609 id=745100 chunk=-1
+10 Goldfinger                     score=9.5773 id=6322029 chunk=-1
+
+VECTOR
+ 1 Casino Royale                  score=0.8291 id=930379 chunk=3
+ 2 Casino Royale                  score=0.7755 id=9019882 chunk=1
+ 3 Casino Royale                  score=0.7729 id=2461592 chunk=0
+ 4 The Man with My Face           score=0.7630 id=2034659 chunk=2
+ 5 Gilda                          score=0.7621 id=1673949 chunk=0
+ 6 Diamonds Are Forever           score=0.7609 id=157481 chunk=2
+ 7 The Life and Death of Peter Sellers score=0.7600 id=2122948 chunk=1
+ 8 Live and Let Die               score=0.7505 id=6446061 chunk=6
+ 9 Finder's Fee                   score=0.7457 id=5248234 chunk=0
+10 Hitler - Dead or Alive         score=0.7454 id=23923137 chunk=1
+
+VECTOR (top2)
+ 1 Casino Royale                  score=0.8146 id=930379 chunk=3
+ 2 Casino Royale                  score=0.7699 id=9019882 chunk=1
+ 3 Casino Royale                  score=0.7583 id=2461592 chunk=0
+ 4 Diamonds Are Forever           score=0.7475 id=157481 chunk=2
+ 5 Live and Let Die               score=0.7299 id=6446061 chunk=6
+ 6 The Man with My Face           score=0.7281 id=2034659 chunk=2
+ 7 Gilda                          score=0.7276 id=1673949 chunk=0
+ 8 The Life and Death of Peter Sellers score=0.7266 id=2122948 chunk=1
+ 9 Never Say Never Again          score=0.7209 id=490101 chunk=3
+10 Finder's Fee                   score=0.7194 id=5248234 chunk=0
+
+GLOBAL
+ 1 Casino Royale                  score=0.8100 id=930379 chunk=-1
+ 2 Casino Royale                  score=0.8027 id=9019882 chunk=-1
+ 3 The Life and Death of Peter Sellers score=0.7374 id=2122948 chunk=-1
+ 4 Octopussy                      score=0.7349 id=541642 chunk=-1
+ 5 Above the Limit                score=0.7292 id=15323456 chunk=-1
+ 6 On Her Majesty's Secret Service score=0.7263 id=6268880 chunk=-1
+ 7 Hitler - Dead or Alive         score=0.7247 id=23923137 chunk=-1
+ 8 Finder's Fee                   score=0.7238 id=5248234 chunk=-1
+ 9 Anna Bond                      score=0.7207 id=33215040 chunk=-1
+10 Live and Let Die               score=0.7198 id=6446061 chunk=-1
+
+RRF (c=60)
+ 1 Casino Royale                  score=0.0328 id=930379    [bm25=#1  vec=#1 ]
+ 2 Casino Royale                  score=0.0323 id=9019882   [bm25=#2  vec=#2 ]
+ 3 Finder's Fee                   score=0.0280 id=5248234   [bm25=#14 vec=#9 ]
+ 4 Goldfinger                     score=0.0271 id=6322029   [bm25=#10 vec=#18]
+ 5 Casino Royale                  score=0.0159 id=2461592   [bm25=-   vec=#3 ]
+ 6 A Big Hand for the Little Lady score=0.0159 id=6788669   [bm25=#3  vec=-  ]
+ 7 The Man with My Face           score=0.0156 id=2034659   [bm25=-   vec=#4 ]
+ 8 Poker King                     score=0.0156 id=24971148  [bm25=#4  vec=-  ]
+ 9 Gilda                          score=0.0154 id=1673949   [bm25=-   vec=#5 ]
+10 More Than a Game               score=0.0154 id=22291276  [bm25=#5  vec=-  ]
+
+RRF_WEIGHTED (alpha=0.60, c=60)
+ 1 Casino Royale                  score=0.0164 id=930379    [bm25=#1  vec=#1 ]
+ 2 Casino Royale                  score=0.0161 id=9019882   [bm25=#2  vec=#2 ]
+ 3 Finder's Fee                   score=0.0139 id=5248234   [bm25=#14 vec=#9 ]
+ 4 Goldfinger                     score=0.0137 id=6322029   [bm25=#10 vec=#18]
+ 5 A Big Hand for the Little Lady score=0.0095 id=6788669   [bm25=#3  vec=-  ]
+ 6 Poker King                     score=0.0094 id=24971148  [bm25=#4  vec=-  ]
+ 7 More Than a Game               score=0.0092 id=22291276  [bm25=#5  vec=-  ]
+ 8 Freeze out                     score=0.0091 id=4424287   [bm25=#6  vec=-  ]
+ 9 Never Say Never Mind: The Swedish Bikini Team score=0.0090 id=22834804  [bm25=#7  vec=-  ]
+10 Tag: The Assassination Game    score=0.0088 id=24160684  [bm25=#8  vec=-  ]
+
+FUSION_LINEAL (alpha=0.60)
+ 1 Casino Royale                  score=1.0000 id=930379    [bm25=#1  vec=#1 ]
+ 2 Casino Royale                  score=0.6052 id=9019882   [bm25=#2  vec=#2 ]
+ 3 Casino Royale                  score=0.1845 id=2461592   [bm25=-   vec=#3 ]
+ 4 The Man with My Face           score=0.1466 id=2034659   [bm25=-   vec=#4 ]
+ 5 Gilda                          score=0.1433 id=1673949   [bm25=-   vec=#5 ]
+ 6 Diamonds Are Forever           score=0.1384 id=157481    [bm25=-   vec=#6 ]
+ 7 The Life and Death of Peter Sellers score=0.1352 id=2122948   [bm25=-   vec=#7 ]
+ 8 A Big Hand for the Little Lady score=0.1079 id=6788669   [bm25=#3  vec=-  ]
+ 9 Poker King                     score=0.1075 id=24971148  [bm25=#4  vec=-  ]
+10 Finder's Fee                   score=0.1001 id=5248234   [bm25=#14 vec=#9 ]

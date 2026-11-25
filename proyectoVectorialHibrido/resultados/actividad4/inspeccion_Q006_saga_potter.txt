@@ -1,0 +1,91 @@
+Consulta: "Films featuring Harry Potter and its recurring characters"
+Par metros: chunk.words=120 chunk.overlap=20 k=10 candidates=100 rrf.c=60 fusion.depth=20 fusion.alpha=0.60
+SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+nov 25, 2026 5:25:04 A.ÿM. org.apache.lucene.internal.vectorization.VectorizationProvider lookup
+WARNING: Java vector incubator module is not readable. For optimal vector performance, pass '--add-modules jdk.incubator.vector' to enable Vector API.
+
+BM25
+ 1 Harry Potter and the Deathly Hallows ? Part 2 score=13.2553 id=31941988 chunk=-1
+ 2 Harry Potter and the Philosopher's Stone score=12.3976 id=667361 chunk=-1
+ 3 Harry Potter and the Half-Blood Prince score=10.9233 id=858575 chunk=-1
+ 4 Harry Potter and the Goblet of Fire score=10.6700 id=667372 chunk=-1
+ 5 Harry Potter and the Prisoner of Azkaban score=10.6554 id=667371 chunk=-1
+ 6 Harry Potter and the Order of the Phoenix score=10.3092 id=670407 chunk=-1
+ 7 Miss Potter                    score=10.1463 id=3966684 chunk=-1
+ 8 Harry Potter and the Chamber of Secrets score=9.5579 id=667368 chunk=-1
+ 9 Harry Potter and the Deathly Hallows: Part I score=9.3724 id=9834441 chunk=-1
+10 Harry and the Hendersons       score=8.7689 id=2037975 chunk=-1
+
+VECTOR
+ 1 Miracle Mile                   score=0.7500 id=936429 chunk=0
+ 2 Married Life                   score=0.7330 id=5208736 chunk=0
+ 3 The Pickle                     score=0.7243 id=25948394 chunk=1
+ 4 Harry Potter and the Philosopher's Stone score=0.7240 id=667361 chunk=0
+ 5 Chota Jadugar                  score=0.7198 id=34260270 chunk=1
+ 6 School for Scoundrels          score=0.7173 id=2413074 chunk=5
+ 7 Mr. Right                      score=0.7172 id=34224279 chunk=1
+ 8 It's In the Water              score=0.7159 id=6386227 chunk=3
+ 9 Kiss Kiss Bang Bang            score=0.7143 id=1889426 chunk=0
+10 The Dawning                    score=0.7130 id=14570672 chunk=0
+
+VECTOR (top2)
+ 1 The Pickle                     score=0.7184 id=25948394 chunk=1
+ 2 Miracle Mile                   score=0.7176 id=936429 chunk=0
+ 3 Married Life                   score=0.7091 id=5208736 chunk=0
+ 4 Mr. Right                      score=0.7059 id=34224279 chunk=1
+ 5 Harry Potter and the Philosopher's Stone score=0.7046 id=667361 chunk=0
+ 6 Chota Jadugar                  score=0.7025 id=34260270 chunk=1
+ 7 School for Scoundrels          score=0.7012 id=2413074 chunk=5
+ 8 It's In the Water              score=0.7005 id=6386227 chunk=3
+ 9 Kiss Kiss Bang Bang            score=0.6997 id=1889426 chunk=0
+10 The Dawning                    score=0.6991 id=14570672 chunk=0
+
+GLOBAL
+ 1 The Pickle                     score=0.7366 id=25948394 chunk=-1
+ 2 Mr. Right                      score=0.7299 id=34224279 chunk=-1
+ 3 Tom, Dick, and Harry           score=0.7210 id=5028363 chunk=-1
+ 4 Drowning by Numbers            score=0.7170 id=412314 chunk=-1
+ 5 Penny Points to Paradise       score=0.7126 id=6696498 chunk=-1
+ 6 Harry Potter and the Chamber of Secrets score=0.7096 id=667368 chunk=-1
+ 7 Night Moves                    score=0.7080 id=1665824 chunk=-1
+ 8 Troublesome Night              score=0.7074 id=26012847 chunk=-1
+ 9 Bliss                          score=0.7052 id=9051776 chunk=-1
+10 Harry Potter and the Half-Blood Prince score=0.7047 id=858575 chunk=-1
+
+RRF (c=60)
+ 1 Harry Potter and the Philosopher's Stone score=0.0318 id=667361    [bm25=#2  vec=#4 ]
+ 2 Mr. Right                      score=0.0283 id=34224279  [bm25=#15 vec=#7 ]
+ 3 Harry Potter and the Deathly Hallows ? Part 2 score=0.0164 id=31941988  [bm25=#1  vec=-  ]
+ 4 Miracle Mile                   score=0.0164 id=936429    [bm25=-   vec=#1 ]
+ 5 Married Life                   score=0.0161 id=5208736   [bm25=-   vec=#2 ]
+ 6 The Pickle                     score=0.0159 id=25948394  [bm25=-   vec=#3 ]
+ 7 Harry Potter and the Half-Blood Prince score=0.0159 id=858575    [bm25=#3  vec=-  ]
+ 8 Harry Potter and the Goblet of Fire score=0.0156 id=667372    [bm25=#4  vec=-  ]
+ 9 Chota Jadugar                  score=0.0154 id=34260270  [bm25=-   vec=#5 ]
+10 Harry Potter and the Prisoner of Azkaban score=0.0154 id=667371    [bm25=#5  vec=-  ]
+
+RRF_WEIGHTED (alpha=0.60, c=60)
+ 1 Harry Potter and the Philosopher's Stone score=0.0159 id=667361    [bm25=#2  vec=#4 ]
+ 2 Mr. Right                      score=0.0140 id=34224279  [bm25=#15 vec=#7 ]
+ 3 Harry Potter and the Deathly Hallows ? Part 2 score=0.0098 id=31941988  [bm25=#1  vec=-  ]
+ 4 Harry Potter and the Half-Blood Prince score=0.0095 id=858575    [bm25=#3  vec=-  ]
+ 5 Harry Potter and the Goblet of Fire score=0.0094 id=667372    [bm25=#4  vec=-  ]
+ 6 Harry Potter and the Prisoner of Azkaban score=0.0092 id=667371    [bm25=#5  vec=-  ]
+ 7 Harry Potter and the Order of the Phoenix score=0.0091 id=670407    [bm25=#6  vec=-  ]
+ 8 Miss Potter                    score=0.0090 id=3966684   [bm25=#7  vec=-  ]
+ 9 Harry Potter and the Chamber of Secrets score=0.0088 id=667368    [bm25=#8  vec=-  ]
+10 Harry Potter and the Deathly Hallows: Part I score=0.0087 id=9834441   [bm25=#9  vec=-  ]
+
+FUSION_LINEAL (alpha=0.60)
+ 1 Harry Potter and the Philosopher's Stone score=0.6886 id=667361    [bm25=#2  vec=#4 ]
+ 2 Harry Potter and the Deathly Hallows ? Part 2 score=0.6000 id=31941988  [bm25=#1  vec=-  ]
+ 3 Miracle Mile                   score=0.4000 id=936429    [bm25=-   vec=#1 ]
+ 4 Harry Potter and the Half-Blood Prince score=0.3716 id=858575    [bm25=#3  vec=-  ]
+ 5 Harry Potter and the Goblet of Fire score=0.3468 id=667372    [bm25=#4  vec=-  ]
+ 6 Harry Potter and the Prisoner of Azkaban score=0.3454 id=667371    [bm25=#5  vec=-  ]
+ 7 Harry Potter and the Order of the Phoenix score=0.3115 id=670407    [bm25=#6  vec=-  ]
+ 8 Miss Potter                    score=0.2955 id=3966684   [bm25=#7  vec=-  ]
+ 9 Married Life                   score=0.2512 id=5208736   [bm25=-   vec=#2 ]
+10 Harry Potter and the Chamber of Secrets score=0.2379 id=667368    [bm25=#8  vec=-  ]

@@ -1,0 +1,91 @@
+Consulta: "A person discovers that their memories were artificially implanted"
+Par metros: chunk.words=120 chunk.overlap=20 k=10 candidates=100 rrf.c=60 fusion.depth=20 fusion.alpha=0.60
+SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+nov 24, 2026 6:02:21 A.ÿM. org.apache.lucene.internal.vectorization.VectorizationProvider lookup
+WARNING: Java vector incubator module is not readable. For optimal vector performance, pass '--add-modules jdk.incubator.vector' to enable Vector API.
+
+BM25
+ 1 Universal Soldier: A New Dimension score=9.6323 id=30951480 chunk=-1
+ 2 Total Recall                   score=8.9625 id=31905391 chunk=-1
+ 3 Progeny                        score=8.5332 id=4544500 chunk=-1
+ 4 Dark City                      score=7.2933 id=1884712 chunk=-1
+ 5 That Darn Cat!                 score=6.9127 id=1204699 chunk=-1
+ 6 Kamen Rider W Forever: A to Z/The Gaia Memories of Fate score=6.8861 id=27458682 chunk=-1
+ 7 Galerians:Rion                 score=6.8576 id=6643828 chunk=-1
+ 8 Their Eyes Were Watching God   score=6.7408 id=2650227 chunk=-1
+ 9 Eternal Family                 score=6.5662 id=21122977 chunk=-1
+10 Johnny Mnemonic                score=6.3924 id=80405 chunk=-1
+
+VECTOR
+ 1 The Creation of the Humanoids  score=0.7650 id=4162883 chunk=2
+ 2 After Life                     score=0.7532 id=430394 chunk=1
+ 3 Nabi                           score=0.7391 id=18757595 chunk=1
+ 4 Johnny Mnemonic                score=0.7367 id=80405 chunk=0
+ 5 Harano Sur                     score=0.7334 id=8614136 chunk=0
+ 6 Replicant                      score=0.7326 id=3229585 chunk=1
+ 7 Memory                         score=0.7292 id=11890652 chunk=0
+ 8 Breast Men                     score=0.7192 id=4238834 chunk=0
+ 9 Hiroshima Mon Amour            score=0.7175 id=1615727 chunk=1
+10 Letter from an Unknown Woman   score=0.7166 id=19115862 chunk=5
+
+VECTOR (top2)
+ 1 The Creation of the Humanoids  score=0.7258 id=4162883 chunk=2
+ 2 After Life                     score=0.7133 id=430394 chunk=1
+ 3 Nabi                           score=0.7063 id=18757595 chunk=1
+ 4 Johnny Mnemonic                score=0.7051 id=80405 chunk=0
+ 5 Harano Sur                     score=0.7034 id=8614136 chunk=0
+ 6 Replicant                      score=0.7030 id=3229585 chunk=1
+ 7 Memory                         score=0.7013 id=11890652 chunk=0
+ 8 Sleep Dealer                   score=0.6997 id=15033858 chunk=4
+ 9 Breast Men                     score=0.6963 id=4238834 chunk=0
+10 Hiroshima Mon Amour            score=0.6954 id=1615727 chunk=1
+
+GLOBAL
+ 1 The Creation of the Humanoids  score=0.7248 id=4162883 chunk=-1
+ 2 Memory                         score=0.7136 id=11890652 chunk=-1
+ 3 Dreamscape                     score=0.7130 id=30684033 chunk=-1
+ 4 Breast Men                     score=0.7002 id=4238834 chunk=-1
+ 5 Technotise Edit & I            score=0.6971 id=14386636 chunk=-1
+ 6 Sleep Dealer                   score=0.6966 id=15033858 chunk=-1
+ 7 ELI                            score=0.6937 id=11527681 chunk=-1
+ 8 Dream                          score=0.6902 id=34405021 chunk=-1
+ 9 Anna to the Infinite Power     score=0.6839 id=6255681 chunk=-1
+10 Before We Forget               score=0.6835 id=33712804 chunk=-1
+
+RRF (c=60)
+ 1 Johnny Mnemonic                score=0.0299 id=80405     [bm25=#10 vec=#4 ]
+ 2 Sleep Dealer                   score=0.0271 id=15033858  [bm25=#11 vec=#17]
+ 3 Universal Soldier: A New Dimension score=0.0164 id=30951480  [bm25=#1  vec=-  ]
+ 4 The Creation of the Humanoids  score=0.0164 id=4162883   [bm25=-   vec=#1 ]
+ 5 Total Recall                   score=0.0161 id=31905391  [bm25=#2  vec=-  ]
+ 6 After Life                     score=0.0161 id=430394    [bm25=-   vec=#2 ]
+ 7 Nabi                           score=0.0159 id=18757595  [bm25=-   vec=#3 ]
+ 8 Progeny                        score=0.0159 id=4544500   [bm25=#3  vec=-  ]
+ 9 Dark City                      score=0.0156 id=1884712   [bm25=#4  vec=-  ]
+10 That Darn Cat!                 score=0.0154 id=1204699   [bm25=#5  vec=-  ]
+
+RRF_WEIGHTED (alpha=0.60, c=60)
+ 1 Johnny Mnemonic                score=0.0148 id=80405     [bm25=#10 vec=#4 ]
+ 2 Sleep Dealer                   score=0.0136 id=15033858  [bm25=#11 vec=#17]
+ 3 Universal Soldier: A New Dimension score=0.0098 id=30951480  [bm25=#1  vec=-  ]
+ 4 Total Recall                   score=0.0097 id=31905391  [bm25=#2  vec=-  ]
+ 5 Progeny                        score=0.0095 id=4544500   [bm25=#3  vec=-  ]
+ 6 Dark City                      score=0.0094 id=1884712   [bm25=#4  vec=-  ]
+ 7 That Darn Cat!                 score=0.0092 id=1204699   [bm25=#5  vec=-  ]
+ 8 Kamen Rider W Forever: A to Z/The Gaia Memories of Fate score=0.0091 id=27458682  [bm25=#6  vec=-  ]
+ 9 Galerians:Rion                 score=0.0090 id=6643828   [bm25=#7  vec=-  ]
+10 Their Eyes Were Watching God   score=0.0088 id=2650227   [bm25=#8  vec=-  ]
+
+FUSION_LINEAL (alpha=0.60)
+ 1 Universal Soldier: A New Dimension score=0.6000 id=30951480  [bm25=#1  vec=-  ]
+ 2 Total Recall                   score=0.5018 id=31905391  [bm25=#2  vec=-  ]
+ 3 Progeny                        score=0.4389 id=4544500   [bm25=#3  vec=-  ]
+ 4 The Creation of the Humanoids  score=0.4000 id=4162883   [bm25=-   vec=#1 ]
+ 5 Johnny Mnemonic                score=0.3292 id=80405     [bm25=#10 vec=#4 ]
+ 6 After Life                     score=0.3186 id=430394    [bm25=-   vec=#2 ]
+ 7 Dark City                      score=0.2571 id=1884712   [bm25=#4  vec=-  ]
+ 8 Nabi                           score=0.2207 id=18757595  [bm25=-   vec=#3 ]
+ 9 That Darn Cat!                 score=0.2013 id=1204699   [bm25=#5  vec=-  ]
+10 Kamen Rider W Forever: A to Z/The Gaia Memories of Fate score=0.1974 id=27458682  [bm25=#6  vec=-  ]

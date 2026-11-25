@@ -1,0 +1,15 @@
+nov 24, 2026 6:01:17 A.ÿM. org.apache.lucene.internal.vectorization.VectorizationProvider lookup
+WARNING: Java vector incubator module is not readable. For optimal vector performance, pass '--add-modules jdk.incubator.vector' to enable Vector API.
+Modo=DISCO | pel¡culas indexadas=29796 | consultas=src\main\resources\evaluation\queries.tsv | qrels=src\main\resources\evaluation\qrels.txt | k=10
+Par metros: chunk.words=120 chunk.overlap=20 k=10 candidates=100 rrf.c=60 fusion.depth=20 fusion.alpha=0.60
+SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+SISTEMA            N      P@k      R@k     F1@k    MAP@k   NDCG@k
+BM25              50    0.204    0.750    0.276    0.554    0.637
+VECTOR            50    0.130    0.589    0.176    0.355    0.451
+VECTOR_TOP2       50    0.142    0.597    0.191    0.385    0.481
+GLOBAL            50    0.110    0.493    0.142    0.315    0.398
+RRF               50    0.196    0.786    0.269    0.551    0.656
+RRF_WEIGHTED      50    0.202    0.760    0.273    0.564    0.656
+FUSION_LINEAL     50    0.202    0.781    0.277    0.567    0.661
