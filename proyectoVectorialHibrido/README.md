@@ -147,7 +147,7 @@ mvn -q exec:java -Dexec.mainClass=es.ugr.ri.vector.MovieSearcherMain \
 mvn -q exec:java -Dexec.mainClass=es.ugr.ri.vector.MovieSearcherMain \
     -Dexec.args="indices/peliculas A person discovers that their memories were artificially implanted" \
     -Dk=10 -Dcandidates=100 > resultados/actividad3/consulta_semantica_Q041.txt
-
+```
 Las salidas de estos experimentos están en resultados/actividad3/.
 
 ### Actividad 4. Evaluación verificable y análisis por consulta
@@ -176,7 +176,7 @@ mvn -q exec:java -Dexec.mainClass=es.ugr.ri.vector.MovieEvaluatorMain \
 # Demostración autocontenida (sample)
 mvn -q exec:java -Dexec.mainClass=es.ugr.ri.vector.MovieEvaluatorMain \
     -Dexec.args="sample" -Dk=5 -Deval.out=resultados/sample/por_consulta_sample_k5.csv > resultados/sample/evaluacion_sample_k5.txt
-
+```
 Las salidas y las inspecciones de las consultas (Q003, Q006, Q038, Q045) están en resultados/actividad4/ y resultados/sample/.
 
 ### Actividad 5. Experimentos, reproducibilidad y discusión
@@ -210,5 +210,5 @@ mvn -q exec:java -Dexec.mainClass=es.ugr.ri.vector.MovieEvaluatorMain \
 # 4. Demostración en modo sample (5 películas, 3 consultas)
 mvn -q exec:java -Dexec.mainClass=es.ugr.ri.vector.MovieEvaluatorMain \
     -Dexec.args="sample" -Dk=5 -Deval.out=resultados/sample/por_consulta_sample_k5.csv > resultados/sample/evaluacion_sample_k5.txt
-
+```
 Los resultados finales y el detalle por consulta se encuentran en resultados/actividad4/ y resultados/sample/, y su análisis (mejoras, empeoramientos y limitaciones) en la memoria del proyecto.
