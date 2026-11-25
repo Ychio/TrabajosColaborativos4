@@ -1,15 +1,18 @@
 package es.ugr.ri.vector;
+
 import java.io.IOException;
 import java.util.*;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.queryparser.classic.QueryParser;
 import org.apache.lucene.search.*;
+
 /** Recuperador independiente: BM25, vectores y fusión. */
 public final class MovieSearcher implements AutoCloseable {
     private final DirectoryReader lexicalReader, chunkReader, globalReader;
     private final IndexSearcher lexical, chunks, global;
     private final EmbeddingService embeddings;
+
     public MovieSearcher(IndexDirectories indexes, EmbeddingService embeddings) throws IOException {
         this.embeddings = embeddings;
         lexicalReader = DirectoryReader.open(indexes.lexical);
@@ -19,8 +22,10 @@ public final class MovieSearcher implements AutoCloseable {
         chunks = new IndexSearcher(chunkReader);
         global = new IndexSearcher(globalReader);
     }
+
     public List<RankedMovie> bm25(String query, int k) throws Exception {
-        var parser = new org.apache.lucene.queryparser.classic.MultiFieldQueryParser(new String[]{"title_text", "plot"}, new StandardAnalyzer());
+        var parser = new org.apache.lucene.queryparser.classic.MultiFieldQueryParser(
+                new String[]{"title_text", "plot"}, new StandardAnalyzer());
         Query q = parser.parse(QueryParser.escape(query));
         var docs = lexical.search(q, k);
         List<RankedMovie> out = new ArrayList<>();
@@ -30,6 +35,7 @@ public final class MovieSearcher implements AutoCloseable {
         }
         return out;
     }
+
     public List<ChunkHit> chunkHits(String query, int candidates) throws IOException {
         int n = Math.min(candidates, chunkReader.numDocs());
         if (n == 0) return List.of();
@@ -44,6 +50,7 @@ public final class MovieSearcher implements AutoCloseable {
     }
 
     public int numChunks() { return chunkReader.numDocs(); }
+
     /** k-NN sobre fragmentos agrupado con MAX (comportamiento original). */
     public List<RankedMovie> vectorChunks(String query, int candidates, int k) throws IOException {
         return vectorChunks(query, candidates, k, ChunkAggregator.Aggregation.MAX);
@@ -59,6 +66,7 @@ public final class MovieSearcher implements AutoCloseable {
                     hits.size(), ranking.size(), k);
         return ranking;
     }
+
     public List<RankedMovie> vectorGlobal(String query, int k) throws IOException {
         int n = Math.min(k, globalReader.numDocs());
         if (n == 0) return List.of();
@@ -70,9 +78,32 @@ public final class MovieSearcher implements AutoCloseable {
         }
         return out;
     }
+
     public List<RankedMovie> hybridRrf(String query, int candidates, int k) throws Exception {
-        // EJERCICIO: sustituir esta fusión de ejemplo por una implementación propia y comparar variantes.
-        return RankFusion.rrf(bm25(query, Math.max(k, 20)), vectorChunks(query, candidates, Math.max(k, 20)), 60, k);
+        return hybridRrf(query, candidates, 20, 60, k);
     }
-    @Override public void close() throws IOException { lexicalReader.close(); chunkReader.close(); globalReader.close(); }
+
+    public List<RankedMovie> hybridRrf(String query, int candidates, int depth, int c, int k) throws Exception {
+        int pool = Math.max(k, depth);
+        return RankFusion.rrf(bm25(query, pool), vectorChunks(query, candidates, pool), c, k);
+    }
+
+    public List<RankedMovie> hybridWeightedRrf(String query, int candidates, int depth,
+                                               double alpha, int c, int k) throws Exception {
+        int pool = Math.max(k, depth);
+        return RankFusion.weightedRrf(bm25(query, pool), vectorChunks(query, candidates, pool), alpha, c, k);
+    }
+
+    public List<RankedMovie> hybridLinear(String query, int candidates, int depth,
+                                          double alpha, int k) throws Exception {
+        int pool = Math.max(k, depth);
+        return RankFusion.linearFusion(bm25(query, pool), vectorChunks(query, candidates, pool), alpha, k);
+    }
+
+    @Override
+    public void close() throws IOException {
+        lexicalReader.close();
+        chunkReader.close();
+        globalReader.close();
+    }
 }
